@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The care and feeding of software engineers &mdash; mlindgren.ca</title>
+  <meta name="author" content="Mitch Lindgren">
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="/favicon.png" rel="icon">
+
+  <link href="/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<!--
+/* @license
+* MyFonts Webfont Build ID 1737828, 2011-12-16T22:03:39-0500
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are 
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license at the URLs below.
+*
+* Webfont: Museo 700 by exljbris
+* URL: http://www.myfonts.com/fonts/exljbris/museo/700/
+* Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+* Licensed pageviews: unlimited
+*
+*
+* License: http://www.myfonts.com/viewlicense?type=web&buildid=1737828
+*
+* © 2011 Bitstream Inc
+*/
+-->
+<link rel="stylesheet" type="text/css" href="/theme/css/mlindgren_ca_museo700.css">
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+ <!-- Load FancyBox -->
+ <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+ <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript">
+ </script>
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+// ender.js gobbles jQuery's ready event: Use ender.js $ instead
+$(document).ready(function() {
+    jQuery(".fancybox").fancybox(
+    {
+      helpers:
+      {
+        overlay:
+        {
+          locked: false
+        }
+      }
+    });
+});
+</script>
+
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="/">mlindgren.ca</a></h1>
+</hgroup>
+<div id="header-outer-wrap">
+  <div id="header-wrap">
+    <div id="header-background">
+      <img src="theme/images/header.jpg" class="header-background-stretch">
+    </div>
+  </div>
+</div></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+
+<ul class="main-navigation">
+      <li >
+        <a href="/category/coding.html">Coding</a>
+      </li>
+      <li class="active">
+        <a href="/category/links.html">Links</a>
+      </li>
+      <li >
+        <a href="/category/other.html">Other</a>
+      </li>
+      <li >
+        <a href="/category/reviews.html">Reviews</a>
+      </li>
+      <li >
+        <a href="/category/technology.html">Technology</a>
+      </li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div class="category-links">
+  <article class="hentry" role="article">
+<header>
+      <h1 class="entry-title">The care and feeding of software engineers</h1>
+    <p class="meta">
+<time datetime="2015-01-26T00:48:10-08:00" pubdate>Mon 26 January 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><p>Via a friend's Facebook feed comes this
+<a href="http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/">excellent article</a>
+about "the psychology of software engineers and what makes us the way we are."
+I'm in almost complete agreement with the article, although I do somewhat take
+issue with this paragraph:</p>
+<blockquote>
+<p>Part of the problem [of software engineers consistently giving overoptimistic
+estimates and then failing to meet them] is also our fragile egos. We get
+afraid that if we give an estimate that is "too long", that people will think
+less of us.  "Good engineers" should be able to work faster, they say, and so
+we acquiesce.</p>
+</blockquote>
+<p>I don't really think software engineers in general have "fragile egos," or at
+least not to a greater extent than people in any other profession. We <em>are</em>
+notoriously bad at giving realistic estimates, but in my experience, this is
+often because we're actually incentivized to do so: deadlines are set before the
+amount of work required for a project is actually determined, or without regard
+to it, and then we're made to fit our estimates into too-short iterations while
+still trying to accomplish all we set out to do. There's a common sentiment that
+it's better to be under-optimistic and out-perform your goals than the converse,
+and while that seems true in theory, in practice there don't seem to be many
+discouragements to failing to live up to estimates that everyone already knows
+are unrealistic and often meaningless.</p>
+<p>By contrast, I think the fear that people will think less of us for giving "too
+long" estimates is completely valid in a culture where it's commonplace to set
+unrealistic goals and then break our backs trying to achieve them by any means
+necessary. I think this especially true at the feature team level when one is
+working on a large piece of software. What do you expect to happen to a team
+that estimates up front that its feature cannot be completed within the release
+window? (Remember,
+<a href="http://en.wikipedia.org/wiki/The_Mythical_Man-Month">adding more engineers might just make the problem worse</a>.)
+I think it's safe to say that it won't involve promotions and pay raises.</p>
+<p>Finally, as my wife pointed out when we discussed this article, the
+<a href="http://en.wikipedia.org/wiki/Planning_fallacy">planning fallacy</a> is by no means
+unique to software engineers.</p>
+<p>All of that said, I think the rest of the article is very good; this part in
+particular struck a chord for me (emphasis mine):</p>
+<blockquote>
+<p>So, without enough information, changing requirements, not enough knowledge to
+do the job, and people constantly second guessing us, we trudge into work
+every day. Being creative people, we put up with all of this because we know
+that one day people will use our work. <strong>That's really what drives software
+engineers more than anything else: the idea that people we don't even know
+will be affected by our work.</strong> Whether you’re working on a web site visited
+by millions each day or you’re working on a point-of-sale system for
+restaurants, the knowledge that we’re affecting people's lives is a powerful
+driver.</p>
+</blockquote></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Mitch Lindgren
+    </span>
+  </span>
+<time datetime="2015-01-26T00:48:10-08:00" pubdate>Mon 26 January 2015</time>  <span class="categories">
+    <a class='category' href='/category/links.html'>Links</a>
+  </span>
+</p><div class="sharing">
+</div>    </footer>
+  </article>
+
+</div>
+<aside class="sidebar">
+  <section>
+    <h1>Pages</h1>
+    <ul id="sidebar_pages">
+      <li><a href="">Home</a></li>
+      <li><a href="/archives.html">Archives</a></li>
+    </ul>
+  </section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post category-other">
+          <a href="/observations-from-three-years-in-america.html">Observations from Three Years in America</a>
+      </li>
+      <li class="post category-technology">
+          <a href="/windows-10.html">Windows 10!</a>
+      </li>
+      <li class="post category-reviews">
+          <a href="/game-review-bloodborne.html">Game Review: Bloodborne</a>
+      </li>
+      <li class="post category-links">
+          <a href="/windows-hello-microsoft-passport-and-tamriel-unlimited.html">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a>
+      </li>
+      <li class="post category-coding">
+          <a href="/fun-with-the-microsoft-band-sdk-preview.html">Fun with the Microsoft Band SDK Preview</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li class="category-coding">
+          <a href="/category/coding.html">Coding</a>
+        </li>
+        <li class="category-links">
+          <a href="/category/links.html">Links</a>
+        </li>
+        <li class="category-other">
+          <a href="/category/other.html">Other</a>
+        </li>
+        <li class="category-reviews">
+          <a href="/category/reviews.html">Reviews</a>
+        </li>
+        <li class="category-technology">
+          <a href="/category/technology.html">Technology</a>
+        </li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+  </section>
+
+
+    <section>
+        <h1>Social</h1>
+        <ul>
+            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+            <li><a href="#" target="_blank">Another social link</a></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Blogroll</h1>
+        <ul>
+            <li><a href="http://slatestarcodex.com" target="_blank">Slate Star Codex</a></li>
+        </ul>
+    </section>
+
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="/theme/js/modernizr-2.0.js"></script>
+  <script src="/theme/js/ender.js"></script>
+  <script src="/theme/js/octopress.js" type="text/javascript"></script>
+</body>
+</html>

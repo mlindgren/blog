@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to manually send a Pingback &mdash; mlindgren.ca</title>
+  <meta name="author" content="Mitch Lindgren">
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="/favicon.png" rel="icon">
+
+  <link href="/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<!--
+/* @license
+* MyFonts Webfont Build ID 1737828, 2011-12-16T22:03:39-0500
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are 
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license at the URLs below.
+*
+* Webfont: Museo 700 by exljbris
+* URL: http://www.myfonts.com/fonts/exljbris/museo/700/
+* Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+* Licensed pageviews: unlimited
+*
+*
+* License: http://www.myfonts.com/viewlicense?type=web&buildid=1737828
+*
+* © 2011 Bitstream Inc
+*/
+-->
+<link rel="stylesheet" type="text/css" href="/theme/css/mlindgren_ca_museo700.css">
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+ <!-- Load FancyBox -->
+ <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+ <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript">
+ </script>
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+// ender.js gobbles jQuery's ready event: Use ender.js $ instead
+$(document).ready(function() {
+    jQuery(".fancybox").fancybox(
+    {
+      helpers:
+      {
+        overlay:
+        {
+          locked: false
+        }
+      }
+    });
+});
+</script>
+
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="/">mlindgren.ca</a></h1>
+</hgroup>
+<div id="header-outer-wrap">
+  <div id="header-wrap">
+    <div id="header-background">
+      <img src="/theme/images/header.jpg" class="header-background-stretch">
+    </div>
+  </div>
+</div></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+
+<ul class="main-navigation">
+      <li >
+        <a href="/category/coding.html">Coding</a>
+      </li>
+      <li >
+        <a href="/category/links.html">Links</a>
+      </li>
+      <li >
+        <a href="/category/other.html">Other</a>
+      </li>
+      <li >
+        <a href="/category/reviews.html">Reviews</a>
+      </li>
+      <li class="active">
+        <a href="/category/technology.html">Technology</a>
+      </li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div class="category-technology">
+  <article class="hentry" role="article">
+<header>
+      <h1 class="entry-title">How to manually send a Pingback</h1>
+    <p class="meta">
+<time datetime="2015-01-17T21:04:29-08:00" pubdate>Sat 17 January 2015</time>  &ndash; &#128339; 2 min read
+    </p>
+</header>
+
+  <div class="entry-content"><p>A couple years ago I stopped using WordPress and
+<a href="http://blog.mlindgren.ca/entry/2012/09/23/switching-to-octopress/">switched</a>
+to <a href="http://octopress.org/">Octopress</a>, which is a derivative of
+<a href="http://jekyllrb.com/">Jekyll</a>. I continue to be pretty happy with this
+decision, but there are some downsides to using a static site generator. One
+issue is the lack of support for
+<a href="http://en.wikipedia.org/wiki/Pingback">Pingbacks</a>, which are a method supported
+by a number of dynamic blogging platforms to notify another blog when you link
+to its content. Pingbacks provide a good way to respond to blog posts using
+your own blog rather than via commenting; thus, they facilitate "conversation"
+between blogs. Unfortunately, if you're using Octopress or Jekyll or another
+framework to generate static HTML pages, you won't natively have the ability to
+send or receive Pingbacks.</p>
+<p>Luckily, Pingbacks can be sent manually with relative ease. Receiving Pingbacks
+still won't be possible, though; that's a much harder problem to solve, for a
+variety of reasons which aren't relevant to this post.</p>
+<p>Before I proceed, I want to note that full credit for this information goes to
+<a href="http://aaronparecki.com/">Aaron Parecki</a>; he explains the technique in
+<a href="https://gist.github.com/aaronpk/5744879">this GitHub Gist</a>. The reason I'm
+reproducing it here is because it was surprisingly hard to find Aaron's Gist,
+or anything else of relevance, when I was searching for information on how to
+send a Pingback. Hopefully, by posting about it and adding some extra context, I
+can make the information more searchable.</p>
+<p>First, you'll need to create a copy of this XML file on your local machine:</p>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+<span class="nt">&lt;methodCall&gt;</span>
+<span class="nt">&lt;methodName&gt;</span>pingback.ping<span class="nt">&lt;/methodName&gt;</span>
+<span class="nt">&lt;params&gt;</span>
+ <span class="nt">&lt;param&gt;</span>
+  <span class="nt">&lt;value&gt;</span>
+   <span class="nt">&lt;string&gt;</span>http://source/url/here<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;/value&gt;</span>
+ <span class="nt">&lt;/param&gt;</span>
+ <span class="nt">&lt;param&gt;</span>
+  <span class="nt">&lt;value&gt;</span>
+   <span class="nt">&lt;string&gt;</span>http://target/url/here<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;/value&gt;</span>
+ <span class="nt">&lt;/param&gt;</span>
+<span class="nt">&lt;/params&gt;</span>
+<span class="nt">&lt;/methodCall&gt;</span>
+</pre></div>
+
+
+<p>Replace the two URLs as appropriate - the first one is the source (i.e. your
+blog post), and the second is the target (the post you are linking to).</p>
+<p>Now, you just need to <code>POST</code> the request to the target server. You'll need to
+know the target's XML-RPC endpoint URL for this.  Usually, it will be <code>/xmlrpc</code>,
+or for WordPress blogs, <code>/xmlrpc.php</code>. You can find out for sure by inspecting
+the site's source for a <code>&lt;link rel="pingback" href="..."/&gt;</code> tag.</p>
+<p>You can use cURL to post your request. It's built into most Unix-like operating
+systems, but Windows users will have to
+<a href="http://curl.haxx.se/dlwiz/?type=bin&amp;os=Win32&amp;flav=-&amp;ver=2000%2FXP">download it</a>,
+and if you're on Mac OS X you probably need to have Apple's developer tools
+installed.  Just run:</p>
+<div class="highlight"><pre>curl -X POST -d @pingback.xml http://example.com/xmlrpc.php
+</pre></div>
+
+
+<p>...and that's it! cURL should print out an XML response from this server with a
+message indicating that your Pingback was registered. Of course, to be truly
+sure it worked, you should check the target URL and see if your Pingback was
+added to the page. (Note that some sites disable Pingbacks.)</p></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Mitch Lindgren
+    </span>
+  </span>
+<time datetime="2015-01-17T21:04:29-08:00" pubdate>Sat 17 January 2015</time>  <span class="categories">
+    <a class='category' href='/category/technology.html'>Technology</a>
+  </span>
+</p><div class="sharing">
+</div>    </footer>
+  </article>
+
+</div>
+<aside class="sidebar">
+  <section>
+    <h1>Pages</h1>
+    <ul id="sidebar_pages">
+      <li><a href="">Home</a></li>
+      <li><a href="/archives.html">Archives</a></li>
+    </ul>
+  </section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post category-other">
+          <a href="/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
+      </li>
+      <li class="post category-technology">
+          <a href="/entry/2015/07/29/windows-10/">Windows 10!</a>
+      </li>
+      <li class="post category-reviews">
+          <a href="/entry/2015/05/22/game-review-bloodborne/">Game Review: Bloodborne</a>
+      </li>
+      <li class="post category-links">
+          <a href="/entry/2015/03/17/windows-hello-microsoft-passport-and-tamriel-unlimited/">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a>
+      </li>
+      <li class="post category-coding">
+          <a href="/entry/2015/03/14/fun-with-the-microsoft-band-sdk-preview/">Fun with the Microsoft Band SDK Preview</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li class="category-coding">
+          <a href="/category/coding.html">Coding</a>
+        </li>
+        <li class="category-links">
+          <a href="/category/links.html">Links</a>
+        </li>
+        <li class="category-other">
+          <a href="/category/other.html">Other</a>
+        </li>
+        <li class="category-reviews">
+          <a href="/category/reviews.html">Reviews</a>
+        </li>
+        <li class="category-technology">
+          <a href="/category/technology.html">Technology</a>
+        </li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+  </section>
+
+
+
+  <section>
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+      <li class="loading">Status updating...</li>
+    </ul>
+      <a href="https://github.com/mlindgren">@mlindgren</a> on GitHub
+    <script type="text/javascript">
+      $.domReady(function(){
+          if (!window.jXHR){
+              var jxhr = document.createElement('script');
+              jxhr.type = 'text/javascript';
+              jxhr.src = '/theme/js/jXHR.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(jxhr, s);
+          }
+
+          github.showRepos({
+              user: 'mlindgren',
+              count: 5,
+              skip_forks: false,
+              target: '#gh_repos'
+          });
+      });
+    </script>
+    <script src="/theme/js/github.js" type="text/javascript"> </script>
+  </section>
+
+    <section>
+        <h1>Social</h1>
+        <ul>
+            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+            <li><a href="#" target="_blank">Another social link</a></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Blogroll</h1>
+        <ul>
+            <li><a href="http://slatestarcodex.com" target="_blank">Slate Star Codex</a></li>
+        </ul>
+    </section>
+
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="/theme/js/modernizr-2.0.js"></script>
+  <script src="/theme/js/ender.js"></script>
+  <script src="/theme/js/octopress.js" type="text/javascript"></script>
+</body>
+</html>

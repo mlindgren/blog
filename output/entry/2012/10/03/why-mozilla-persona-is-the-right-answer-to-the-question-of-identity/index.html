@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Why Mozilla Persona Is the Right Answer to the Question of Identity &mdash; mlindgren.ca</title>
+  <meta name="author" content="Mitch Lindgren">
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="/favicon.png" rel="icon">
+
+  <link href="/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<!--
+/* @license
+* MyFonts Webfont Build ID 1737828, 2011-12-16T22:03:39-0500
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are 
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license at the URLs below.
+*
+* Webfont: Museo 700 by exljbris
+* URL: http://www.myfonts.com/fonts/exljbris/museo/700/
+* Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+* Licensed pageviews: unlimited
+*
+*
+* License: http://www.myfonts.com/viewlicense?type=web&buildid=1737828
+*
+* © 2011 Bitstream Inc
+*/
+-->
+<link rel="stylesheet" type="text/css" href="/theme/css/mlindgren_ca_museo700.css">
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+ <!-- Load FancyBox -->
+ <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+ <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript">
+ </script>
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+// ender.js gobbles jQuery's ready event: Use ender.js $ instead
+$(document).ready(function() {
+    jQuery(".fancybox").fancybox(
+    {
+      helpers:
+      {
+        overlay:
+        {
+          locked: false
+        }
+      }
+    });
+});
+</script>
+
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="/">mlindgren.ca</a></h1>
+</hgroup>
+<div id="header-outer-wrap">
+  <div id="header-wrap">
+    <div id="header-background">
+      <img src="/theme/images/header.jpg" class="header-background-stretch">
+    </div>
+  </div>
+</div></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+
+<ul class="main-navigation">
+      <li >
+        <a href="/category/coding.html">Coding</a>
+      </li>
+      <li class="active">
+        <a href="/category/links.html">Links</a>
+      </li>
+      <li >
+        <a href="/category/other.html">Other</a>
+      </li>
+      <li >
+        <a href="/category/reviews.html">Reviews</a>
+      </li>
+      <li >
+        <a href="/category/technology.html">Technology</a>
+      </li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div class="category-links">
+  <article class="hentry" role="article">
+<header>
+      <h1 class="entry-title">Why Mozilla Persona Is the Right Answer to the Question of Identity</h1>
+    <p class="meta">
+<time datetime="2012-10-03T20:37:00-07:00" pubdate>Wed 03 October 2012</time>  &ndash; &#128339; 2 min read
+    </p>
+</header>
+
+  <div class="entry-content"><p><em>[Updated December 24th, 2014: I'm leaving this post here for historical
+purposes, but I no longer endorse Mozilla Persona. There are a number of reasons
+for this, but one of the primary ones is that the project does not seem to have
+gained any momentum in the two years since I wrote this post. At this point I am
+skeptical that it ever will gain that momentum.]</em></p>
+<p>David Somers presents an
+<a href="http://labs.newsint.co.uk/blog/2012/10/why-mozilla-persona-is-the-right-answer-to-the-question-of-identity/">excellent rundown</a>
+of what
+<a href="http://www.mozilla.org/en-US/persona/">Mozilla Persona</a> is and why it's
+currently the best option for identity and authentication for web services. I've
+implemented authentication using Persona in the
+<a href="http://blog.mlindgren.ca/entry/2012/09/14/social-networks-and-content-ownership/">photo album app</a>
+I'm working on, and I found it remarkably easy to integrate with my app. And, as
+David explains, Persona is also much easier for users to understand than
+competing platforms like OpenID. If you're a web developer, you really need to
+add Persona support to your application as soon as
+possible. It can be done in literally a matter of minutes, and if Persona takes
+off the benefit to identity management on the Internet could be huge.</p>
+<p>Perhaps my favourite thing about Persona is that it gives me the opportunity to
+<a href="https://developer.mozilla.org/en-US/docs/Persona/Implementing_a_Persona_IdP">implement my own identity provider</a>,
+which means I can have <em>complete</em> control over how I authenticate to any
+Persona-consuming service. I could have <em>n</em>-factor authentication, with no limit
+on the complexity or specificity of the factors besides my own imagination. For
+example, I could generate SSL client certificates for each of my machines and
+hardcode their thumbprints into my identity provider to ensure that it wouldn't
+even service requests from machines I haven't explicitly added.  Or if I wanted
+to get creative, I could have my identity provider generate a random temporary
+key which I would have to retrieve via SSH (but this is less convenient and
+probably also less secure than doing SSL client authentication.) The
+possibilities are endless.</p>
+<p>Perhaps an end is finally in sight to the frustration of having dozens upon
+dozens of different accounts and passwords for various services,
+<a href="http://me.veekun.com/blog/2011/12/04/fuck-passwords/">each with its own uniquely nonsensical password composition policy</a>.  Everyone needs to implement Persona&mdash;preferably yesterday.</p></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Mitch Lindgren
+    </span>
+  </span>
+<time datetime="2012-10-03T20:37:00-07:00" pubdate>Wed 03 October 2012</time>  <span class="categories">
+    <a class='category' href='/category/links.html'>Links</a>
+  </span>
+</p><div class="sharing">
+</div>    </footer>
+  </article>
+
+</div>
+<aside class="sidebar">
+  <section>
+    <h1>Pages</h1>
+    <ul id="sidebar_pages">
+      <li><a href="">Home</a></li>
+      <li><a href="/archives.html">Archives</a></li>
+    </ul>
+  </section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post category-other">
+          <a href="/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
+      </li>
+      <li class="post category-technology">
+          <a href="/entry/2015/07/29/windows-10/">Windows 10!</a>
+      </li>
+      <li class="post category-reviews">
+          <a href="/entry/2015/05/22/game-review-bloodborne/">Game Review: Bloodborne</a>
+      </li>
+      <li class="post category-links">
+          <a href="/entry/2015/03/17/windows-hello-microsoft-passport-and-tamriel-unlimited/">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a>
+      </li>
+      <li class="post category-coding">
+          <a href="/entry/2015/03/14/fun-with-the-microsoft-band-sdk-preview/">Fun with the Microsoft Band SDK Preview</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li class="category-coding">
+          <a href="/category/coding.html">Coding</a>
+        </li>
+        <li class="category-links">
+          <a href="/category/links.html">Links</a>
+        </li>
+        <li class="category-other">
+          <a href="/category/other.html">Other</a>
+        </li>
+        <li class="category-reviews">
+          <a href="/category/reviews.html">Reviews</a>
+        </li>
+        <li class="category-technology">
+          <a href="/category/technology.html">Technology</a>
+        </li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+  </section>
+
+
+
+  <section>
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+      <li class="loading">Status updating...</li>
+    </ul>
+      <a href="https://github.com/mlindgren">@mlindgren</a> on GitHub
+    <script type="text/javascript">
+      $.domReady(function(){
+          if (!window.jXHR){
+              var jxhr = document.createElement('script');
+              jxhr.type = 'text/javascript';
+              jxhr.src = '/theme/js/jXHR.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(jxhr, s);
+          }
+
+          github.showRepos({
+              user: 'mlindgren',
+              count: 5,
+              skip_forks: false,
+              target: '#gh_repos'
+          });
+      });
+    </script>
+    <script src="/theme/js/github.js" type="text/javascript"> </script>
+  </section>
+
+    <section>
+        <h1>Social</h1>
+        <ul>
+            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+            <li><a href="#" target="_blank">Another social link</a></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Blogroll</h1>
+        <ul>
+            <li><a href="http://slatestarcodex.com" target="_blank">Slate Star Codex</a></li>
+        </ul>
+    </section>
+
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="/theme/js/modernizr-2.0.js"></script>
+  <script src="/theme/js/ender.js"></script>
+  <script src="/theme/js/octopress.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Android NDK Stack Trace Script &mdash; mlindgren.ca</title>
+  <meta name="author" content="Mitch Lindgren">
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="/favicon.png" rel="icon">
+
+  <link href="/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<!--
+/* @license
+* MyFonts Webfont Build ID 1737828, 2011-12-16T22:03:39-0500
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are 
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license at the URLs below.
+*
+* Webfont: Museo 700 by exljbris
+* URL: http://www.myfonts.com/fonts/exljbris/museo/700/
+* Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+* Licensed pageviews: unlimited
+*
+*
+* License: http://www.myfonts.com/viewlicense?type=web&buildid=1737828
+*
+* © 2011 Bitstream Inc
+*/
+-->
+<link rel="stylesheet" type="text/css" href="/theme/css/mlindgren_ca_museo700.css">
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+
+ <!-- Load FancyBox -->
+ <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
+ <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript">
+ </script>
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+// ender.js gobbles jQuery's ready event: Use ender.js $ instead
+$(document).ready(function() {
+    jQuery(".fancybox").fancybox(
+    {
+      helpers:
+      {
+        overlay:
+        {
+          locked: false
+        }
+      }
+    });
+});
+</script>
+
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="/">mlindgren.ca</a></h1>
+</hgroup>
+<div id="header-outer-wrap">
+  <div id="header-wrap">
+    <div id="header-background">
+      <img src="theme/images/header.jpg" class="header-background-stretch">
+    </div>
+  </div>
+</div></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+
+<ul class="main-navigation">
+      <li class="active">
+        <a href="/category/coding.html">Coding</a>
+      </li>
+      <li >
+        <a href="/category/links.html">Links</a>
+      </li>
+      <li >
+        <a href="/category/other.html">Other</a>
+      </li>
+      <li >
+        <a href="/category/reviews.html">Reviews</a>
+      </li>
+      <li >
+        <a href="/category/technology.html">Technology</a>
+      </li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div class="category-coding">
+  <article class="hentry" role="article">
+<header>
+      <h1 class="entry-title">Android NDK Stack Trace Script</h1>
+    <p class="meta">
+<time datetime="2011-04-09T16:30:00-07:00" pubdate>Sat 09 April 2011</time>    </p>
+</header>
+
+  <div class="entry-content"><p>I've finally started doing some Android development in earnest, and because I have a stubborn dislike of Java, I've decided to use the <a href="http://developer.android.com/sdk/ndk/index.html">Native Development Kit</a>.  The native development kit allows you to write "performance-critical" parts of your application in C or C++ code, which is then compiled to platform-native ARM or MIPS instructions.  The NDK is something of an unfriendly beast; it makes interaction with most regular Android libraries very difficult, and debugging native code on Android is none too easy.  Although Google provides a script which can attach gdb to your native code, I've not yet figured out how to use it properly; every time I execute it, gdb complains about missing debugging symbols and libraries and seems to be unable to do anything useful.  (I don't imagine it's too difficult, but I haven't spent much time on it—I've not needed to do much debugging yet.)</p>
+<p>When your native code crashes due to a segmentation fault or some other similar problem, though, you do get a nice stack trace in the Android debugging log, which you can view with <code>adb logcat</code>.  Unfortunately, the stack trace only gives you memory addresses, and you need to use another script to convert those memory addresses to lines of code.  That script is already included with the NDK, but it's a bit of a pain to use.  To that end, I've put together a simple shell script which glues everything together. I should mention that this is designed to be used with Linux or Mac OS X; if you'd like to do something similar on Windows, I'm sure it won't be hard, but you're on your own.  Here's how to use it:
+<ol>
+    <li>Create a folder in your project called "debug" (or whatever name you'd like)</li>
+    <li>Create a file called <code>debug.sh</code>, consisting of the following:</p>
+<div class="highlight"><pre><span class="c">#!/usr/bin/env bash</span>
+NDK_ROOT/toolchains/arm-eabi-4.4.0/prebuilt/linux-x86/bin/arm-eabi-objdump -S PATH_TO_SOLIB &gt; SOLIB_NAME.arm
+adb logcat -d &gt; logcat.txt
+python parse_stack.py SOLIB_NAME.arm logcat.txt
+</pre></div>
+
+
+<div class="highlight"><pre><span class="nt">&lt;li&gt;&lt;code&gt;</span>chmod +x debug.sh<span class="nt">&lt;/code&gt;</span> so that it&#39;s executable<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Run the script with <span class="nt">&lt;code&gt;</span>./debug.sh<span class="nt">&lt;/code&gt;</span> each time you need to see a stack trace<span class="nt">&lt;/li&gt;</span>
+</pre></div>
+
+
+<p></ol>
+Obviously there are a few things you'll need to replace in the above code.  <code>NDK_ROOT</code> should be the path to your Android NDK installation.  <code>PATH_TO_SOLIB</code> should be the path to your compiled shared object library.  Usually this will be in your project folder under <code>obj/local/armeabi</code>.  <code>SOLIB_NAME</code> can really be whatever name you want, but I liked to name the <code>.arm</code> file after the corresponding <code>.so</code> file for consistency.</p>
+<p>You should repeat line 2 for each shared object library you need to debug in your project, and repeat line 4 for each corresponding <code>.arm</code> file.  However, note that the <code>arm-eabi-objdump</code> process is quite slow, so if you have any large <code>.so</code> files which don't change frequently, you can skip dumping them to improve speed.  Just remember that if they do change, you'll need to dump them again to get accurate results.</p></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Mitch Lindgren
+    </span>
+  </span>
+<time datetime="2011-04-09T16:30:00-07:00" pubdate>Sat 09 April 2011</time>  <span class="categories">
+    <a class='category' href='/category/coding.html'>Coding</a>
+  </span>
+</p><div class="sharing">
+</div>    </footer>
+  </article>
+
+</div>
+<aside class="sidebar">
+  <section>
+    <h1>Pages</h1>
+    <ul id="sidebar_pages">
+      <li><a href="">Home</a></li>
+      <li><a href="/archives.html">Archives</a></li>
+    </ul>
+  </section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post category-other">
+          <a href="/blog/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
+      </li>
+      <li class="post category-technology">
+          <a href="/blog/2015/07/29/windows-10/">Windows 10!</a>
+      </li>
+      <li class="post category-reviews">
+          <a href="/blog/2015/05/22/game-review-bloodborne/">Game Review: Bloodborne</a>
+      </li>
+      <li class="post category-links">
+          <a href="/blog/2015/03/17/windows-hello-microsoft-passport-and-tamriel-unlimited/">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a>
+      </li>
+      <li class="post category-coding">
+          <a href="/blog/2015/03/14/fun-with-the-microsoft-band-sdk-preview/">Fun with the Microsoft Band SDK Preview</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li class="category-coding">
+          <a href="/category/coding.html">Coding</a>
+        </li>
+        <li class="category-links">
+          <a href="/category/links.html">Links</a>
+        </li>
+        <li class="category-other">
+          <a href="/category/other.html">Other</a>
+        </li>
+        <li class="category-reviews">
+          <a href="/category/reviews.html">Reviews</a>
+        </li>
+        <li class="category-technology">
+          <a href="/category/technology.html">Technology</a>
+        </li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+  </section>
+
+
+    <section>
+        <h1>Social</h1>
+        <ul>
+            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+            <li><a href="#" target="_blank">Another social link</a></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Blogroll</h1>
+        <ul>
+            <li><a href="http://slatestarcodex.com" target="_blank">Slate Star Codex</a></li>
+        </ul>
+    </section>
+
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="/theme/js/modernizr-2.0.js"></script>
+  <script src="/theme/js/ender.js"></script>
+  <script src="/theme/js/octopress.js" type="text/javascript"></script>
+</body>
+</html>
