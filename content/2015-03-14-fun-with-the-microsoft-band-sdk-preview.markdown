@@ -50,76 +50,76 @@ project on GitHub. If you are only connecting to the Band for a short time, you 
 block instead, as discussed above, which will ensure that `Dispose()` is called for you. Thanks to
 Phil for the correction.]
 
-{% codeblock lang:csharp App.xaml.cs %}
-using Microsoft.Band;
+    :::csharp
+    // App.xaml.cs
+    using Microsoft.Band;
 
-namespace BandDemo
-{
-  public sealed partial class App : Application
-  {
-    public static IBandClient BandClient
+    namespace BandDemo
     {
-      get; set;
-    }
-
-    // ...
-
-    private async void OnSuspending(object sender, SuspendingEventArgs e)
-    {
-        var deferral = e.SuspendingOperation.GetDeferral();
-
-        if(App.BandClient != null)
-        {
-            // Unsubscribe from sensor data so that we don't drain the Band's battery when
-            // the app is not in use.
-            await App.BandClient.SensorManager.Accelerometer.StopReadingsAsync();
-            await App.BandClient.SensorManager.Gyroscope.StopReadingsAsync();
-            await App.BandClient.SensorManager.HeartRate.StopReadingsAsync();
-
-            // Call Dispose to close the connect to the Band
-            App.BandClient.Dispose();
-
-            // We are done with this client, so assign null to the member variable so the
-            // IBandClient can be garbage collected
-            App.BandClient = null;
-        }
-
-        deferral.Complete();
-    }
-  }
-}
-{% endcodeblock %}
-
-{% codeblock lang:csharp MainPage.xaml.cs %}
-using Microsoft.Band;
-using Microsoft.Band.Sensors;
-
-namespace BandDemo
-{
-  public sealed partial class MainPage : Page
-  {
-
-    // ...
-
-    protected async override void OnNavigatedTo(NavigationEventArgs e)
-    {
-      IBandInfo[] pairedBands = await BandClientManager.Instance.GetBandsAsync();
-
-      try
+      public sealed partial class App : Application
       {
-          App.BandClient = await BandClientManager.Instance.ConnectAsync(pairedBands[0]);
+	public static IBandClient BandClient
+	{
+	  get; set;
+	}
 
-          // Do work after successful connect
-          System.Diagnostics.Debug.WriteLine("Connected!");
-      }
-      catch(Exception)
-      {
-        System.Diagnostics.Debug.WriteLine("Connection failed!");
+	// ...
+
+	private async void OnSuspending(object sender, SuspendingEventArgs e)
+	{
+	    var deferral = e.SuspendingOperation.GetDeferral();
+
+	    if(App.BandClient != null)
+	    {
+		// Unsubscribe from sensor data so that we don't drain the Band's battery when
+		// the app is not in use.
+		await App.BandClient.SensorManager.Accelerometer.StopReadingsAsync();
+		await App.BandClient.SensorManager.Gyroscope.StopReadingsAsync();
+		await App.BandClient.SensorManager.HeartRate.StopReadingsAsync();
+
+		// Call Dispose to close the connect to the Band
+		App.BandClient.Dispose();
+
+		// We are done with this client, so assign null to the member variable so the
+		// IBandClient can be garbage collected
+		App.BandClient = null;
+	    }
+
+	    deferral.Complete();
+	}
       }
     }
-  }
-}
-{% endcodeblock %}
+
+    :::csharp
+    // MainPage.xaml.cs
+    using Microsoft.Band;
+    using Microsoft.Band.Sensors;
+
+    namespace BandDemo
+    {
+      public sealed partial class MainPage : Page
+      {
+
+	// ...
+
+	protected async override void OnNavigatedTo(NavigationEventArgs e)
+	{
+	  IBandInfo[] pairedBands = await BandClientManager.Instance.GetBandsAsync();
+
+	  try
+	  {
+	      App.BandClient = await BandClientManager.Instance.ConnectAsync(pairedBands[0]);
+
+	      // Do work after successful connect
+	      System.Diagnostics.Debug.WriteLine("Connected!");
+	  }
+	  catch(Exception)
+	  {
+	    System.Diagnostics.Debug.WriteLine("Connection failed!");
+	  }
+	}
+      }
+    }
 
 The next thing you'll notice in the documentation is that it recommends that you query the device
 for available reporting intervals for each sensor. It's fairly easy to miss that setting the
@@ -138,20 +138,19 @@ Luckily, the solution is simple: you just need to use `Dispatcher.RunAsync` to d
 So, putting it all together, here's how you subscribe to sensor data and update the UI when it
 changes:
 
-{% codeblock lang:csharp %}
-App.BandClient.SensorManager.Accelerometer.ReadingChanged += async (sender, args) =>
-{
-  await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-  {
-    AccelerometerXValue.Text = args.SensorReading.AccelerationX.ToString("###00.00");
-    AccelerometerYValue.Text = args.SensorReading.AccelerationY.ToString("###00.00");
-    AccelerometerZValue.Text = args.SensorReading.AccelerationZ.ToString("###00.00");
+    :::csharp
+    App.BandClient.SensorManager.Accelerometer.ReadingChanged += async (sender, args) =>
+    {
+      await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+      {
+	AccelerometerXValue.Text = args.SensorReading.AccelerationX.ToString("###00.00");
+	AccelerometerYValue.Text = args.SensorReading.AccelerationY.ToString("###00.00");
+	AccelerometerZValue.Text = args.SensorReading.AccelerationZ.ToString("###00.00");
 
-    System.Diagnostics.Debug.WriteLine("Got accelerometer event!");
-  });
-};
+	System.Diagnostics.Debug.WriteLine("Got accelerometer event!");
+      });
+    };
 
-await App.BandClient.SensorManager.Accelerometer.StartReadingsAsync();
-{% endcodeblock %}
+    await App.BandClient.SensorManager.Accelerometer.StartReadingsAsync();
 
 That's it for now! If you have any questions, leave a comment and I'll do my best to answer them.

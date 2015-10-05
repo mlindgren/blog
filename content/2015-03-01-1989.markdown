@@ -52,7 +52,7 @@ Swift's latest album, _[1989](http://taylorswift.com/releases#/release/12453)_.
 
 <div style="margin-left: auto; margin-right: auto; text-align: center;">
 <a href="http://taylorswift.com/releases#/release/12453">
-<img src="/images/TaylorSwift1989.png" alt="Taylor Swift - 1989 album cover"/>
+<img src="http://files.mlindgren.ca/images/TaylorSwift1989.png" alt="Taylor Swift - 1989 album cover"/>
 </a>
 <br />
 <small>Copyright 2014 Big Machine Records. Used under Fair Use.</small>

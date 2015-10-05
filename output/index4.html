@@ -120,76 +120,14 @@ $(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
-  		<article class="category-coding">
-<header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/09/21/how-to-link-glut-in-qt-creator-on-os-x/">How to link GLUT in Qt Creator on OS X</a>
-      </h1>
-    <p class="meta">
-<time datetime="2011-09-21T00:34:00-07:00" pubdate>Wed 21 September 2011</time>  &ndash; &#128339; 2 min read
-    </p>
-</header>
-
-  <div class="entry-content"><p>This tutorial is for an extremely specific and possibly unusual set of circumstances, but I'm hoping that it will prove useful to someone. For one of my courses this term, we're building OpenGL apps using Nokia's open source Qt framework. Qt provides some very nice scaffolding, and the Qt Creator IDE is among the best I've used, although I imagine it lacks flexibility for general-purpose applications—that is, you probably wouldn't use it to build non-Qt applications. Qt also allows one to easily write cross-platform C++ GUI applications. That said, linking procedures can be a bit different on different platforms, and as a beginner it's not always immediately obvious how instructions for Windows development translate into other environments.</p>
-<p>In particular, I found myself having difficulty linking the OpenGL Utility Toolkit (GLUT) with my project on Mac OS X. After much Googling and some frustration, I came up with the correct way to go about it, which is as follows:
-<ol>
-    <li>In Qt Creator, open your project file (.pro) in the text editor.  Right click on the text editor pane and select "Add Library..."</li>
-    <li>Chose "System Library."</li>
-    <li>Locate the GLUT framework.  On my Mac, running Lion, I used <code>/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework</code>. However, it seems there are multiple different copies on the disk that you could use.  If that path doesn't work for you, just search for <code>glut.h</code> in Finder and you'll find a copy of the framework.  The path you enter into Qt Creator should point to a <code>.framework</code> directory.</li>
-    <li>Qt Creator will generate code in your project file which will link to the correct framework or library depending on which platform the code is being compiled on.</li>
-    <li>Finally, because Apple loves to be different, the glut.h header path is different on OS X.  <strong>You'll need to <code>#include &lt;GLUT/glut.h&gt;</code></strong>, instead of <code>&lt;gl/glut.h&gt;</code> is usually the case.  You can use preprocessor conditional statements to make this inclusion cross-platform:
-<pre>#if defined(<strong>APPLE</strong>) || defined(MACOSX)
-  #include &lt;GLUT/glut.h&gt;</p>
-<h1>else</h1>
-<p>#include &lt;gl/glut.h&gt;</p>
-<h1>endif</pre></h1>
-<p></li>
-</ol>
-That's it! If you have any trouble, leave a comment.</p></div>
-  		</article>
   		<article class="category-technology">
 <header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/09/21/how-to-reinstall-os-x-from-a-disc-image-using-only-one-computer/">How to reinstall OS X from a disc image using only one computer</a>
-      </h1>
-    <p class="meta">
-<time datetime="2011-09-21T00:17:00-07:00" pubdate>Wed 21 September 2011</time>  &ndash; &#128339; 2 min read
-    </p>
-</header>
-
-  <div class="entry-content"><p>My internship recently ended, and as such, I had to move from Calgary back to Edmonton, where I'll be completing the fourth year of my Computing Science degree at the University of Alberta. I hope to be able to write more about my internship later, but at the moment I want to share a handy trick I discovered for reinstalling OS X. The reason I bring up the move is that after I arrived in Edmonton, I found myself wanting to reformat my Mac Mini and re-install Snow Leopard, but my Snow Leopard disc was nowhere to be found. Luckily, as a semi-paranoid computer scientist with an abundance of disk space, I keep images of important discs on my network-attached storage device for just such occasions.</p>
-<p>Unfortunately, however, the Snow Leopard disc image is large enough that it can only be burned to a dual-layer DVD. I don't tend to keep writeable dual-layer DVDs lying around, so I needed a solution which required only the disc image itself. There are a number of methods available for installing OS X over the network, but none of them seemed to work for me—perhaps owing to the fact that I had only one Mac. Luckily, I discovered that you can install OS X from a separate partition on the same disk. Here's how:
-<ol>
-    <li>First, you'll need to re-partition your disk. Open Disk Utility and select the disk you want to use. Be sure to select the disk itself, rather than one of its partitions, which are indented beneath the disk.</li>
-    <li>Click the + button to add a new partition, and drag the new partition's section in the disk layout graph upwards until it's large enough to store your operating system disc image. Apply the changes. It may take some time for the disk to be re-partitioned.</li>
-    <li>Now, select the new partition from the list on the left. Go to the Restore tab, and restore your operating system disc image to the new partition.</li>
-    <li>Once the restore is complete, restart your computer, holding Option (Alt) at start-up. This should bring up a list of available start-up disks. Choose your new partition.</li>
-    <li>You should now be at the installer, and you can re-install to your primary partition. Once the installation is complete, delete your installation disc partition to and resize the primary partition to reclaim the extra space.</li>
-</ol>
-That's it! In retrospect, it's completely obvious, but I haven't seen these instructions anywhere else on the web. This technique might be particularly useful for owners of Macs without disc drives.</p></div>
-  		</article>
-  		<article class="category-other">
-<header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/08/22/rest-in-peace-jack-layton/">Rest in Peace, Jack Layton</a>
-      </h1>
-    <p class="meta">
-<time datetime="2011-08-22T20:36:00-07:00" pubdate>Mon 22 August 2011</time>  &ndash; &#128339; 1 min read
-    </p>
-</header>
-
-  <div class="entry-content"><p>I don't discuss politics on this site, but today warrants an exception. Canada has suffered a terrible loss with the death of Jack Layton, the leader of the federal New Democratic Party. He was an inspiring figure, hopeful and optimistic right to the end, and he devoted his life to the betterment of Canada and its citizens. He was taken from us far too soon, and will be sorely missed.
-<p style="text-align: center;"><a title="Jack Layton.  Click to view full resoltuon." href="/images/jack_layout.jpg"><img src="/images/jack_layton.jpg" alt="" width="658" height="370" /></a></p>
-Rest in peace.</p></div>
-  		</article>
-  		<article class="category-technology">
-<header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/07/14/in-defense-of-clones/">In Defense of Clones</a>
-      </h1>
     <p class="meta">
 <time datetime="2011-07-14T22:23:00-07:00" pubdate>Thu 14 July 2011</time>  &ndash; &#128339; 8 min read
     </p>
+      <h1 class="entry-title">
+        <a href="/entry/2011/07/14/in-defense-of-clones/">In Defense of Clones</a>
+      </h1>
 </header>
 
   <div class="entry-content"><p>With the phenomenal and growing successes of the iPhone App Store, the Android Market, and the Xbox Live Indie Games marketplace, gamers have seen an unprecedented number of titles which could be described as "clones" of more successful games&mdash;or rip-offs, if you're feeling less kind.  Along with these titles has come a veritable tsunami of hatred for their developers, from game critics and anonymous Internet commenters alike.  The commercial success of some of these titles, such as <em>Angry Birds</em>,<sup>1</sup> has shown that average gamers are happy to patronize any developer who can provide a fun experience, regardless of originality.  However, any mention of a new clone on a gaming blog or podcast inevitably brings about a stunning amount of vitriol from gamers who, presumably, are upset that their favorite megacorporations aren't getting their due.</div>
@@ -199,12 +137,12 @@ Rest in peace.</p></div>
   		</article>
   		<article class="category-coding">
 <header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/06/29/what-are-lambdas-good-for-anyway/">What are lambdas good for, anyway?</a>
-      </h1>
     <p class="meta">
 <time datetime="2011-06-29T22:27:00-07:00" pubdate>Wed 29 June 2011</time>  &ndash; &#128339; 2 min read
     </p>
+      <h1 class="entry-title">
+        <a href="/entry/2011/06/29/what-are-lambdas-good-for-anyway/">What are lambdas good for, anyway?</a>
+      </h1>
 </header>
 
   <div class="entry-content"><p>I had a discussion today about what lambda functions are used for, how they differ from regular functions, and why they're important. I thought I'd reproduce it here, as it seems that lambdas are often thought of as confusing and obscure. The truth is that they're very simple, and also quite powerful. While they can reduce readability if used incorrectly, they do serve an important purpose, and those who understand them should have nothing to fear from them. This discussion pertains specifically to lambda functions as they're implemented in Python, but they're very similar in other languages where they're available.</div>
@@ -214,12 +152,12 @@ Rest in peace.</p></div>
   		</article>
   		<article class="category-technology">
 <header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/06/12/im-considering-switching-back-to-ios-heres-why/">I'm considering switching back to iOS. Here's why.</a>
-      </h1>
     <p class="meta">
 <time datetime="2011-06-12T22:13:00-07:00" pubdate>Sun 12 June 2011</time>  &ndash; &#128339; 9 min read
     </p>
+      <h1 class="entry-title">
+        <a href="/entry/2011/06/12/im-considering-switching-back-to-ios-heres-why/">I'm considering switching back to iOS. Here's why.</a>
+      </h1>
 </header>
 
   <div class="entry-content"><p><em>In September of last year I ditched my iPhone 3G and switched to the Android-powered HTC Desire (which I later sold in order to purchase a Desire Z, which sports a physical keyboard.)  I'm sad to report that I'm now considering switching back to iOS, after less than a year on the Android platform.  The following is an excerpt from an e-mail I wrote to a friend of mine whom I'd describe as a fervent Android evangelist, detailing some of the frustrations I have with the operating system and why I feel that I might be better served by iOS.  I've edited it slightly to make it more readable for anyone who might come across this blog.</em></p>
@@ -233,12 +171,12 @@ Rest in peace.</p></div>
   		</article>
   		<article class="category-technology">
 <header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/04/16/android-uiux-gripes/">Android UI/UX gripes</a>
-      </h1>
     <p class="meta">
 <time datetime="2011-04-16T22:08:00-07:00" pubdate>Sat 16 April 2011</time>  &ndash; &#128339; 3 min read
     </p>
+      <h1 class="entry-title">
+        <a href="/entry/2011/04/16/android-uiux-gripes/">Android UI/UX gripes</a>
+      </h1>
 </header>
 
   <div class="entry-content"><p>The week before last, whilst browsing <a href="http://reddit.com">Reddit</a> I came across a blog by the name of <a href="http://android-gripes.tumblr.com/">"Android Gripes."</a> The name is perhaps a bit misleading, as it's not actually a blog by an Android user hoping to spur Google into making UI improvements, as I would have expected.  It is, rather, a blog by a self-proclaimed Apple fanboy (though he's recently <a href="http://www.reddit.com/r/Android/comments/glbjz/android_gripes_why_do_apps_from_the_same_company/c1ogv3q">edited his about page to remove that admission</a>) complaining about Android for the sake of... well, complaining about Android.</div>
@@ -248,12 +186,12 @@ Rest in peace.</p></div>
   		</article>
   		<article class="category-coding">
 <header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/04/09/android-ndk-stack-trace-script/">Android NDK Stack Trace Script</a>
-      </h1>
     <p class="meta">
 <time datetime="2011-04-09T16:30:00-07:00" pubdate>Sat 09 April 2011</time>  &ndash; &#128339; 2 min read
     </p>
+      <h1 class="entry-title">
+        <a href="/entry/2011/04/09/android-ndk-stack-trace-script/">Android NDK Stack Trace Script</a>
+      </h1>
 </header>
 
   <div class="entry-content"><p>I've finally started doing some Android development in earnest, and because I have a stubborn dislike of Java, I've decided to use the <a href="http://developer.android.com/sdk/ndk/index.html">Native Development Kit</a>.  The native development kit allows you to write "performance-critical" parts of your application in C or C++ code, which is then compiled to platform-native ARM or MIPS instructions.  The NDK is something of an unfriendly beast; it makes interaction with most regular Android libraries very difficult, and debugging native code on Android is none too easy.  Although Google provides a script which can attach gdb to your native code, I've not yet figured out how to use it properly; every time I execute it, gdb complains about missing debugging symbols and libraries and seems to be unable to do anything useful.  (I don't imagine it's too difficult, but I haven't spent much time on it—I've not needed to do much debugging yet.)</div>
@@ -263,12 +201,12 @@ Rest in peace.</p></div>
   		</article>
   		<article class="category-links">
 <header>
-      <h1 class="entry-title">
-        <a href="/entry/2011/02/03/non-myths-about-programming/">Non-Myths About Programming</a>
-      </h1>
     <p class="meta">
 <time datetime="2011-02-03T20:53:00-08:00" pubdate>Thu 03 February 2011</time>  &ndash; &#128339; 1 min read
     </p>
+      <h1 class="entry-title">
+        <a href="/entry/2011/02/03/non-myths-about-programming/">Non-Myths About Programming</a>
+      </h1>
 </header>
 
   <div class="entry-content"><p>While browsing <a href="http://reddit.com">Reddit</a> today, I came across a short essay by
@@ -282,12 +220,12 @@ and check it out for yourself.</p></div>
   		</article>
   		<article class="category-technology">
 <header>
-      <h1 class="entry-title">
-        <a href="/entry/2010/10/03/making-samba-shares-accessible-to-apache-on-os-x/">Making Samba shares accessible to Apache on OS X</a>
-      </h1>
     <p class="meta">
 <time datetime="2010-10-03T19:29:00-07:00" pubdate>Sun 03 October 2010</time>  &ndash; &#128339; 2 min read
     </p>
+      <h1 class="entry-title">
+        <a href="/entry/2010/10/03/making-samba-shares-accessible-to-apache-on-os-x/">Making Samba shares accessible to Apache on OS X</a>
+      </h1>
 </header>
 
   <div class="entry-content"><p>As a small weekend project, I've been working on a simple Python HTTP "file server" of sorts.  The basic idea is that authorized users can log in to a web interface and browse files in specific locations on my home network.  The Python script is accessed through Apache on my Mac Mini, but some of the files I need access to are on Windows boxes.  Unfortunately this presented something of a problem, as the Apache user on OS X (<code>_www</code> as of Snow Leopard) doesn't have permission to access Windows shares mounted by users.</p>
@@ -307,6 +245,53 @@ sudo chmod 755 /Volumes/Mount_Name
 </ol>
 I doubt a great number of people will need this information as it's a strange sort of setup, but it's my hope that these instructions will save someone some time.</p></div>
   		</article>
+  		<article class="category-coding">
+<header>
+    <p class="meta">
+<time datetime="2010-09-12T17:02:00-07:00" pubdate>Sun 12 September 2010</time>  &ndash; &#128339; 2 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="/entry/2010/09/12/android-development-device-setup-in-ubuntu-1004/">Android Development Device Setup in Ubuntu 10.04</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>I spent part of last night setting up my HTC Desire as a development device on my Ubuntu laptop.  This was a somewhat frustrating process, because a lot of the information I came across seem to be outdated and didn't work for me.  Even the <a title="Android documentation for developing on a device" href="http://developer.android.com/guide/developing/device.html">official documentation</a> refers to a version of Ubuntu which is more than two years old.  I did eventually piece together the correct process for Ubuntu 10.04, so I'm documenting that process here in the hope that it will help out other developers in the future.  This guide assumes that you've already installed and configured the <a href="http://developer.android.com/sdk/index.html">Android SDK.</a></div>
+  <footer>
+    <a rel="full-article" href="/entry/2010/09/12/android-development-device-setup-in-ubuntu-1004/">More &rarr;</a>
+  </footer>
+  		</article>
+  		<article class="category-technology">
+<header>
+    <p class="meta">
+<time datetime="2010-09-06T20:19:00-07:00" pubdate>Mon 06 September 2010</time>  &ndash; &#128339; 5 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="/entry/2010/09/06/android-first-impressions/">Android First Impressions</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>Like a number of disgruntled users and developers, I recently decided to trade my iPhone in for an Android device.  My distaste for Apple's app store policies, design philosophy and corporate culture had been pushing me in that direction for some time.  The final straw, though, was iOS 4, which rendered my iPhone 3G almost unusably slow while failing to grant <em>any </em>of the most noteworthy<a title="new features." href="http://www.apple.com/iphone/ios4/" target="_blank"> new features.</a> The <a title="My iPhone Debacle" href="http://www.mlindgren.ca/archives/79">inordinate difficulty</a> of downgrading iOS exacerbates the problem for users who are still stuck with the iPhone 3G.  To be fair to Apple, Wednesday will see iOS 4.1 released, and they've claimed that it will fix the iPhone 3G performance issues.  For me, though, 4.1 is too little, too late.</div>
+  <footer>
+    <a rel="full-article" href="/entry/2010/09/06/android-first-impressions/">More &rarr;</a>
+  </footer>
+  		</article>
+  		<article class="category-coding">
+<header>
+    <p class="meta">
+<time datetime="2010-08-27T19:01:00-07:00" pubdate>Fri 27 August 2010</time>  &ndash; &#128339; 4 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="/entry/2010/08/27/where-are-all-the-computer-scientists/">Where are all the Computer Scientists?</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>It's common knowledge that enrollment in computer science programs has declined significantly over the past decade.  Although the trend seems to be reversing itself with enrollment <a href="http://arstechnica.com/science/news/2010/03/computer-science-enrollment-continues-growth-but-phds-down.ars">increasing over the past few years</a>, computer science educators shouldn't get complacent just yet.  There's still much work to be done in order to ensure that computer science departments continue to grow and are able to meet the increasing demand for technically skilled graduates.</p>
+<p>I've always felt that a lack of exposure is one of the primary detriments to computer science enrollment.  While I don't have any hard data, my own experience combined with an informal surveyal of friends and colleagues leads me to believe that a large percentage of North American high schools—possibly even a majority—offer little in the way of comprehensive computing classes.  While I don't dispute the importance of math, English and science, I can't help but wonder why computing isn't given an equal footing in the educational sphere, given its ubiquity today.</p>
+<p>I've encountered a great number of intelligent and educated people who have <em>no idea whatsoever</em> about what the field of computer science is, or even how computers and software work.  I understand that most people don't necessarily need that information.  However, it's odd to me that basic computer literacy isn't required of college graduates (let alone high school students) in the same way that basic writing and math skills are.  In the interest of meeting ever-increasing economic demand for technically skilled graduates, shouldn't we do more to expose students to computing?</div>
+  <footer>
+    <a rel="full-article" href="/entry/2010/08/27/where-are-all-the-computer-scientists/">More &rarr;</a>
+  </footer>
+  		</article>
 <div class="pagination">
     <a class="prev" href="/index5.html">&larr; Older</a>
 
@@ -324,6 +309,9 @@ I doubt a great number of people will need this information as it's a strange so
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-reviews">
+          <a href="/entry/2015/09/25/tv-series-review-mr-robot-season-one/">TV Series Review: Mr. Robot, Season One</a>
+      </li>
       <li class="post category-other">
           <a href="/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
@@ -335,9 +323,6 @@ I doubt a great number of people will need this information as it's a strange so
       </li>
       <li class="post category-links">
           <a href="/entry/2015/03/17/windows-hello-microsoft-passport-and-tamriel-unlimited/">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a>
-      </li>
-      <li class="post category-coding">
-          <a href="/entry/2015/03/14/fun-with-the-microsoft-band-sdk-preview/">Fun with the Microsoft Band SDK Preview</a>
       </li>
     </ul>
   </section>
@@ -397,17 +382,15 @@ I doubt a great number of people will need this information as it's a strange so
     <script src="/theme/js/github.js" type="text/javascript"> </script>
   </section>
 
-    <section>
+    <section class="social">
         <h1>Social</h1>
         <ul>
-            <li><a href="#" target="_blank">You can add links in your config file</a></li>
-            <li><a href="#" target="_blank">Another social link</a></li>
-        </ul>
-    </section>
-    <section>
-        <h1>Blogroll</h1>
-        <ul>
-            <li><a href="http://slatestarcodex.com" target="_blank">Slate Star Codex</a></li>
+            <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
+            <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
+            <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
+            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
+            <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
+            <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
     </section>
 
