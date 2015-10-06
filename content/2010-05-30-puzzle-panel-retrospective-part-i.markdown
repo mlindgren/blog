@@ -2,6 +2,8 @@ title: Puzzle Panel Postmortem: Introduction
 date: 2010-05-30 01:26
 comments: true
 category: Coding
+slug: puzzle-panel-retrospective-part-i
+tags: Puzzle Panel, iPhone, University of Alberta
 
 Welcome, dear reader!
 

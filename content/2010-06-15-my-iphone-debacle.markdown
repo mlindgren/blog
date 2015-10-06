@@ -1,12 +1,10 @@
----
 layout: post
 Title: My iPhone debacle
 date: 2010-06-15 23:07
-comments: true
-external-url:
 Category: Technology
-published: true
----
+slug: my-iphone-debacle
+tags: iPhone, Android, Complaints Department
+
 ...or "Another Reason I'm Considering <em>Switching</em> to Android."
 
 Yesterday evening, as I was leaving work, I was carrying on a conversation via text message with a friend of mine.  Upon arriving home, I realized that she'd apparently stopped responding, so I pulled my phone out of my pocket to check if I'd missed a message.  Instead of my usual lock screen, though, I was met a very unwelcome "Connect to iTunes" prompt.  I'd been running the beta of OS 4, and it turns out that if your developer licence expires while you still have the beta installed, Apple will <em>remotely lock you out of your device without so much as a warning.</em> I guess I should have expected as much.<!-- PELICAN_END_SUMMARY -->

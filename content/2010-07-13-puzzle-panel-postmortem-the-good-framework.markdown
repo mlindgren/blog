@@ -1,14 +1,13 @@
----
-layout: post
 Title: Puzzle Panel Postmortem: Framework
 date: 2010-07-13 00:33
-comments: true
-external-url:
 Category: Coding
-published: true
----
+slug: puzzle-panel-postmortem-the-good-framework
+tags: Puzzle Panel, iPhone, OpenGL
+
 I'm currently reading <a title="Coders at Work" href="http://www.codersatwork.com/">Coders at Work</a> by Peter Seibel.  The book is a collection of interviews with respected and knowledgeable programmers.  While the interview format can be somewhat difficult to read at times, the book is excellent.  Seibel is himself an experienced programmer, and asks the sort of insightful questions no ordinary interviewer could, making for fascinating discussions.  One could mine the book for weeks for interesting quotes.  I'm going to try to resist that temptation, but because it relates to the topic at hand, I will permit myself to share with you one statement made by Joe Armstrong:
-<blockquote>Being a young programmer today must be awful—you can choose 20 different programming languages, dozens of framework[s] and operating systems and you're paralysed by choice.</blockquote>
+
+> Being a young programmer today must be awful—you can choose 20 different programming languages, dozens of framework[s] and operating systems and you're paralysed by choice.
+
 I think Armstrong is mistaken; it's anything but awful to be a young programmer today.  However, it's certainly true that the number of choices one must make in starting a project can be daunting.  The choices you make at the start of a project can have far-reaching implications.  Choose wisely and your endeavour might be easy and successful, but choose poorly and you'll almost certainly regret it later.  For iPhone game developers, perhaps the most important choice that must be made early on in a project is which graphics libraries to use.<!-- PELICAN_END_SUMMARY -->
 
 There are essentially two graphics libraries for iPhone game developers to choose between.  Apple's <a title="Quartz" href="http://developer.apple.com/iphone/library/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html" target="_blank">Quartz</a> and Core Animation libraries provide a fairly robust set of classes and methods for 2D drawing, and they're quite easy to use and well-integrated with regular iPhone UI elements.  Of course, this simplicity comes at a price; the performance of Quartz leaves something to be desired for high-complexity scenes.  The other option is, of course, OpenGL.  OpenGL offers much better performance (and is of course capable of 3D, which Quartz is not), but it's also more difficult to use.
@@ -19,8 +18,8 @@ Luckily, another option presented itself to me in the form of <a title="Cocos2D 
 
 There are a multitude of excellent <a title="Cocos2D tutorials" href="http://www.cocos2d-iphone.org/wiki/doku.php/" target="_blank">Cocos2D tutorials</a> on the Internet, so I'm not (at this time) going to go into much detail about how it's used.  For illustrative purposes, though, I will provide a specific example of how a scene is organized in Puzzle Panel:
 
-<a href="/images/nodes.png"><img class="aligncenter size-medium wp-image-101"
-title="Node usage in Puzzle Panel" src="/images/nodes-300x271.png" alt="Node usage in Puzzle Panel" width="300" height="271" style="display: block; margin-left: auto; margin-right: auto;"/></a>
+<a href="http://files.mlindgren.ca/images/nodes.png"><img class="aligncenter size-medium wp-image-101"
+title="Node usage in Puzzle Panel" src="http://files.mlindgren.ca/images/nodes-300x271.png" alt="Node usage in Puzzle Panel" width="300" height="271" style="display: block; margin-left: auto; margin-right: auto;"/></a>
 
 The above is a side-view of a typical game scene in Puzzle Panel.  Rendered objects in Cocos2D are always subclasses of <span style="display: inline; font-family: Courier">CCNode</span>, labeled "Node" in the diagram above.  Each node (except for the top-level node, the Scene) has a parent and may have any number of children; Cocos2D uses a simple 2D scene graph in which nodes are rendered breadth-first.  <span style="display: inline; font-family: Courier">CCLayer</span>s, or "Layers" above, are simple Node subclasses which are typically used for scene organization: one might have a background layer and a foreground layer, and add sprites to each as necessary.
 
