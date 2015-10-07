@@ -3,7 +3,7 @@ Title: My iPhone debacle
 date: 2010-06-15 23:07
 Category: Technology
 slug: my-iphone-debacle
-tags: iPhone, Android, Complaints Department
+tags: iPhone, Android, Shouting into the void
 
 ...or "Another Reason I'm Considering <em>Switching</em> to Android."
 

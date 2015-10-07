@@ -1,12 +1,10 @@
----
 layout: post
 Title: I'm considering switching back to iOS. Here's why.
 date: 2011-06-12 22:13
-comments: true
-external-url:
 Category: Technology
-published: true
----
+slug: im-considering-switching-back-to-ios-heres-why
+tags: Android, iOS, Shouting into the void
+
 <p><em>In September of last year I ditched my iPhone 3G and switched to the Android-powered HTC Desire (which I later sold in order to purchase a Desire Z, which sports a physical keyboard.)  I'm sad to report that I'm now considering switching back to iOS, after less than a year on the Android platform.  The following is an excerpt from an e-mail I wrote to a friend of mine whom I'd describe as a fervent Android evangelist, detailing some of the frustrations I have with the operating system and why I feel that I might be better served by iOS.  I've edited it slightly to make it more readable for anyone who might come across this blog.</em></p>
 
 <p><em>I really want to like the Android platform, and writing this gave me no joy.  There are two reasons I'm posting it here, though.  The first is simply that the purpose of this website is for me to post about my programming and my experiences with technology (as well as whatever else catches my fancy.)  The second is that I hope that sharing my honest opinion about Android might be helpful to anyone considering a phone purchase.</em></p><!-- PELICAN_END_SUMMARY -->

@@ -4,8 +4,10 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tag: Guide &mdash; mlindgren.ca</title>
+  <title>Making Samba shares accessible to Apache on OS X &mdash; mlindgren.ca</title>
   <meta name="author" content="Mitch Lindgren">
+
+
 
 
 
@@ -113,65 +115,55 @@ $(document).ready(function() {
       <li >
         <a href="/category/reviews.html">Reviews</a>
       </li>
-      <li >
+      <li class="active">
         <a href="/category/technology.html">Technology</a>
       </li>
 </ul></nav>
   <div id="main">
     <div id="content">
-<div>
-	<article role="article">
-    	<header>
-    		<h1 class="entry-title">Tag: Guide</h1>
-    	</header>
+<div class="category-technology">
+  <article class="hentry" role="article">
+<header>
+    <p class="meta">
+<time datetime="2010-10-03T19:29:00-07:00" pubdate>Sun 03 October 2010</time>  &ndash; &#128339; 2 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="/entry/2010/10/03/194/">Making Samba shares accessible to Apache on OS X</a>
+      </h1>
+</header>
 
-    	<div id="blog-archives">
-            <h2>2011</h2>
-                    <article>
-                        <h1><a href="/entry/2011/04/09/android-ndk-stack-trace-script/">Android NDK Stack Trace Script</a></h1>
-                        <time datetime="2011-04-09 16:30:00-07:00" pubdate>
-                            <span class="month">Apr</span>
-                            <span class="day">09</span>
-                            <span class="year">2011</span>
-                        </time>
-                        <footer>
-                            <span class="categories">posted in
-                                <a class='category' href='/category/coding.html'>Coding</a>
-                            </span>
-  &ndash; &#128339; 2 min read
-                        </footer>
-                    </article>
-            <h2>2010</h2>
-                    <article>
-                        <h1><a href="/entry/2010/10/03/194/">Making Samba shares accessible to Apache on OS X</a></h1>
-                        <time datetime="2010-10-03 19:29:00-07:00" pubdate>
-                            <span class="month">Oct</span>
-                            <span class="day">03</span>
-                            <span class="year">2010</span>
-                        </time>
-                        <footer>
-                            <span class="categories">posted in
-                                <a class='category' href='/category/technology.html'>Technology</a>
-                            </span>
-  &ndash; &#128339; 2 min read
-                        </footer>
-                    </article>
-                    <article>
-                        <h1><a href="/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/">Android Development Device Setup in Ubuntu 10.04</a></h1>
-                        <time datetime="2010-09-12 17:02:00-07:00" pubdate>
-                            <span class="month">Sep</span>
-                            <span class="day">12</span>
-                            <span class="year">2010</span>
-                        </time>
-                        <footer>
-                            <span class="categories">posted in
-                                <a class='category' href='/category/coding.html'>Coding</a>
-                            </span>
-  &ndash; &#128339; 2 min read
-                        </footer>
-                    </article>
-	    </div>
-    </article>
+  <div class="entry-content"><p>As a small weekend project, I've been working on a simple Python HTTP "file server" of sorts.  The basic idea is that authorized users can log in to a web interface and browse files in specific locations on my home network.  The Python script is accessed through Apache on my Mac Mini, but some of the files I need access to are on Windows boxes.  Unfortunately this presented something of a problem, as the Apache user on OS X (<code>_www</code> as of Snow Leopard) doesn't have permission to access Windows shares mounted by users.</p>
+<p>Sounds simple enough, right?  Just <code>chmod</code> or <code>chown</code> the Windows share and go to town.  Unfortunately, this doesn't seem to work; neither <code>chown</code> or <code>chmod</code> have any effect on mounted Windows shares.  Oddly, they don't output any errors; they just don't <em>do anything.</em> The only way around this seems to be to mount the shares <em>as</em> the Apache user (or whichever user you need to have access).  Here's how to do so in Snow Leopard, with instructions modified slightly from a <a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a> <a title="Stack Overflow: mount a windows smb share on OS X as so it can be accessed by 'www' user" href="http://stackoverflow.com/questions/324171/mount-a-windows-smb-share-on-os-x-as-so-it-can-be-accessed-by-www-user" target="_blank">question on the subject</a>:
+<ol>
+    <li>Create the mountpoint<br />
+        <code>mkdir /Volumes/Mount_Name</code></li>
+    <li>Set the permissions on the mount point
+<pre><code>sudo chown _www:_www /Volumes/Mount_Name
+sudo chmod 755 /Volumes/Mount_Name
+</code></pre>
+</li>
+    <li>If necessary, make a symlink from your Apache documents folder to the mount point<br />
+         <code>ln -s /Volumes/Mount_Name /Library/WebServer/Documents/Mount_Name</code></li>
+    <li>Mount the share <strong>as the Apache user</strong><br />
+        <code>sudo -u _www mount_smbfs //DOMAIN;User:Password@Host/Share /Volumes/Mount_Name</code></li>
+</ol></p>
+<p>I doubt a great number of people will need this information as it's a strange sort of setup, but it's my hope that these instructions will save someone some time.</p></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Mitch Lindgren
+    </span>
+  </span>
+<time datetime="2010-10-03T19:29:00-07:00" pubdate>Sun 03 October 2010</time>  <span class="categories">
+    <a class='category' href='/category/technology.html'>Technology</a>
+  </span>
+  <span class="categories">
+    <a class="category" href="/tag/os-x.html">OS X</a>,    <a class="category" href="/tag/guide.html">Guide</a>  </span>
+</p><div class="sharing">
+</div>    </footer>
+  </article>
+
 </div>
 <aside class="sidebar">
   <section>
@@ -184,14 +176,20 @@ $(document).ready(function() {
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
-      <li class="post category-coding">
-          <a href="/entry/2011/04/09/android-ndk-stack-trace-script/">Android NDK Stack Trace Script</a>
+      <li class="post category-reviews">
+          <a href="/entry/2015/09/25/tv-series-review-mr-robot-season-one/">TV Series Review: Mr. Robot, Season One</a>
+      </li>
+      <li class="post category-other">
+          <a href="/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
       <li class="post category-technology">
-          <a href="/entry/2010/10/03/194/">Making Samba shares accessible to Apache on OS X</a>
+          <a href="/entry/2015/07/29/windows-10/">Windows 10!</a>
       </li>
-      <li class="post category-coding">
-          <a href="/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/">Android Development Device Setup in Ubuntu 10.04</a>
+      <li class="post category-reviews">
+          <a href="/entry/2015/05/22/game-review-bloodborne/">Game Review: Bloodborne</a>
+      </li>
+      <li class="post category-links">
+          <a href="/entry/2015/03/17/windows-hello-microsoft-passport-and-tamriel-unlimited/">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a>
       </li>
     </ul>
   </section>
@@ -266,7 +264,7 @@ $(document).ready(function() {
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2011  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="/theme/js/modernizr-2.0.js"></script>

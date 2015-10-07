@@ -1,12 +1,11 @@
----
 layout: post
 Title: What are lambdas good for, anyway?
 date: 2011-06-29 22:27
 comments: true
-external-url:
 Category: Coding
-published: true
----
+Slug: what-are-lambdas-good-for-anyway
+Tags: Python
+
 I had a discussion today about what lambda functions are used for, how they differ from regular functions, and why they're important. I thought I'd reproduce it here, as it seems that lambdas are often thought of as confusing and obscure. The truth is that they're very simple, and also quite powerful. While they can reduce readability if used incorrectly, they do serve an important purpose, and those who understand them should have nothing to fear from them. This discussion pertains specifically to lambda functions as they're implemented in Python, but they're very similar in other languages where they're available.<!-- PELICAN_END_SUMMARY -->
 
 I think the best way to explain lambdas is with a simple example. Say you want a switch statement. Python doesn’t have them, but what you can do is set up a dictionary and get a value out of it, which is sort of like a switch. However, you can't do this...
