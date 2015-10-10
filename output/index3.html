@@ -316,7 +316,7 @@ title="Virtual Private Server">VPS</acronym>.  I've also moved WordPress out of 
     <a rel="full-article" href="/entry/2011/12/31/2010-and-2011-in-review/">More &rarr;</a>
   </footer>
   		</article>
-  		<article class="category-links">
+  		<article class="category-technology">
 <header>
     <p class="meta">
 <time datetime="2011-12-30T16:28:00-08:00" pubdate>Fri 30 December 2011</time>  &ndash; &#128339; 2 min read
@@ -340,21 +340,23 @@ title="Virtual Private Server">VPS</acronym>.  I've also moved WordPress out of 
 </header>
 
   <div class="entry-content"><p>This tutorial is for an extremely specific and possibly unusual set of circumstances, but I'm hoping that it will prove useful to someone. For one of my courses this term, we're building OpenGL apps using Nokia's open source Qt framework. Qt provides some very nice scaffolding, and the Qt Creator IDE is among the best I've used, although I imagine it lacks flexibility for general-purpose applications—that is, you probably wouldn't use it to build non-Qt applications. Qt also allows one to easily write cross-platform C++ GUI applications. That said, linking procedures can be a bit different on different platforms, and as a beginner it's not always immediately obvious how instructions for Windows development translate into other environments.</p>
-<p>In particular, I found myself having difficulty linking the OpenGL Utility Toolkit (GLUT) with my project on Mac OS X. After much Googling and some frustration, I came up with the correct way to go about it, which is as follows:
+<p>In particular, I found myself having difficulty linking the OpenGL Utility Toolkit (GLUT) with my project on Mac OS X. After much Googling and some frustration, I came up with the correct way to go about it, which is as follows:</p>
 <ol>
-    <li>In Qt Creator, open your project file (.pro) in the text editor.  Right click on the text editor pane and select "Add Library..."</li>
-    <li>Chose "System Library."</li>
-    <li>Locate the GLUT framework.  On my Mac, running Lion, I used <code>/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework</code>. However, it seems there are multiple different copies on the disk that you could use.  If that path doesn't work for you, just search for <code>glut.h</code> in Finder and you'll find a copy of the framework.  The path you enter into Qt Creator should point to a <code>.framework</code> directory.</li>
-    <li>Qt Creator will generate code in your project file which will link to the correct framework or library depending on which platform the code is being compiled on.</li>
-    <li>Finally, because Apple loves to be different, the glut.h header path is different on OS X.  <strong>You'll need to <code>#include &lt;GLUT/glut.h&gt;</code></strong>, instead of <code>&lt;gl/glut.h&gt;</code> is usually the case.  You can use preprocessor conditional statements to make this inclusion cross-platform:
-<pre>#if defined(<strong>APPLE</strong>) || defined(MACOSX)
-  #include &lt;GLUT/glut.h&gt;</p>
-<h1>else</h1>
-<p>#include &lt;gl/glut.h&gt;</p>
-<h1>endif</pre></h1>
-<p></li>
+<li>In Qt Creator, open your project file (.pro) in the text editor.  Right click on the text editor pane and select "Add Library..."</li>
+<li>Chose "System Library."</li>
+<li>Locate the GLUT framework.  On my Mac, running Lion, I used <code>/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework</code>. However, it seems there are multiple different copies on the disk that you could use.  If that path doesn't work for you, just search for <code>glut.h</code> in Finder and you'll find a copy of the framework.  The path you enter into Qt Creator should point to a <code>.framework</code> directory.</li>
+<li>Qt Creator will generate code in your project file which will link to the correct framework or library depending on which platform the code is being compiled on.</li>
+<li>Finally, because Apple loves to be different, the glut.h header path is different on OS X.  <strong>You'll need to <code>#include &lt;GLUT/glut.h&gt;</code></strong>, instead of <code>&lt;gl/glut.h&gt;</code> is usually the case.  You can use preprocessor conditional statements to make this inclusion cross-platform:<div class="highlight"><pre><span class="cp">#if defined(__APPLE__) || defined(MACOSX)</span>
+  <span class="cp">#include &lt;GLUT/glut.h&gt;</span>
+<span class="cp">#else</span>
+    <span class="cp">#include &lt;gl/glut.h&gt;</span>
+<span class="cp">#endif</span>
+</pre></div>
+
+
+</li>
 </ol>
-That's it! If you have any trouble, leave a comment.</p></div>
+<p>That's it! If you have any trouble, leave a comment.</p></div>
   		</article>
   		<article class="category-technology">
 <header>
@@ -367,15 +369,15 @@ That's it! If you have any trouble, leave a comment.</p></div>
 </header>
 
   <div class="entry-content"><p>My internship recently ended, and as such, I had to move from Calgary back to Edmonton, where I'll be completing the fourth year of my Computing Science degree at the University of Alberta. I hope to be able to write more about my internship later, but at the moment I want to share a handy trick I discovered for reinstalling OS X. The reason I bring up the move is that after I arrived in Edmonton, I found myself wanting to reformat my Mac Mini and re-install Snow Leopard, but my Snow Leopard disc was nowhere to be found. Luckily, as a semi-paranoid computer scientist with an abundance of disk space, I keep images of important discs on my network-attached storage device for just such occasions.</p>
-<p>Unfortunately, however, the Snow Leopard disc image is large enough that it can only be burned to a dual-layer DVD. I don't tend to keep writeable dual-layer DVDs lying around, so I needed a solution which required only the disc image itself. There are a number of methods available for installing OS X over the network, but none of them seemed to work for me—perhaps owing to the fact that I had only one Mac. Luckily, I discovered that you can install OS X from a separate partition on the same disk. Here's how:
+<p>Unfortunately, however, the Snow Leopard disc image is large enough that it can only be burned to a dual-layer DVD. I don't tend to keep writeable dual-layer DVDs lying around, so I needed a solution which required only the disc image itself. There are a number of methods available for installing OS X over the network, but none of them seemed to work for me—perhaps owing to the fact that I had only one Mac. Luckily, I discovered that you can install OS X from a separate partition on the same disk. Here's how:</p>
 <ol>
-    <li>First, you'll need to re-partition your disk. Open Disk Utility and select the disk you want to use. Be sure to select the disk itself, rather than one of its partitions, which are indented beneath the disk.</li>
-    <li>Click the + button to add a new partition, and drag the new partition's section in the disk layout graph upwards until it's large enough to store your operating system disc image. Apply the changes. It may take some time for the disk to be re-partitioned.</li>
-    <li>Now, select the new partition from the list on the left. Go to the Restore tab, and restore your operating system disc image to the new partition.</li>
-    <li>Once the restore is complete, restart your computer, holding Option (Alt) at start-up. This should bring up a list of available start-up disks. Choose your new partition.</li>
-    <li>You should now be at the installer, and you can re-install to your primary partition. Once the installation is complete, delete your installation disc partition to and resize the primary partition to reclaim the extra space.</li>
+<li>First, you'll need to re-partition your disk. Open Disk Utility and select the disk you want to use. Be sure to select the disk itself, rather than one of its partitions, which are indented beneath the disk.</li>
+<li>Click the + button to add a new partition, and drag the new partition's section in the disk layout graph upwards until it's large enough to store your operating system disc image. Apply the changes. It may take some time for the disk to be re-partitioned.</li>
+<li>Now, select the new partition from the list on the left. Go to the Restore tab, and restore your operating system disc image to the new partition.</li>
+<li>Once the restore is complete, restart your computer, holding Option (Alt) at start-up. This should bring up a list of available start-up disks. Choose your new partition.</li>
+<li>You should now be at the installer, and you can re-install to your primary partition. Once the installation is complete, delete your installation disc partition to and resize the primary partition to reclaim the extra space.</li>
 </ol>
-That's it! In retrospect, it's completely obvious, but I haven't seen these instructions anywhere else on the web. This technique might be particularly useful for owners of Macs without disc drives.</p></div>
+<p>That's it! In retrospect, it's completely obvious, but I haven't seen these instructions anywhere else on the web. This technique might be particularly useful for owners of Macs without disc drives.</p></div>
   		</article>
 <div class="pagination">
     <a class="prev" href="/index4.html">&larr; Older</a>
@@ -436,7 +438,7 @@ That's it! In retrospect, it's completely obvious, but I haven't seen these inst
 
   <section>
   <h1>Tags</h1>
-    <a href="/tag/university-of-alberta.html">University of Alberta</a>,    <a href="/tag/ux.html">UX</a>,    <a href="/tag/links.html">Links</a>,    <a href="/tag/shouting-into-the-void.html">Shouting into the void</a>,    <a href="/tag/python.html">Python</a>,    <a href="/tag/opengl.html">OpenGL</a>,    <a href="/tag/ios.html">iOS</a>,    <a href="/tag/puzzle-panel.html">Puzzle Panel</a>,    <a href="/tag/iphone.html">iPhone</a>,    <a href="/tag/linux.html">Linux</a>,    <a href="/tag/os-x.html">OS X</a>,    <a href="/tag/android.html">Android</a>,    <a href="/tag/education.html">Education</a>,    <a href="/tag/guide.html">Guide</a>,    <a href="/tag/computer-science.html">Computer Science</a>  </section>
+    <a href="/tag/video-games.html">Video Games</a>,    <a href="/tag/gaming.html">Gaming</a>,    <a href="/tag/computer-science.html">Computer Science</a>,    <a href="/tag/university-of-alberta.html">University of Alberta</a>,    <a href="/tag/ux.html">UX</a>,    <a href="/tag/links.html">Links</a>,    <a href="/tag/shouting-into-the-void.html">Shouting into the void</a>,    <a href="/tag/personal.html">Personal</a>,    <a href="/tag/opengl.html">OpenGL</a>,    <a href="/tag/ios.html">iOS</a>,    <a href="/tag/puzzle-panel.html">Puzzle Panel</a>,    <a href="/tag/python.html">Python</a>,    <a href="/tag/iphone.html">iPhone</a>,    <a href="/tag/linux.html">Linux</a>,    <a href="/tag/os-x.html">OS X</a>,    <a href="/tag/ethics.html">Ethics</a>,    <a href="/tag/education.html">Education</a>,    <a href="/tag/guide.html">Guide</a>,    <a href="/tag/android.html">Android</a>  </section>
 
 
 

@@ -1,29 +1,26 @@
----
-layout: post
 Title: Some thoughts on used games and online passes
 date: 2012-02-03 23:37
-comments: true
-external-url:
 Category: Technology
-published: true
----
+Slug: some-thoughts-on-used-games-and-online-passes
+Tags: Gaming
+
 Online passes are becoming more and more ubiquitous in the games industry.  For those who aren't familiar with the terminology, an online pass is essentially a form of digital rights management designed to discourage and devalue used game sales by tying some game content to unique, one-use codes packaged with new copies of games.  Online passes are a contentious issue.  Some feel that they're a perfectly legitimate way for developers and publishers to ensure that they get their cut of each sale, and to reward those who purchase games new.  Others see them as a violation of consumer rights or contend that they inconvenience customers who <em>do</em> buy new (by requiring them to type in long access codes on game controllers) while being of only dubious value to publishers and developers.
 
 Most recently, there's been a bit of an uproar over the inclusion of an online pass in <em><a href="http://en.wikipedia.org/wiki/Kingdoms_of_Amalur:_Reckoning">Kingdoms of Amalur: Reckoning</a></em>, a single-player RPG with no online component.  The pass confers seven extra quests on those who purchase the game new, or deprives those who purchased used of them, depending on your perspective.<!-- PELICAN_END_SUMMARY -->  Before I lay my cards on the table, I'll let Curt Schilling, the founder of the studio behind the game, explain what he sees the purpose of the online pass as:
 
-<blockquote>That being said, this next part is likely to piss people off, but it's a truth and it's how I feel. You can argue the merits and effectiveness of it, but right now it's how it's done and as someone that's as invested as I am in this company, I stand by what has happened.
-
-DAY 1 DLC, to be extremely and VIVIDLY clear, is FREE, 100% totally FREE, to anyone that buys a new copy of Reckoning, ANYONE. 
-
-If you don't buy new games you buy them used, and in that case you will have to pay for the Day 1 free DLC content the new copy buyers got for free.
-
-It's clear the intent right? To promote early adopters and MUCH MORE IMPORTANT TO ME, REWARD fans and gamers who commit to us with their time and money when it benefits the company.</blockquote>
+> That being said, this next part is likely to piss people off, but it's a truth and it's how I feel. You can argue the merits and effectiveness of it, but right now it's how it's done and as someone that's as invested as I am in this company, I stand by what has happened.
+>
+> DAY 1 DLC, to be extremely and VIVIDLY clear, is FREE, 100% totally FREE, to anyone that buys a new copy of Reckoning, ANYONE. 
+>
+> If you don't buy new games you buy them used, and in that case you will have to pay for the Day 1 free DLC content the new copy buyers got for free.
+>
+> It's clear the intent right? To promote early adopters and MUCH MORE IMPORTANT TO ME, REWARD fans and gamers who commit to us with their time and money when it benefits the company.
 
 You can read the rest of his post <a href="http://forums.reckoning.amalur.com/showthread.php?3063-Did-you-push-back-at-EA-at-all-over-this-Quest-content-gated-by-online-pass.&s=2ba8c3194088140ce6161b0c374691f5&p=52812&viewfull=1#post52812" title="Curt Schilling's post on the Kingdoms of Amalur online pass.">on the Kingdoms of Amalur forum.</a>  I think Curt's position is reasonable and I am sympathetic to the frustration he's clearly feeling; he believes that he's trying to protect his business interests and in the process rewarding loyal fans with free bonus content, and receiving nothing but scorn in return.
 
 I don't think <em>Kingdoms of Amalur</em>'s online pass is an egregious abuse by any means, but in general,  I do count myself among those who see online passes as an unsettling trend.  I think consumers have good reason to be suspicious of companies that choose to use online passes.  There are good arguments for and against online passes, but the most popular arguments in favor of online passes often seem to rely on strawmen and dubious assumptions with no supporting data.  Jerry Holkins (Tycho) of Penny Arcade <a href="http://penny-arcade.com/2012/01/30/plurality" title="Plurality - Penny Arcade">writes:</a>
 
-<blockquote>I've been reading a lot his weekend about Fat Cats and how fat they are and how they want your money, but the only choice you get in this matter (aside from the wholly valid "not buying it" choice, of course) is which supposed Fat Cat to enrich.  You can enrich the people who made the game you are enjoying, or you can enrich people who had nothing to do with the game.  Policies like this are designed to incentivize new purchases: that is to say, sales.  We call those sales.</blockquote>
+> I've been reading a lot his weekend about Fat Cats and how fat they are and how they want your money, but the only choice you get in this matter (aside from the wholly valid "not buying it" choice, of course) is which supposed Fat Cat to enrich.  You can enrich the people who made the game you are enjoying, or you can enrich people who had nothing to do with the game.  Policies like this are designed to incentivize new purchases: that is to say, sales.  We call those sales.
 
 In other words, you're either supporting the developers who produce the games you love, or you're supporting retailers like Gamestop.  Naturally most consumers would prefer the former, all else being equal; developers are creative entities, focused&mdash;or so we can hope&mdash;on artistic expression before profit.  Retailers, by contrast, are often viewed as greedy and incidental vestiges of the rapidly dying era of physical media.  Their services are at best unnecessary, and at worst <a href="http://www.joystiq.com/2011/08/24/gamestop-intentionally-removing-deus-ex-onlive-coupons-from-reta/" title="Gamestop intentionally removing Deus Ex OnLive coupons from retail PC copies - Joystiq">abusive of their customers to an extent that would make an ardent objectivist blush.</a> 
 
@@ -37,35 +34,33 @@ My arguments thus far have been based on assumptions and logic rather than empir
 
 Now, you might be thinking that because I'm not in the industry, my perspective is limited.  Maybe publishers <em>do</em> have data which support the conclusion that used game sales are a net loss.  It's possible; it certainly makes sense that entities which exist solely to maximize game sales would want to have that data.  That said, given the ineptitude displayed by media giants in fighting piracy, I am not convinced that it should be taken for granted that they take a scientific approach to <em>anything</em>.  Take this exchange between <a href="https://twitter.com/#!/kristen_">Kristen Bornemann</a> and I on Twitter:
 
-<blockquote>
-<a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a
+> <a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a
 href="https://twitter.com/#!/cwgabriel">@cwgabriel</a> When people pick up used
 games it reduces the chance of publishers investing more money into the game
 (sequel, etc).<br />
-<a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a
+> <a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a
 href="https://twitter.com/#!/cwgabriel">@cwgabriel</a> Therefore it directly
 hurts us as devs… especially 3rd party devs.<br />
-<a href="https://twitter.com/#!/lindgrenM"><strong>@lindgrenM</strong></a>: <a
+> <a href="https://twitter.com/#!/lindgrenM"><strong>@lindgrenM</strong></a>: <a
 href="https://twitter.com/#!/kristen_">@kristen_</a> Do you have statistics that
 demonstrate that, or are you just assuming so by the false equivalency of 1 used
 sale = 1 lost sale?<br />
-<a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a
+> <a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a
 href="https://twitter.com/#!/lindgrenM">@lindgrenM</a> I worked in publishing.
 The fact is if a publisher hears that used sales are high = death for game. They
 don't care about stats.<br />
-<a href="https://twitter.com/#!/lindgrenM"><strong>@lindgrenM</strong></a>: <a
+> <a href="https://twitter.com/#!/lindgrenM"><strong>@lindgrenM</strong></a>: <a
 href="https://twitter.com/#!/kristen_">@kristen_</a> Then perhaps the community
 should focus on fixing that, rather than limiting consumer choice? <br />
-<a href="https://twitter.com/#!/lindgrenM"><strong>@lindgrenM</strong></a>: <a
+> <a href="https://twitter.com/#!/lindgrenM"><strong>@lindgrenM</strong></a>: <a
 href="https://twitter.com/#!/kristen_">@kristen_</a> Because if the publishers
 "don't care about stats," what are their business decisions based on?
 Vindictiveness? <br />
-<a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a href="https://twitter.com/#!/lindgrenM">@lindgrenM</a> hearsay and gut/instinct… why do you think I left? ;)
-</blockquote>
+> <a href="https://twitter.com/#!/kristen_"><strong>@kristen_</strong></a>: <a href="https://twitter.com/#!/lindgrenM">@lindgrenM</a> hearsay and gut/instinct… why do you think I left? ;)
 
 I'm aware that this short Twitter exchange is by no means a definitive example of how every publisher everywhere conducts business.  Again, I'm simply saying that until I see data which actually show a net loss for publishers and developers from used sales, I see no reason to take as gospel the assertion that they <em>are</em> a net loss.  That said, even if conclusive data were available, I still don't think I could support online passes at the conceptual level.  <em>Amalur</em> is innocuous, but it's the exception rather than the rule; most online passes lock used buyers out of multiplayer until they've shelled out another ten to fifteen dollars.  That is blatantly vindictive anti-consumer behaviour on the part of publishers, and it epitomizes the troubling trend of media companies punishing legitimate consumers in a misguided attempt to artificially control the marketplace and perpetuate outdated business models.  For an example of exactly how far this thinking goes, consider <a href="http://altdevblogaday.com/2012/02/02/i-feel-used/" title="I Feel Used">this post</a> by Jameson Durall of Volition:
 
-<blockquote>There’s another big rumor about the next Xbox console that could really start to shake things up…it won’t play used games at all!  Personally I think this would be a fantastic change for our business and even though the consumers would be up in arms about it at first…they will grow to understand why and that it won’t kill them.</blockquote>
+> There’s another big rumor about the next Xbox console that could really start to shake things up... it won’t play used games at all!  Personally I think this would be a fantastic change for our business and even though the consumers would be up in arms about it at first... they will grow to understand why and that it won’t kill them.
 
 To say that entirely removing the used market "won't kill" consumers strikes me as extremely ironic.  Used games have existed for as long as games have existed, and have evidently not killed the industry, and yet that is exactly what developers and publishers are complaining will happen if we continue with the status quo.  Durall himself says that used game sales are "making it more and more difficult for us to continue making higher quality products."  My feeling is that the rhetoric is a lot more emotionally charged on the part of online pass supporters; there is a strong insinuation that used buyers are costing people their jobs and are in some sense morally inferior to those who have the luxury of being able to buy only new games.
 
