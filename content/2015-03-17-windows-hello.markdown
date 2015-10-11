@@ -1,7 +1,8 @@
 Title: Windows Hello, Microsoft Passport, and Tamriel Unlimited
 date: 2015-03-17 23:28:10 -0700
-comments: true
-Category: Links
+Category: Technology
+Slug: windows-hello
+Tags: Link, Video Games, Windows, Breaking the cardinal rule
 
 Lots of exciting news today! First off, Microsoft has made a couple exciting announcements about
 Windows 10. Full disclosure: I am a Microsoft employee, so I am posting these for self-interested

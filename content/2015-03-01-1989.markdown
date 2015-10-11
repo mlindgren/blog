@@ -1,10 +1,8 @@
----
-layout: post
 Title: 1989
 date: 2015-03-01 23:57:06 -0800
-comments: true
 Category: Other
----
+Slug: 1989
+Tags: Music
 
 I've been working on my next book review for a few days now, but I'm finding
 that when I try to work on it, words don't come quickly or easily to me. So,

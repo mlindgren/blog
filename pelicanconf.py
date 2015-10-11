@@ -43,6 +43,11 @@ DEFAULT_PAGINATION = 10
 
 ARTICLE_URL = 'entry/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'entry/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+PAGE_URL = 'blog/{slug}/'
+PAGE_SAVE_AS = 'blog/{slug}/index.html'
+ARCHIVES_SAVE_AS = 'blog/archives/index.html'
+TAG_URL = 'tag/{slug}/'
+TAG_SAVE_AS = 'tag/{slug}/index.html'
 
 THEME = '../mlindgren-pelican-theme'
 

@@ -1,11 +1,9 @@
----
-layout: post
 Title: The care and feeding of software engineers
 date: 2015-01-26 00:48:10 -0800
-comments: true
 external-url: http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/
-Category: Links
----
+Category: Coding
+Slug: the-care-and-feeding-of-software-engineers
+Tags: Link
 
 Via a friend's Facebook feed comes this
 [excellent article](http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/)

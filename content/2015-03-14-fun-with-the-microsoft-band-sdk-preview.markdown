@@ -1,10 +1,8 @@
----
-layout: post
 Title: Fun with the Microsoft Band SDK Preview
 date: 2015-03-14 02:07:34 -0700
-comments: true
 Category: Coding
----
+Slug: fun-with-the-microsoft-band-sdk-preview
+Tags: Guide, C#
 
 First of all, happy [Pi Day](http://en.wikipedia.org/wiki/Pi_Day)! Using the standard United States
 date format, today is 3/14/15, which makes it the most significant Pi Day this century.
@@ -89,6 +87,8 @@ Phil for the correction.]
 	}
       }
     }
+
+&nbsp;
 
     :::csharp
     // MainPage.xaml.cs

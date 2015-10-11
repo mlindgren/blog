@@ -1,10 +1,9 @@
----
 layout: post
 Title: Game Review: Bloodborne
 date: 2015-05-22 01:27:44 -0700
-comments: true
 Category: Reviews
----
+Slug: game-review-bloodborne
+Tags: Video Games
 
 _[I completed this review after playing Bloodborne for approximately 30 hours. I have finished the
 game, but I have not discovered 100% of the content. I played the entire game solo, not using any

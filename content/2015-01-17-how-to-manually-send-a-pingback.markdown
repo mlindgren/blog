@@ -1,10 +1,8 @@
----
-layout: post
 Title: How to manually send a Pingback
 date: 2015-01-17 21:04:29 -0800
-comments: true
 Category: Technology
----
+Slug: how-to-manually-send-a-pingback
+Tags: Guide
 
 A couple years ago I stopped using WordPress and
 [switched](http://blog.mlindgren.ca/entry/2012/09/23/switching-to-octopress/)

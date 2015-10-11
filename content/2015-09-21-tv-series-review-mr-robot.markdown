@@ -1,10 +1,8 @@
----
-layout: post
 title: TV Series Review: Mr. Robot, Season One
 date: 2015-09-25 01:19:00 -0700
-comments: true
 category: Reviews
----
+Slug: tv-series-review-mr-robot
+Tags: TV
 
 I don't watch a whole lot of TV. In fact, I don't even have cable. The only
 shows I end up watching, therefore, are those I'm introduced to or I read about.

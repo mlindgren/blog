@@ -1,10 +1,8 @@
----
-layout: post
 Title: Observations from Three Years in America
 date: 2015-09-07 15:44:23 -0700
-comments: true
 Category: Other
----
+Slug: observations-from-three-years-in-america
+Tags: Personal, Politics
 
 _Some of this post is adapted from a Facebook comment I wrote earlier in the year in response to
 [this CBC article](http://www.cbc.ca/news/world/farewell-america-canada-could-learn-a-few-things-from-you-1.3143760).

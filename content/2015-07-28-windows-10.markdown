@@ -2,6 +2,8 @@ title: Windows 10!
 date: 2015-07-29 00:00:00 -0700
 comments: true
 category: Technology
+Slug: windows-10
+Tags: Windows, Breaking the cardinal rule
 
 Windows 10 is out today! This is the first release of Windows that I have worked
 on as a developer , and I'm proud of what my team and Microsoft as a whole have
