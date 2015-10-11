@@ -1,10 +1,8 @@
----
-layout: post
 Title: Book Review: Dataclysm
 date: 2014-10-08 22:51
-comments: true
 Category: Reviews
----
+Slug: dataclysm-who-we-are-when-we-think-no-ones-looking
+Tags: Books, Science
 
 If you've ever read OkCupid's popular [OkTrends](http://blog.okcupid.com/) blog,
 you're already familiar with the work of Christian Rudder. As OkCupid's resident
@@ -50,7 +48,7 @@ ratings (on a 1-5 star scale) received by a user, and on the y-axis is the
 percentage of all users that received that average rating:
 
 <div style="margin-left: auto; margin-right: auto; text-align: center;">
-<img src="/images/men_women_attractiveness.png" alt="Attractiveness of women as
+<img src="http://files.mlindgren.ca/images/men_women_attractiveness.png" alt="Attractiveness of women as
 rated by men and vice versa"/><br />
 <small>Copyright 2014 Christian Rudder. Used under Fair Use.</small>
 </div><br />
@@ -94,7 +92,7 @@ Consider this map of responses to the question "Should flag burning be illegal?"
 among OkCupid users:
 
 <div style="margin-left: auto; margin-right: auto; text-align: center;">
-<img src="/images/dataclysm_flag_burning.png" alt="Map of answers to the
+<img src="http://files.mlindgren.ca/images/dataclysm_flag_burning.png" alt="Map of answers to the
 question: Should flag burning be illegal?"/><br />
 <small>Copyright 2014 Christian Rudder. Used under Fair Use.</small>
 </div><br />

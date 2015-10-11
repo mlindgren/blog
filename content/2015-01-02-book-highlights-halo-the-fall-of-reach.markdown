@@ -1,10 +1,8 @@
----
-layout: post
 Title: Book Highlights: Halo: The Fall of Reach
 date: 2015-01-02 20:03:24 -0800
-comments: true
 Category: Reviews
----
+Slug: book-highlights-halo-the-fall-of-reach
+Tags: Books, Video Games
 
 As the first book set in the Halo universe, Eric Nylund's _Halo: The Fall of
 Reach_ describes the training and induction of the first-ever Spartans,

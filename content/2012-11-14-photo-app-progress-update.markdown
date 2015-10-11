@@ -1,10 +1,8 @@
----
-layout: post
 Title: Photo App Progress Update
 date: 2012-11-14 22:58
-comments: true
 Category: Coding
----
+Slug: photo-app-progress-update
+Tags: Projects, Python
 
 In September I [wrote about](/entry/2012/09/14/social-networks-and-content-ownership/)
 my intention to develop a web application to share my photos. I made good

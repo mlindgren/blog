@@ -248,7 +248,7 @@ longer the right choice for my specific needs. These are my problems with it:</p
 </pre></div>
 
 
-<p>What I'm doing here is grabbing all of the EXIF tags I know about out of my database with <a title="SQLAlchemy" href="http://www.sqlalchemy.org/" target="_blank">SQLAlchemy</a> (also awesome, by the way), and creating a dictionary which maps each tag's name to the corresponding <acronym title="Object-Relational Mapper">ORM</acronym> object; I can find the ORM object simply with <code>db_tags[tag_name]</code>, which lets me easily and efficiently insert new tag values as I read <acronym title="Exchangeable Image File Format">EXIF</acronym> data from a photo.  This isn't particularly <em>difficult</em> to do in any other language; as I said, it's a trivial example.  But consider how much more verbose the code would be: PHP, which is still the most popular language for web applications despite being an <a title="PHP: A Fractal of Bad Design - Fuzzy Notepad" href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/" target="_blank">incorrigible pile of garbage</a>, doesn't have list comprehensions.  I don't even want to think about how many lines of code this would take in Java; additionally, while I'm unfamiliar with them in general, I suspect Java ORMs require the use of generics to a painful extent (i.e. more than not at all).  In Python it only takes one <acronym title="Source Line Of Code">SLOC</acronym>, without sacrificing any readability.<sup>1, 2</sup></p>
+<p>What I'm doing here is grabbing all of the EXIF tags I know about out of my database with <a title="SQLAlchemy" href="http://www.sqlalchemy.org/" target="_blank">SQLAlchemy</a> (also awesome, by the way), and creating a dictionary which maps each tag's name to the corresponding <acronym title="Object-Relational Mapper">ORM</acronym> object; I can find the ORM object simply with <code>db_tags[tag_name]</code>, which lets me easily and efficiently insert new tag values as I read <acronym title="Exchangeable Image File Format">EXIF</acronym> data from a photo.  This isn't particularly <em>difficult</em> to do in any other language; as I said, it's a trivial example.  But consider how much more verbose the code would be: PHP, which is still the most popular language for web applications despite being an <a title="PHP: A Fractal of Bad Design - Fuzzy Notepad" href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/" target="_blank">incorrigible pile of garbage</a>, doesn't have list comprehensions.  I don't even want to think about how many lines of code this would take in Java; additionally, while I'm unfamiliar with them in general, I suspect Java ORMs require the use of generics to a painful extent (i.e. more than not at all).  In Python it only takes one <acronym title="Source Line Of Code">SLOC</acronym>, without sacrificing any readability.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup><sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup></p>
 <p>So, Python's pretty great. But like all languages, it does have a few problems. The one I have had the most difficulty with in my current project is that third party library support is somewhat lacking in some important areas; specifically, there aren't many good options for reading and manipulating images. The most popular library seems to be the <a href="http://www.pythonware.com/products/pil/">Python Imaging Library</a>, PIL. It's easy enough to install and provides a <em>passable</em> set of core features, but doesn't go much beyond that.  For instance, none of the various camera raw formats seem to be supported, which I consider a fairly important feature for my photo album; I'd very much like be able to upload original raws and have the application automatically convert them to JPEGs for me.  Additionally, it doesn't provide much in the way of convenience methods for cropping and resizing images.  <a title="ImageMagick" href="http://www.imagemagick.org/" target="_blank">ImageMagick</a> has <a title="ImageMagick geometry" href="http://www.imagemagick.org/script/command-line-processing.php#geometry" target="_blank">a very nice means of specifying cropping and resizing geometry</a> with various aspect ratio-preserving (or not) behaviour, and I wanted to be able to leverage something similar for my app so that I could quickly prototype with various size options.
 </div>
   <footer>
@@ -269,20 +269,6 @@ longer the right choice for my specific needs. These are my problems with it:</p
   <footer>
     <a rel="full-article" href="/entry/2012/09/14/social-networks-and-content-ownership/">More &rarr;</a>
   </footer>
-  		</article>
-  		<article class="category-other">
-<header>
-    <p class="meta">
-<time datetime="2012-08-08T00:40:00-07:00" pubdate>Wed 08 August 2012</time>  &ndash; &#128339; 1 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="/entry/2012/08/08/mlindgrenca-now-on-an-all-new-server/">mlindgren.ca: now on an all-new server!</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>It feels like a bit of a cop out to post this after having not written anything
-for five months, but I've decided to switch from shared hosting to a <acronym
-title="Virtual Private Server">VPS</acronym>.  I've also moved WordPress out of the www root directory.  The transition was surprisingly easy, but it's possible that some pages may contain dead links or missing images.  If you see any, please leave a comment and let me know!</p></div>
   		</article>
   		<article class="category-technology">
 <header>
@@ -379,6 +365,22 @@ title="Virtual Private Server">VPS</acronym>.  I've also moved WordPress out of 
 </ol>
 <p>That's it! In retrospect, it's completely obvious, but I haven't seen these instructions anywhere else on the web. This technique might be particularly useful for owners of Macs without disc drives.</p></div>
   		</article>
+  		<article class="category-technology">
+<header>
+    <p class="meta">
+<time datetime="2011-07-14T22:23:00-07:00" pubdate>Thu 14 July 2011</time>  &ndash; &#128339; 7 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="/entry/2011/07/14/in-defense-of-clones/">In Defense of Clones</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p><em>[2015-10-10]: I made some minor edits to this post to remove some content that I now feel is superfluous. These edits did not change the substance of the post.</em></p>
+<p>With the phenomenal and growing successes of the iPhone App Store, the Android Market, and the Xbox Live Indie Games marketplace, gamers have seen an unprecedented number of titles which could be described as "clones" of more successful games&mdash;or rip-offs, if you're feeling less kind.  Along with these titles has come a veritable tsunami of hatred for their developers, from game critics and anonymous Internet commenters alike.  The commercial success of some of these titles, such as <em>Angry Birds</em>,<sup id="fnref:birds"><a class="footnote-ref" href="#fn:birds" rel="footnote">1</a></sup> has shown that average gamers are happy to patronize any developer who can provide a fun experience, regardless of originality.  However, any mention of a new clone on a gaming blog or podcast inevitably brings about a stunning amount of vitriol from gamers who, presumably, are upset that their favorite megacorporations aren't getting their due.</div>
+  <footer>
+    <a rel="full-article" href="/entry/2011/07/14/in-defense-of-clones/">More &rarr;</a>
+  </footer>
+  		</article>
 <div class="pagination">
     <a class="prev" href="/index4.html">&larr; Older</a>
 
@@ -438,7 +440,7 @@ title="Virtual Private Server">VPS</acronym>.  I've also moved WordPress out of 
 
   <section>
   <h1>Tags</h1>
-    <a href="/tag/video-games.html">Video Games</a>,    <a href="/tag/gaming.html">Gaming</a>,    <a href="/tag/computer-science.html">Computer Science</a>,    <a href="/tag/university-of-alberta.html">University of Alberta</a>,    <a href="/tag/ux.html">UX</a>,    <a href="/tag/links.html">Links</a>,    <a href="/tag/shouting-into-the-void.html">Shouting into the void</a>,    <a href="/tag/personal.html">Personal</a>,    <a href="/tag/opengl.html">OpenGL</a>,    <a href="/tag/ios.html">iOS</a>,    <a href="/tag/puzzle-panel.html">Puzzle Panel</a>,    <a href="/tag/python.html">Python</a>,    <a href="/tag/iphone.html">iPhone</a>,    <a href="/tag/linux.html">Linux</a>,    <a href="/tag/os-x.html">OS X</a>,    <a href="/tag/ethics.html">Ethics</a>,    <a href="/tag/education.html">Education</a>,    <a href="/tag/guide.html">Guide</a>,    <a href="/tag/android.html">Android</a>  </section>
+    <a href="/tag/social-networking.html">Social networking</a>,    <a href="/tag/links.html">Links</a>,    <a href="/tag/books.html">Books</a>,    <a href="/tag/linux.html">Linux</a>,    <a href="/tag/education.html">Education</a>,    <a href="/tag/opengl.html">OpenGL</a>,    <a href="/tag/personal.html">Personal</a>,    <a href="/tag/travel.html">Travel</a>,    <a href="/tag/religion.html">Religion</a>,    <a href="/tag/iphone.html">iPhone</a>,    <a href="/tag/os-x.html">OS X</a>,    <a href="/tag/android.html">Android</a>,    <a href="/tag/video-games.html">Video Games</a>,    <a href="/tag/shouting-into-the-void.html">Shouting into the void</a>,    <a href="/tag/python.html">Python</a>,    <a href="/tag/philosophy.html">Philosophy</a>,    <a href="/tag/ios.html">iOS</a>,    <a href="/tag/puzzle-panel.html">Puzzle Panel</a>,    <a href="/tag/ethics.html">Ethics</a>,    <a href="/tag/projects.html">Projects</a>,    <a href="/tag/sam-harris.html">Sam Harris</a>,    <a href="/tag/c.html">C</a>,    <a href="/tag/ux.html">UX</a>,    <a href="/tag/science.html">Science</a>,    <a href="/tag/computer-science.html">Computer Science</a>,    <a href="/tag/university-of-alberta.html">University of Alberta</a>,    <a href="/tag/guide.html">Guide</a>  </section>
 
 
 

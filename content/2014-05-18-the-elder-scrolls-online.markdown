@@ -1,10 +1,8 @@
----
-layout: post
 Title: Game Review: The Elder Scrolls Online
 date: 2014-05-18 21:02
-comments: true
 Category: Reviews
----
+Slug: the-elder-scrolls-online
+Tags: Video Games
 
 [**Updated March 17, 2015:** The Elder Scrolls Online: Tamriel Unlimited was officially released
 today, meaning that ESO no longer requires a subscription fee to play. In addition, there have been

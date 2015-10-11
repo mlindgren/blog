@@ -1,10 +1,8 @@
----
-layout: post
 Title: Book Review: I Am Malala
 date: 2014-12-26 01:57
-comments: true
 Category: Reviews
----
+Slug: book-review-i-am-malala
+Tags: Books, Religion
 
 I expect most people will already have some familiarity with Malala Yousafzai.
 In case you've been living under a rock, though, Malala is a young Pakistani
@@ -26,7 +24,7 @@ support of education.<!-- PELICAN_END_SUMMARY -->
 
 <div style="float: right; max-width: 30%; margin: 5px;">
 <a href="http://www.malala.org/">
-<img src="/images/IAmMalala.jpg"
+<img src="http://files.mlindgren.ca/images/IAmMalala.jpg"
 style="max-height: 300px"
 alt="I Am Malala: The Girl Who Stood Up for Education and Was Shot by the
 Taliban, by Malala Yousafzai and Christina Lamb. Image copyright Hachette Book

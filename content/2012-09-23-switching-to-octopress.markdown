@@ -1,11 +1,9 @@
----
-layout: post
 Title: Switching to Octopress
 date: 2012-09-23 23:22
 comments: true
 Category: Technology
-published: true
----
+Slug: switching-to-octopress
+Tags: Python, Projects
 
 I've been using Wordpress on various sites that I've maintained for probably the
 better part of a decade now. By most metrics, it's still very good blogging
@@ -94,7 +92,7 @@ framework for hackers," which is an attractive description given my
 [predilections.](/categories/coding) It uses
 [Jekyll](https://github.com/mojombo/jekyll) to generate static pages from a set
 of templates and content written in
-[Markdown.](http://daringfireball.net/projects/markdown/)<sup>1</sup> It is,
+[Markdown.](http://daringfireball.net/projects/markdown/)[^markdown] It is,
 without a doubt, harder to use than to Wordpress, but it has the following
 advantages:
 
@@ -153,14 +151,14 @@ it's a good choice for me, and although the switch took me considerably longer
 than I expected (the better part of an weekend where I'd expected an evening or
 so of work), I'm pretty happy that I did it.
 
-In an upcoming post, I'll discuss the actual process of reconfiguring my server
+<span style="text-decoration: line-through;">In an upcoming post, I'll discuss the actual process of reconfiguring my server
 and importing all of my content (which is what I had planned to do before this
-turned into a 1,600 word diatribe against Wordpress.) For now, if I've inspired
+turned into a 1,600 word diatribe against Wordpress.)</span> For now, if I've inspired
 you and you're thinking about switching your own Wordpress site to Octopress,
 you can take a look at the
 [<acronym title="Extract, Transform, Load">ETL</acronym> I wrote](https://github.com/mlindgren/wp2octopress)
 to ease the import process.
 
-<sup>1</sup> <small>Did you know that Markdown was created by John Gruber? Until very
+[^markdown]: Did you know that Markdown was created by John Gruber? Until very
 recently, I didn't. And here I thought all he did was play apologist for
-Apple.</small>
+Apple.

@@ -2,7 +2,7 @@ Title: Some thoughts on used games and online passes
 date: 2012-02-03 23:37
 Category: Technology
 Slug: some-thoughts-on-used-games-and-online-passes
-Tags: Gaming
+Tags: Video Games
 
 Online passes are becoming more and more ubiquitous in the games industry.  For those who aren't familiar with the terminology, an online pass is essentially a form of digital rights management designed to discourage and devalue used game sales by tying some game content to unique, one-use codes packaged with new copies of games.  Online passes are a contentious issue.  Some feel that they're a perfectly legitimate way for developers and publishers to ensure that they get their cut of each sale, and to reward those who purchase games new.  Others see them as a violation of consumer rights or contend that they inconvenience customers who <em>do</em> buy new (by requiring them to type in long access codes on game controllers) while being of only dubious value to publishers and developers.
 

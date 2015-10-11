@@ -1,10 +1,8 @@
----
-layout: post
 Title: Book Review: Free Will
 date: 2014-10-26 17:00
-comments: true
 Category: Reviews
----
+Slug: book-review-free-will
+Tags: Books, Science, Philosophy, Religion, Sam Harris
 
 Sam Harris is a controversial figure, to say the least. Personally, I'm a fan of
 his work, but as one of the "four horsemen" of so-called New Atheism, he has
@@ -19,7 +17,7 @@ reception from fellow "horseman" and philosophy professor Dan Dennett.
 
 <div style="float: right; max-width: 30%;">
 <a href="http://www.samharris.org/free-will">
-<img src="/images/SamHarrisFreeWill.jpg"
+<img src="http://files.mlindgren.ca/images/SamHarrisFreeWill.jpg"
 style="max-height: 300px"
 alt="Free Will by Sam Harris. Image copyright Sam Harris, used under fair use" />
 </a>

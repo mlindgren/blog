@@ -1,10 +1,8 @@
----
-layout: post
 Title: Book Review: Lying
 date: 2014-11-02 18:09
-comments: true
 Category: Reviews
----
+Slug: book-review-lying
+Tags: Books, Philosophy, Sam Harris
 
 Originally published as a
 ["Kindle single"](http://en.wikipedia.org/wiki/Kindle_single) in 2011, Sam
@@ -31,7 +29,7 @@ argues that the cost of these lies, in the long term, outweighs their benefit:
 
 <div style="float: right; max-width: 30%;">
 <a href="http://www.samharris.org/free-will">
-<img src="/images/SamHarrisLying.jpg"
+<img src="http://files.mlindgren.ca/images/SamHarrisLying.jpg"
 style="max-height: 300px"
 alt="Lying by Sam Harris. Image copyright Sam Harris, used under fair use" />
 </a>

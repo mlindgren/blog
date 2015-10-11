@@ -1,10 +1,8 @@
----
-layout: post
 Title: The Subaru Saga
 date: 2013-06-09 22:22
-comments: true
 Category: Other 
----
+slug: the-subaru-saga
+tags: Shouting into the void, Personal
 
 Or "buying used cars is the worst and I will never do it ever again."
 
