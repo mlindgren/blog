@@ -4,6 +4,8 @@ Category: Technology
 Slug: switching-to-pelican
 Tags: Meta, Python, Projects
 
+I keep forgetting to mention it, but this May was the fifth anniversary of
+this blog. Thus, it's time again for some housekeeping.
 [Three years ago](/entry/2012/09/23/switching-to-octopress/) I stopped using
 Wordpress for my blog and moved it to [Octopress](http://octopress.org).
 Octopress is a great blogging framework, but its current incarnation
