@@ -6,7 +6,7 @@ Category: Technology
 Slug: configuring-dpi-in-lubuntu-slash-lxde
 Tags: Linux, Guide
 
-**Updated 2015-10-10:** [Paul](http://lambertington.github.io/) suggests that this can also be accomplished by editing or creating `/usr/share/lightdm/lightdm.conf/50xserver-command.conf` and adding the command `xerver-command=X -core -dpi 96`. I haven't tried this myself. Alternatively, you can just use [Xubuntu](http://xubuntu.org/) instead, which seems to run just as well, and has a handy UI for adjusting DPI. It also handles multi-monitor setups _much_ better.
+**Updated 2015-10-10:** [Paul](http://lambertington.github.io/) suggests that this can also be accomplished by editing or creating `/usr/share/lightdm/lightdm.conf/50xserver-command.conf` and adding the command `xerver-command=X -core -dpi 150`. I haven't tried this myself. Alternatively, you can just use [Xubuntu](http://xubuntu.org/) instead, which seems to run just as well, and has a handy UI for adjusting DPI. It also handles multi-monitor setups _much_ better.
 
 ---
 
