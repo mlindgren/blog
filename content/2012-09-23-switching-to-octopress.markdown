@@ -3,7 +3,7 @@ date: 2012-09-23 23:22
 comments: true
 Category: Technology
 Slug: switching-to-octopress
-Tags: Python, Projects
+Tags: Python, Projects, Meta
 
 I've been using Wordpress on various sites that I've maintained for probably the
 better part of a decade now. By most metrics, it's still very good blogging

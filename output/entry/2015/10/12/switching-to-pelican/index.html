@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Switching to Octopress &mdash; mlindgren.ca</title>
+  <title>Switching to Pelican &mdash; mlindgren.ca</title>
   <meta name="author" content="Mitch Lindgren">
 
 
@@ -126,173 +126,47 @@ jQuery(document).ready(function() {
   <article class="hentry" role="article">
 <header>
     <p class="meta">
-<time datetime="2012-09-23T23:22:00-07:00" pubdate>Sun 23 September 2012</time>  &ndash; &#128339; 7 min read
+<time datetime="2015-10-12T00:00:00-07:00" pubdate>Mon 12 October 2015</time>  &ndash; &#128339; 2 min read
     </p>
       <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2012/09/23/switching-to-octopress/">Switching to Octopress</a>
+        <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
       </h1>
 </header>
 
-  <div class="entry-content"><p>I've been using Wordpress on various sites that I've maintained for probably the
-better part of a decade now. By most metrics, it's still very good blogging
-software; I'm not aware of any self-hostable alternative that can match
-Wordpress in terms of the union of ease of use, feature set and flexibility that
-it provides. That said, lately I've been feeling that perhaps Wordpress is no
-longer the right choice for my specific needs. These are my problems with it:</p>
-<ul>
-<li>It's not very good for sharing source code. There are a multitude of plugins
-  available for syntax highlighting; the best of them seems to be
-  <a href="http://alexgorbatchev.com/SyntaxHighlighter/">Alex Gorbatchev's Syntax Highlighter</a>,
-  which is used by
-  <a href="http://wordpress.com">Wordpress.com</a> and is also what I was using on my blog.
-  But I've had problems with the Wordpress converting some of the characters in
-  my code to HTML entities (e.g. <code>&amp;amp;</code> for &amp; ) which are then printed
-  literally by the plugin.</li>
-<li>I find that more often than not Wordpress' visual editor is
-  insufficient for the formatting I want in my posts. That forces me to use
-  the raw HTML editor. That would be fine, except that Wordpress has a strange
-  sort of off-spec way of storing post HTML. Paragraph and line break tags are
-  omitted in the editor and the database, and are added when the page is
-  actually rendered to the client. This is okay, I guess, and I <em>think</em>
-  Wordpress is smart enough to not insert extra paragraph tags if you do wrap
-  your own paragraphs with them. Still, it leads to some unpredictability with
-  regard to how a post with hand-written HTML will actually be rendered.</li>
-<li>A similar but worse problem occurs when you try to insert extra line breaks.
-  Even if you're using the raw HTML editor to insert <code>&lt;br /&gt;</code> tags, Wordpress
-  will just get rid of them unless you insert additional non-breaking spaces
-  (<code>&amp;nbsp;</code>) so that it thinks the lines are non-empty. But! If you switch back
-  to the visual editor for any reason, even your <code>&amp;nbsp;&lt;br /&gt;</code> lines will be
-  wiped out. Even for "average" users I can't think of any situation in which
-  this "feature" would be desirable. If I put a bunch of extra newlines into
-  something I'm writing, it is because <em>I want exactly that many newlines.</em> I
-  tend to not have much patience for software that thinks it's smarter than
-  I am; that is why I still write most of my code in <a href="http://www.vim.org/">Vim</a>
-  and use hand-written makefiles in an age of
-  <acronym title="Integrated Development Environment">IDE</acronym>s.</li>
-<li>Never-ending updates. It seems like every time I log in there's a new update
-  to download. Wordpress has updates down to a one-click install process, so
-  this wouldn't be much of a problem except for the fact that
-  every time I have to update Wordpress warns me that I should back up my
-  database first. Why? Is there a significant possibility that the update might
-  break everything? It's probably just a
-  <acronym title="Cover Our Asses">COA</acronym>, and I back up my database
-  daily anyway, but this whole aspect of Wordpress makes me uneasy and I don't
-  want to have to deal with it any more. Even though I'm covered for backups,
-  recovering from a botched update would undoubtedly be a nightmare.</li>
-<li><a href="http://en.wikipedia.org/wiki/WordPress#Vulnerabilities">Vulnerabilities.</a> One
-  of the big reasons that Wordpress is updated so frequently is that it has a
-  long history of security vulnerabilities, and more are still being discovered
-  and patched. This also means that if I don't log in frequently enough to
-  download new security patches, I'm at risk of having my site compromised,
-  loaded up with malware and blacklisted by Google.</li>
-<li>It's written in PHP. <a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP sucks.</a>
-  (I can't link to that enough.) I don't want to be dogmatic about technology
-  choices; good software is good software regardless of what language it's
-  written in, and my primary desire is always to use whatever is best for the
-  task at hand. But lately I've been pretty vocal, both here and in person with
-  friends and colleagues, about how bad PHP is. Continuing to rely on it
-  undermines my credibility on the issue and makes me a bit of a hypocrite.</li>
-</ul>
-<p>And while this might seem trivial or pedantic, it's
-  actually one of the root causes of almost all of the issues above; the weird
-  HTML handling, inappropriate entity conversion, and security issues are all
-  due, at least in part, to bad design patterns popularized and perpetuated by
-  PHP. Wordpress still uses raw non-parameterized SQL queries; blogging software
-  built on a modern web framework with a proper
-  <acronym title="Object-Relational Mapping">ORM</acronym>
-  would not be plagued by SQL
-  injection exploits as Wordpress has been historically and probably continues
-  to be.
-- Wordpress supports themes so that you can customize the apperance of your
-  site, but editing them kind of sucks, because they're all written in PHP
-  instead of a proper templating language. Years ago I actually wrote a lot of
-  PHP, but I still find Wordpress templates pretty ugly and difficult to
-  understand; they seem more verbose than should really be necessary for what
-  they accomplish, and have, on average, more <code>&lt;?php ?&gt;</code> sections than a
-  keyboard has keys. (That analogy sucked. Sorry, it's late. What I'm trying to
-  say is that there are a lot of them.)</p>
-
-
-<p>So recently I got it into my head to switch over to
-<a href="http://octopress.org/">Octopress.</a> Octopress bills itself as "a blogging
-framework for hackers," which is an attractive description given my
-<a href="/categories/coding">predilections.</a> It uses
-<a href="https://github.com/mojombo/jekyll">Jekyll</a> to generate static pages from a set
-of templates and content written in
-<a href="http://daringfireball.net/projects/markdown/">Markdown.</a><sup id="fnref:markdown"><a class="footnote-ref" href="#fn:markdown" rel="footnote">1</a></sup> It is,
-without a doubt, harder to use than to Wordpress, but it has the following
-advantages:</p>
-<ul>
-<li>Rendering static pages once and serving dynamic content via AJAX is much more
-  efficient than rendering entire pages dynamically for each visitor. This isn't
-  really a concern for me because this is a very low-traffic site, and I have an
-  entire quad-core <acronym title="Virtual Private Server">VPS</acronym>
-  doing basically nothing besides serving this site. That said, it's nice to
-  know that when I start doing other stuff on my VPS, I won't be contending for
-  cycles with PHP and MySQL, so the site will always be very responsive. Plus,
-  wow does the site load fast now (once you have that huge header image cached,
-  anyway. I'll fix that soon.) Also not a huge concern for a blog, but I
-  didn't expect the difference to even be noticeable, and it definitely is.</li>
-<li>Static pages significantly decrease the attack surface of the site; there is
-  no database, so no SQL injection to worry about, and no scripts are being
-  executed, so <a href="http://www.kb.cert.org/vuls/id/520827">PHP vulnerabilities</a>
-  aren't a concern.</li>
-<li>Static pages means I get a nicely organized, easily navigable directory
-  structure instead of God-awful rewrite rules.</li>
-<li>The default Octopress theme is very well designed and well-suited to
-  customization.  I was able to modify it to make it look almost exactly like my
-  old custom Wordpress theme did, while retaining the fully fluid layout of the
-  Octopress theme&mdash;meaning that the layout will resize to look beautiful at
-  any screen resolution, including on mobile devices.</li>
-<li>Octopress has pretty nice built in Github and Twitter widgets.</li>
-<li>Comments are handled by <a href="http://disqus.com/">Disqus</a>, which provides a nicer
-  comment system than Wordpress' built in comments.  I was using Disqus anyway
-  via a plugin, but now I don't have to worry about keeping the Disqus comments
-  synced with the Wordpress database. Incidentally, Disqus provides a very nice
-  system to migrate comments to new URLs by uploading a
-  <acronym title="Comma Separate Value">CSV</acronym> file mapping old URLs to
-  new URLs. They've really thought of everything, so props to them for providing
-  a great service.</li>
-<li>All of the blog content is stored on my local machine, which means I can write
-  posts in a disconnected environment using Vim, version control them with Git,
-  and then push them to my server when they're finished. I have a nice
-  deployment setup where everything is stored in a Git repository on the server
-  and a post-commit hook copies the updated content to the web root for the blog
-  subdomain. All I have to do is <code>git push</code> and the blog is instantly updated.</li>
-<li>Since Wordpress uses hand-written SQL queries, it is tightly coupled with
-  MySQL and doesn't support any other database. PHP is similarly tied to Apache;
-  while it's possible to run it with other servers, it's not particularly easy.
-  By ditching Wordpress, I can also get rid of Apache, PHP and MySQL. This is
-  nice since I was planning to use nginx and Postgres for my
-  <a href="/entry/2012/09/14/social-networks-and-content-ownership/">photo album project</a>
-  anyway.</li>
-</ul>
-<p>Those are, give or take a few minor considerations, my reasons for switching
-blogging platforms. I'd be remiss to not mention that Octopress does have some
-noteworthy disadvantages even for "power users" to whom the above advantages
-might sound attractive.
-<a href="http://alblue.bandlem.com/2012/02/disadvantages-of-octopress.html" title="Disadvantages of Octopress - AlBlue's Blog">This post</a>
-does a good job cataloguing a few of them. On the balance, though, I feel like
-it's a good choice for me, and although the switch took me considerably longer
-than I expected (the better part of an weekend where I'd expected an evening or
-so of work), I'm pretty happy that I did it.</p>
-<p><span style="text-decoration: line-through;">In an upcoming post, I'll discuss the actual process of reconfiguring my server
-and importing all of my content (which is what I had planned to do before this
-turned into a 1,600 word diatribe against Wordpress.)</span> For now, if I've inspired
-you and you're thinking about switching your own Wordpress site to Octopress,
-you can take a look at the
-<a href="https://github.com/mlindgren/wp2octopress"><acronym title="Extract, Transform, Load">ETL</acronym> I wrote</a>
-to ease the import process.</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:markdown">
-<p>Did you know that Markdown was created by John Gruber? Until very
-recently, I didn't. And here I thought all he did was play apologist for
-Apple.&#160;<a class="footnote-backref" href="#fnref:markdown" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div></div>
+  <div class="entry-content"><p><a href="/entry/2012/09/23/switching-to-octopress/">Three years ago</a> I stopped using
+Wordpress for my blog and moved it to <a href="http://octopress.org">Octopress</a>.
+Octopress is a great blogging framework, but its current incarnation
+<a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">has some major shortcomings</a>.
+Those will be fixed with Octopress 3.0, but 3.0 has been a long time coming, and
+due to the changing distribution model the work to move from 2.0 to 3.0 may be
+substantial. Plus, Octopress isn't the best fit for me because it's written in
+Ruby, which I don't know and don't have much interest in learning; I much prefer
+Python.</p>
+<p>I recently learned of <a href="http://getpelican.com">Pelican</a>, which is a
+Python-based blogging tool. Luckily, Maurizio Sambati has already done the hard
+work of
+<a href="https://github.com/duilio/pelican-octopress-theme">porting the Octopress theme to Pelican</a>.
+Since my blog's theme is the Octopress theme with a few tweaks, it wasn't an
+inordinate amount of work to
+<a href="https://github.com/mlindgren/mlindgren-pelican-theme">port my own theme to Pelican</a>.
+Jake Vanderplas also did some great work in
+<a href="https://github.com/getpelican/pelican-plugins/pull/21">porting some of Octopress' Liquid tags</a>
+to Pelican, and he also has
+<a href="https://jakevdp.github.io/blog/2013/05/07/migrating-from-octopress-to-pelican/">a great blog post</a>
+which walks through the process (and describes some of his reasons for
+switching, which mirror my own). In the end, it did take me several hours of
+work to move everything over and clean up some of the posts where I was making
+use of various Octopress plug-ins, but I think it will be a boon in the long
+run. (Please let me know if anything appears to be broken, as it's possible that
+I missed something.)</p>
+<p>In addition to being easier for me to use and contribute to, I'm really excited
+about Pelican's support for tags. Tagging will help organize my blog,
+especially since I've limited myself to having only a few categories since I'm
+committed to having a unique, easily-distinguishable color for each one. I'm
+also excited that Pelican has built-in support for
+<a href="http://docs.getpelican.com/en/3.6.3/content.html#translations">translating articles</a>,
+which I plan to take advantage of to practice the languages I'm learning.</p>
+<p>Check back in three years to see which new blogging platform I switch to next!</p></div>
     <footer>
 <p class="meta">
   <span class="byline author vcard">
@@ -300,11 +174,11 @@ Apple.&#160;<a class="footnote-backref" href="#fnref:markdown" rev="footnote" ti
         Mitch Lindgren
     </span>
   </span>
-<time datetime="2012-09-23T23:22:00-07:00" pubdate>Sun 23 September 2012</time>  <span class="categories">
+<time datetime="2015-10-12T00:00:00-07:00" pubdate>Mon 12 October 2015</time>  <span class="categories">
     <a class='category' href='http://blog.mlindgren.ca/category/technology.html'>Technology</a>
   </span>
   <span class="categories">
-    <a class="category" href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a class="category" href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a class="category" href="http://blog.mlindgren.ca/tag/meta/">Meta</a>  </span>
+    <a class="category" href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a class="category" href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a class="category" href="http://blog.mlindgren.ca/tag/projects/">Projects</a>  </span>
 </p><div class="sharing">
 </div>    </footer>
   </article>
@@ -437,9 +311,9 @@ Apple.&#160;<a class="footnote-backref" href="#fnref:markdown" rev="footnote" ti
 </script>
   <script type="text/javascript">
     var disqus_shortname = 'mlindgrenca';
-    var disqus_identifier = '/entry/2012/09/23/switching-to-octopress/';
-    var disqus_url = 'http://blog.mlindgren.ca/entry/2012/09/23/switching-to-octopress/';
-    var disqus_title = 'Switching to Octopress';
+    var disqus_identifier = '/entry/2015/10/12/switching-to-pelican/';
+    var disqus_url = 'http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/';
+    var disqus_title = 'Switching to Pelican';
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';

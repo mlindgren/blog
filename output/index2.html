@@ -121,6 +121,79 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-technology">
+<header>
+    <p class="meta">
+<time datetime="2015-01-17T21:04:29-08:00" pubdate>Sat 17 January 2015</time>  &ndash; &#128339; 2 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2015/01/17/how-to-manually-send-a-pingback/">How to manually send a Pingback</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>A couple years ago I stopped using WordPress and
+<a href="http://blog.mlindgren.ca/entry/2012/09/23/switching-to-octopress/">switched</a>
+to <a href="http://octopress.org/">Octopress</a>, which is a derivative of
+<a href="http://jekyllrb.com/">Jekyll</a>. I continue to be pretty happy with this
+decision, but there are some downsides to using a static site generator. One
+issue is the lack of support for
+<a href="http://en.wikipedia.org/wiki/Pingback">Pingbacks</a>, which are a method supported
+by a number of dynamic blogging platforms to notify another blog when you link
+to its content. Pingbacks provide a good way to respond to blog posts using
+your own blog rather than via commenting; thus, they facilitate "conversation"
+between blogs. Unfortunately, if you're using Octopress or Jekyll or another
+framework to generate static HTML pages, you won't natively have the ability to
+send or receive Pingbacks.</p>
+<p>Luckily, Pingbacks can be sent manually with relative ease. Receiving Pingbacks
+still won't be possible, though; that's a much harder problem to solve, for a
+variety of reasons which aren't relevant to this post.</p>
+<p>Before I proceed, I want to note that full credit for this information goes to
+<a href="http://aaronparecki.com/">Aaron Parecki</a>; he explains the technique in
+<a href="https://gist.github.com/aaronpk/5744879">this GitHub Gist</a>. The reason I'm
+reproducing it here is because it was surprisingly hard to find Aaron's Gist,
+or anything else of relevance, when I was searching for information on how to
+send a Pingback. Hopefully, by posting about it and adding some extra context, I
+can make the information more searchable.</p>
+<p>First, you'll need to create a copy of this XML file on your local machine:</p>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+<span class="nt">&lt;methodCall&gt;</span>
+<span class="nt">&lt;methodName&gt;</span>pingback.ping<span class="nt">&lt;/methodName&gt;</span>
+<span class="nt">&lt;params&gt;</span>
+ <span class="nt">&lt;param&gt;</span>
+  <span class="nt">&lt;value&gt;</span>
+   <span class="nt">&lt;string&gt;</span>http://source/url/here<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;/value&gt;</span>
+ <span class="nt">&lt;/param&gt;</span>
+ <span class="nt">&lt;param&gt;</span>
+  <span class="nt">&lt;value&gt;</span>
+   <span class="nt">&lt;string&gt;</span>http://target/url/here<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;/value&gt;</span>
+ <span class="nt">&lt;/param&gt;</span>
+<span class="nt">&lt;/params&gt;</span>
+<span class="nt">&lt;/methodCall&gt;</span>
+</pre></div>
+
+
+<p>Replace the two URLs as appropriate - the first one is the source (i.e. your
+blog post), and the second is the target (the post you are linking to).</p>
+<p>Now, you just need to <code>POST</code> the request to the target server. You'll need to
+know the target's XML-RPC endpoint URL for this.  Usually, it will be <code>/xmlrpc</code>,
+or for WordPress blogs, <code>/xmlrpc.php</code>. You can find out for sure by inspecting
+the site's source for a <code>&lt;link rel="pingback" href="..."/&gt;</code> tag.</p>
+<p>You can use cURL to post your request. It's built into most Unix-like operating
+systems, but Windows users will have to
+<a href="http://curl.haxx.se/dlwiz/?type=bin&amp;os=Win32&amp;flav=-&amp;ver=2000%2FXP">download it</a>,
+and if you're on Mac OS X you probably need to have Apple's developer tools
+installed.  Just run:</p>
+<div class="highlight"><pre>curl -X POST -d @pingback.xml http://example.com/xmlrpc.php
+</pre></div>
+
+
+<p>...and that's it! cURL should print out an XML response from this server with a
+message indicating that your Pingback was registered. Of course, to be truly
+sure it worked, you should check the target URL and see if your Pingback was
+added to the page. (Note that some sites disable Pingbacks.)</p></div>
+  		</article>
   		<article class="category-reviews">
 <header>
     <p class="meta">
@@ -472,39 +545,6 @@ only has so long to exercise the opportunity to be young and irresponsible!
     <a rel="full-article" href="http://blog.mlindgren.ca/entry/2013/06/09/the-subaru-saga/">More &rarr;</a>
   </footer>
   		</article>
-  		<article class="category-coding">
-<header>
-    <p class="meta">
-<time datetime="2012-11-14T22:58:00-08:00" pubdate>Wed 14 November 2012</time>  &ndash; &#128339; 7 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2012/11/14/photo-app-progress-update/">Photo App Progress Update</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>In September I <a href="/entry/2012/09/14/social-networks-and-content-ownership/">wrote about</a>
-my intention to develop a web application to share my photos. I made good
-progress on it throughout September and early October, but for various reasons I
-haven't been able to work on it much in the past month or so. Last weekend,
-though, I was able to solve some blocking issues which were preventing me from
-doing an alpha release. Those being dealt with, I've now got a few of my albums
-up at <a href="http://photos.mlindgren.ca/">photos.mlindgren.ca</a>; take a look and leave
-a comment if you have any feedback.</p>
-<p>I haven't released the source code yet as there's still a great deal of work to
-be done, and I'm generally of the belief that dumping a bunch of unfinished,
-messy code on Github with the hope that the community will sort it out is of
-little benefit to anyone. My goal at this point is to do a beta release in a
-two to three months or so and release the code at that point. That timeline is
-anything but firm, though. This project is turning out to be much more work than
-I expected (as projects are wont to do), and I expect to be fairly busy over the
-next couple months.</p>
-<p>Anyway, with the alpha version up and running, this seems like a good
-opportunity to reflect on some of the issues I've faced that complicated the
-project, and on what remains to be done. </div>
-  <footer>
-    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2012/11/14/photo-app-progress-update/">More &rarr;</a>
-  </footer>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index3.html">&larr; Older</a>
 
@@ -523,6 +563,9 @@ project, and on what remains to be done. </div>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-technology">
+          <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
       </li>
@@ -534,9 +577,6 @@ project, and on what remains to be done. </div>
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/05/22/game-review-bloodborne/">Game Review: Bloodborne</a>
-      </li>
-      <li class="post category-technology">
-          <a href="http://blog.mlindgren.ca/entry/2015/03/17/windows-hello/">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a>
       </li>
     </ul>
   </section>
@@ -562,7 +602,7 @@ project, and on what remains to be done. </div>
 
   <section>
   <h1>Tags</h1>
-    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/video-games/">Video Games</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </section>
+    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/video-games/">Video Games</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </section>
 
 
 
