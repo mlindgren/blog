@@ -21,6 +21,9 @@ AUTHOR_FEED_RSS = None
 
 DISPLAY_PAGES_ON_MENU = True
 
+DISQUS_SITENAME = 'mlindgrenca'
+GOOGLE_ANALYTICS = 'UA-56108181-1'
+
 # Blogroll
 LINKS = ()
 
