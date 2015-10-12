@@ -62,14 +62,15 @@ type="text/javascript"></script>
 </script>
 
  <!-- Load FancyBox -->
- <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" />
- <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript">
+<!-- Fancybox bh fancyapps.com. License: http://fancyapps.com/fancybox/#license -->
+ <link rel="stylesheet" href="/theme/css/jquery.fancybox.css" />
+ <script src="/theme/js/jquery.fancybox.pack.js" type="text/javascript">
  </script>
 
 <!-- Custom Scripts -->
 <script language="Javascript" type="text/javascript">
 // ender.js gobbles jQuery's ready event: Use ender.js $ instead
-$(document).ready(function() {
+jQuery(document).ready(function() {
     jQuery(".fancybox").fancybox(
     {
       helpers:
@@ -101,6 +102,7 @@ $(document).ready(function() {
 
 
 <ul class="main-navigation">
+      <li><a href="/blog/about/">About</a></li>
       <li >
         <a href="/category/coding.html">Coding</a>
       </li>
@@ -124,7 +126,7 @@ $(document).ready(function() {
 
     	<div id="blog-archives">
             <h2>2015</h2>
-                    <article>
+                    <article class="category-reviews">
                         <h1><a href="/entry/2015/05/22/game-review-bloodborne/">Game Review: Bloodborne</a></h1>
                         <time datetime="2015-05-22 01:27:44-07:00" pubdate>
                             <span class="month">May</span>
@@ -138,7 +140,7 @@ $(document).ready(function() {
   &ndash; &#128339; 10 min read
                         </footer>
                     </article>
-                    <article>
+                    <article class="category-technology">
                         <h1><a href="/entry/2015/03/17/windows-hello/">Windows Hello, Microsoft Passport, and Tamriel Unlimited</a></h1>
                         <time datetime="2015-03-17 23:28:10-07:00" pubdate>
                             <span class="month">Mar</span>
@@ -152,7 +154,7 @@ $(document).ready(function() {
   &ndash; &#128339; 3 min read
                         </footer>
                     </article>
-                    <article>
+                    <article class="category-reviews">
                         <h1><a href="/entry/2015/01/02/book-highlights-halo-the-fall-of-reach/">Book Highlights: Halo: The Fall of Reach</a></h1>
                         <time datetime="2015-01-02 20:03:24-08:00" pubdate>
                             <span class="month">Jan</span>
@@ -167,7 +169,7 @@ $(document).ready(function() {
                         </footer>
                     </article>
             <h2>2014</h2>
-                    <article>
+                    <article class="category-reviews">
                         <h1><a href="/entry/2014/05/18/the-elder-scrolls-online/">Game Review: The Elder Scrolls Online</a></h1>
                         <time datetime="2014-05-18 21:02:00-07:00" pubdate>
                             <span class="month">May</span>
@@ -182,7 +184,7 @@ $(document).ready(function() {
                         </footer>
                     </article>
             <h2>2012</h2>
-                    <article>
+                    <article class="category-technology">
                         <h1><a href="/entry/2012/02/03/some-thoughts-on-used-games-and-online-passes/">Some thoughts on used games and online passes</a></h1>
                         <time datetime="2012-02-03 23:37:00-08:00" pubdate>
                             <span class="month">Feb</span>
@@ -197,7 +199,7 @@ $(document).ready(function() {
                         </footer>
                     </article>
             <h2>2011</h2>
-                    <article>
+                    <article class="category-technology">
                         <h1><a href="/entry/2011/12/30/ethical-game-design-from-gamasutra/">Ethical Game Design from Gamasutra</a></h1>
                         <time datetime="2011-12-30 16:28:00-08:00" pubdate>
                             <span class="month">Dec</span>
@@ -211,7 +213,7 @@ $(document).ready(function() {
   &ndash; &#128339; 2 min read
                         </footer>
                     </article>
-                    <article>
+                    <article class="category-technology">
                         <h1><a href="/entry/2011/07/14/in-defense-of-clones/">In Defense of Clones</a></h1>
                         <time datetime="2011-07-14 22:23:00-07:00" pubdate>
                             <span class="month">Jul</span>
@@ -234,6 +236,7 @@ $(document).ready(function() {
     <ul id="sidebar_pages">
       <li><a href="">Home</a></li>
       <li><a href="/blog/archives/">Archives</a></li>
+          <li><a href="/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
@@ -289,7 +292,7 @@ $(document).ready(function() {
     </ul>
       <a href="https://github.com/mlindgren">@mlindgren</a> on GitHub
     <script type="text/javascript">
-      $.domReady(function(){
+      jQuery(document).ready(function(){
           if (!window.jXHR){
               var jxhr = document.createElement('script');
               jxhr.type = 'text/javascript';

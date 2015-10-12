@@ -19,6 +19,8 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+DISPLAY_PAGES_ON_MENU = True
+
 # Blogroll
 LINKS = ()
 
@@ -56,6 +58,12 @@ SUMMARY_MAX_LENGTH = None
 PLUGIN_PATHS = ["../pelican-plugins"]
 PLUGINS = ["liquid_tags.img", "liquid_tags.video", "liquid_tags.youtube",
            "liquid_tags.include_code", "summary", "post_stats"]
+
+STATIC_PATHS = ['extra/favicon.ico', 'extra/favicon.png']
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/favicon.png': {'path': 'favicon.png'}
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
