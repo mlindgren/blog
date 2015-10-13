@@ -48,6 +48,8 @@ DEFAULT_PAGINATION = 10
 
 ARTICLE_URL = 'entry/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'entry/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_LANG_URL = 'entry/{date:%Y}/{date:%m}/{date:%d}/{slug}-{lang}/'
+ARTICLE_LANG_SAVE_AS = 'entry/{date:%Y}/{date:%m}/{date:%d}/{slug}-{lang}/index.html'
 PAGE_URL = 'blog/{slug}/'
 PAGE_SAVE_AS = 'blog/{slug}/index.html'
 ARCHIVES_SAVE_AS = 'blog/archives/index.html'
