@@ -121,6 +121,58 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-other">
+<header>
+    <p class="meta">
+<time datetime="2013-06-09T22:22:00-07:00" pubdate>Sun 09 June 2013</time>  &ndash; &#128339; 37 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2013/06/09/the-subaru-saga/">The Subaru Saga</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>Or "buying used cars is the worst and I will never do it ever again."</p>
+<p>I recently purchased a new-to-me 2011
+<a href="http://www.subaru.com/vehicles/impreza-wrx/index.html">Subaru WRX STI</a> sedan.
+I had been thinking about buying a new car for a long time&mdash;since I
+graduated, more or less. Until I bought my Subaru, I owned an ageing Honda Civic
+(1997, to be precise).  While it was a very capable and extremely reliable car
+throughout the many years I owned it for, it was old enough that it lacked some
+of the conveniences one expects in a car these days, such as power locks and
+windows, and most importantly, air conditioning.  The lack of air conditioning
+in particular made it  less than ideal for summer road trips, and more
+importantly, it was in need of some moderately expensive maintenance, and it
+didn't seem to make sense to me to spend much money on it given that the overall
+value of the car was fairly low.</p>
+<p>I didn't go on many test drives before I purchased my Subaru, but I didn't feel
+the need to; I had already spent months watching reviews, reading forums,
+comparing specs and window shopping on AutoTrader. I knew I wanted a sporty car
+with plenty of horsepower for under $40,000, and all-wheel drive was a must as I
+go to the mountains nearly every weekend in the winter and almost as often in
+the summer. Besides the STI, the Evo, MazdaSpeed3, and the Golf R were the best
+contenders, but each had significant drawbacks with regard to my personal
+preferences. The Evo has a notoriously lacklustre interior (not that the STI is
+<em>a lot</em> better, to be fair); I don't like the way the MazdaSpeed3 looks, and the
+Golf comes with the reputation of higher maintenance costs for German cars.</p>
+<p>I also really like the Subaru community.
+<a href="http://www.reddit.com/r/subaru">/r/subaru</a> is the largest manufacturer-specific
+subreddit, and in addition to forums like <a href="http://forums.nasioc.com/">NASIOC</a>,
+it comprises a vibrant community of enthusiastic Subaru owners. Of course other
+brands have significant followings as well&mdash;particularly VW&mdash;but my
+impression of the Subaru community is that it's less elitist and, in contrast to
+the others, puts as much emphasis on what one can <em>do</em> with the cars as on the
+cars themselves. To "go Subaruing" is a popular term for going out into the mud
+or the snow or the sand or the bush and getting the car wet and dirty, and
+having a ton of fun in the process.</p>
+<p>The STI, then, was the clear winner in my eyes.  Truth be told, a WRX probably
+would have been more than sufficient for my needs, but I generally prefer to put
+down the extra money and be sure that I'm getting the best product. And hey, one
+only has so long to exercise the opportunity to be young and irresponsible!
+</div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2013/06/09/the-subaru-saga/">More &rarr;</a>
+  </footer>
+  		</article>
   		<article class="category-coding">
 <header>
     <p class="meta">
@@ -378,27 +430,6 @@ longer the right choice for my specific needs. These are my problems with it:</p
 </ol>
 <p>That's it! If you have any trouble, leave a comment.</p></div>
   		</article>
-  		<article class="category-technology">
-<header>
-    <p class="meta">
-<time datetime="2011-09-21T00:17:00-07:00" pubdate>Wed 21 September 2011</time>  &ndash; &#128339; 2 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2011/09/21/how-to-reinstall-os-x-from-a-disc-image-using-only-one-computer/">How to reinstall OS X from a disc image using only one computer</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>My internship recently ended, and as such, I had to move from Calgary back to Edmonton, where I'll be completing the fourth year of my Computing Science degree at the University of Alberta. I hope to be able to write more about my internship later, but at the moment I want to share a handy trick I discovered for reinstalling OS X. The reason I bring up the move is that after I arrived in Edmonton, I found myself wanting to reformat my Mac Mini and re-install Snow Leopard, but my Snow Leopard disc was nowhere to be found. Luckily, as a semi-paranoid computer scientist with an abundance of disk space, I keep images of important discs on my network-attached storage device for just such occasions.</p>
-<p>Unfortunately, however, the Snow Leopard disc image is large enough that it can only be burned to a dual-layer DVD. I don't tend to keep writeable dual-layer DVDs lying around, so I needed a solution which required only the disc image itself. There are a number of methods available for installing OS X over the network, but none of them seemed to work for me—perhaps owing to the fact that I had only one Mac. Luckily, I discovered that you can install OS X from a separate partition on the same disk. Here's how:</p>
-<ol>
-<li>First, you'll need to re-partition your disk. Open Disk Utility and select the disk you want to use. Be sure to select the disk itself, rather than one of its partitions, which are indented beneath the disk.</li>
-<li>Click the + button to add a new partition, and drag the new partition's section in the disk layout graph upwards until it's large enough to store your operating system disc image. Apply the changes. It may take some time for the disk to be re-partitioned.</li>
-<li>Now, select the new partition from the list on the left. Go to the Restore tab, and restore your operating system disc image to the new partition.</li>
-<li>Once the restore is complete, restart your computer, holding Option (Alt) at start-up. This should bring up a list of available start-up disks. Choose your new partition.</li>
-<li>You should now be at the installer, and you can re-install to your primary partition. Once the installation is complete, delete your installation disc partition to and resize the primary partition to reclaim the extra space.</li>
-</ol>
-<p>That's it! In retrospect, it's completely obvious, but I haven't seen these instructions anywhere else on the web. This technique might be particularly useful for owners of Macs without disc drives.</p></div>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index4.html">&larr; Older</a>
 
@@ -417,6 +448,9 @@ longer the right choice for my specific needs. These are my problems with it:</p
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-reviews">
+          <a href="http://blog.mlindgren.ca/entry/2015/12/20/game-review-fallout-4/">Game Review: Fallout 4</a>
+      </li>
       <li class="post category-technology">
           <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
       </li>
@@ -428,9 +462,6 @@ longer the right choice for my specific needs. These are my problems with it:</p
       </li>
       <li class="post category-technology">
           <a href="http://blog.mlindgren.ca/entry/2015/07/29/windows-10/">Windows 10!</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/05/22/game-review-bloodborne/">Game Review: Bloodborne</a>
       </li>
     </ul>
   </section>
