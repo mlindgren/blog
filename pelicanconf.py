@@ -62,7 +62,7 @@ SUMMARY_MAX_LENGTH = None
 
 PLUGIN_PATHS = ["../pelican-plugins"]
 PLUGINS = ["liquid_tags.img", "liquid_tags.video", "liquid_tags.youtube",
-           "liquid_tags.include_code", "summary", "post_stats"]
+           "liquid_tags.include_code", "summary", "post_stats", "render_math"]
 
 STATIC_PATHS = ['extra/favicon.ico', 'extra/favicon.png']
 EXTRA_PATH_METADATA = {

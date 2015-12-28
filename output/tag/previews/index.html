@@ -4,10 +4,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Android Development Device Setup in Ubuntu 10.04 &mdash; mlindgren.ca</title>
+  <title>Tag: Previews &mdash; mlindgren.ca</title>
   <meta name="author" content="Mitch Lindgren">
-
-
 
 
 
@@ -107,7 +105,7 @@ jQuery(document).ready(function() {
 
 <ul class="main-navigation">
       <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
-      <li class="active">
+      <li >
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
       <li >
@@ -122,128 +120,30 @@ jQuery(document).ready(function() {
 </ul></nav>
   <div id="main">
     <div id="content">
-<div class="category-coding">
-  <article class="hentry" role="article">
-<header>
-    <p class="meta">
-<time datetime="2010-09-12T17:02:00-07:00" pubdate>Sun 12 September 2010</time>  &ndash; &#128339; 3 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/">Android Development Device Setup in Ubuntu 10.04</a>
-      </h1>
-</header>
+<div>
+	<article role="article">
+    	<header>
+    		<h1 class="entry-title">Tag: Previews</h1>
+    	</header>
 
-  <div class="entry-content"><p>I spent part of last night setting up my HTC Desire as a development device on my Ubuntu laptop.  This was a somewhat frustrating process, because a lot of the information I came across seem to be outdated and didn't work for me.  Even the <a title="Android documentation for developing on a device" href="http://developer.android.com/guide/developing/device.html">official documentation</a> refers to a version of Ubuntu which is more than two years old.  I did eventually piece together the correct process for Ubuntu 10.04, so I'm documenting that process here in the hope that it will help out other developers in the future.  This guide assumes that you've already installed and configured the <a href="http://developer.android.com/sdk/index.html">Android SDK.</a>
-<ol>
-    <li>Connect your phone to your computer and open a terminal window.  Run <code>adb devices</code> to confirm that adb can "see" your phone.  You should see something like this:
-<pre><code><span class="math">\( adb devices
-List of devices attached
-???????????? no permissions&lt;/code&gt;&lt;/pre&gt;
-    &lt;/li&gt;&lt;li&gt;Type &lt;code&gt;lsusb&lt;/code&gt; to get a list of attached USB devices.  Look for an entry with your phone's manufacturer; for instance, since I have an HTC device, I get:
-&lt;pre&gt;&lt;code&gt;\)</span> lsusb
-...
-Bus 002 Device 003: ID 0bb4:0c87 High Tech Computer Corp. 
-...</code></pre></p>
-<p>Note the ID - in my case, <code>0bb4:0c87</code>.  The part before the colon is the vendor ID.  The part after it is the product ID.  Keep these in mind.
-</li><li>
-You'll now need to create a udev rules file using your preferred text editor.  <a href="http://dimitar.me/how-to-connect-your-android-phone-to-ubuntu-to-do-developmenttestinginstallations-or-tethering/" title="How to connect your Android phone to Ubuntu">This guide</a> lists a number of different file names per-device, but based on my reading of the udev man page, I don't believe the file name is actually important.  The official documentation recommends <code>51-android.rules</code>, which is what I went with.  You'll need to use <code>sudo</code> to get permission to create the file:
-<pre><code><span class="math">\( sudo vi /etc/udev/rules.d/51-android.rules&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-The contents of the file should be as follows:
-&lt;pre&gt;&lt;code&gt;SUBSYSTEMS=="usb", ATTRS{idVendor}=="[Vendor ID]", ATTRS{idProduct}=="[Product ID]", MODE="0666"&lt;/code&gt;&lt;/pre&gt;
-...where the bracketed bits are replaced with the IDs you got earlier from lsusb.  For my HTC Desire, I entered:
-&lt;pre&gt;&lt;code&gt;SUBSYSTEMS=="usb", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="0c87", MODE="0666"&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-Save the file.  Most of the documentation I've come across says that restarting adb and udev is sufficient to give adb access to your device, but &lt;strong&gt;in my case I had to completely restart my computer before adb properly recognized my phone.&lt;/strong&gt;  Nevertheless, it's probably best to adb and udev first:
-&lt;pre&gt;&lt;code&gt;\)</span> sudo restart udev
-$ adb kill-server
-$ adb start-server</code></pre>
-Run <code>adb devices</code> again to see if your phone is recognized.  If you still see <code>???????????? no permissions</code>, you'll probably need to restart your computer.
-</li>
-<li>
-You should now have full access to your phone from adb and Eclipse.
-</li>
-</ol></p>
-<p>I hope this proves helpful.  If you have any corrections or if this method didn't work for you, leave a comment.</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script></div>
-    <footer>
-<p class="meta">
-  <span class="byline author vcard">
-    Posted by <span class="fn">
-        Mitch Lindgren
-    </span>
-  </span>
-<time datetime="2010-09-12T17:02:00-07:00" pubdate>Sun 12 September 2010</time>  <span class="categories">
-    <a class='category' href='http://blog.mlindgren.ca/category/coding.html'>Coding</a>
-  </span>
-  <span class="categories">
-    <a class="category" href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a class="category" href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a class="category" href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </span>
-</p><div class="sharing">
-</div>    </footer>
-  </article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
-  </section>
+    	<div id="blog-archives">
+            <h2>2015</h2>
+                    <article class="category-reviews">
+                        <h1><a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a></h1>
+                        <time datetime="2015-12-27 00:00:00-08:00" pubdate>
+                            <span class="month">Dec</span>
+                            <span class="day">27</span>
+                            <span class="year">2015</span>
+                        </time>
+                        <footer>
+                            <span class="categories">posted in
+                                <a class='category' href='http://blog.mlindgren.ca/category/reviews.html'>Reviews</a>
+                            </span>
+  &ndash; &#128339; 6 min read
+                        </footer>
+                    </article>
+	    </div>
+    </article>
 </div>
 <aside class="sidebar">
   <section>
@@ -259,18 +159,6 @@ You should now have full access to your phone from adb and Eclipse.
     <ul id="recent_posts">
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/12/20/game-review-fallout-4/">Game Review: Fallout 4</a>
-      </li>
-      <li class="post category-technology">
-          <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -342,7 +230,7 @@ You should now have full access to your phone from adb and Eclipse.
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2015  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>
@@ -368,9 +256,6 @@ You should now have full access to your phone from adb and Eclipse.
 </script>
   <script type="text/javascript">
     var disqus_shortname = 'mlindgrenca';
-    var disqus_identifier = '/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/';
-    var disqus_url = 'http://blog.mlindgren.ca/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/';
-    var disqus_title = 'Android Development Device Setup in Ubuntu 10.04';
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';

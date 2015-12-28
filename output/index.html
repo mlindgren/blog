@@ -124,6 +124,66 @@ jQuery(document).ready(function() {
   		<article class="category-reviews">
 <header>
     <p class="meta">
+<time datetime="2015-12-27T00:00:00-08:00" pubdate>Sun 27 December 2015</time>  &ndash; &#128339; 6 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>Today I'm previewing three early access titles now available on Steam:
+<em><a href="http://store.steampowered.com/app/369200">Ghost in the Shell Stand Alone Complex First Assault Online</a></em>,
+<em><a href="http://store.steampowered.com/app/252490/">Rust</a></em>, and
+<em><a href="http://store.steampowered.com/app/393420">Hurtworld</a></em>.</p>
+<h3>Ghost in the Shell Stand Alone Complex First Assault Online</h3>
+<p>...Tactical Combat Video Game Entertainment Simulation System. Okay, I made that
+last part up, but somebody in Nexon America's marketing department really should
+have reigned in that title a little bit. It can't even be made into a convenient
+acronym. "Hey, want to play GITSSACFAO?" asked no one, ever.</p>
+<p>Anyhow, I was drawn to this title because I love <em><a href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex"> Ghost in the Shell: Stand Alone Complex</a></em>,
+and to a lesser extent the <em>Ghost in the Shell</em> movies as well. If you're not
+familiar with the series, it follows a special forces team led by Major Motoko
+Kusanagi in a sci-fi 2030s Japan where everyone who can afford it is a cyborg.
+(The overoptistic timeline is worthy of <em>Back to the Future</em>!) The setting is
+leveraged to deliver some surprisingly sophisticated philosophical and social
+commentary&mdash;for an anime, anyway. But more to the point, there's also a lot
+of over-the-top action and a hint of gun-fetishism, which makes the series
+perfect for a first person shooter. It's surprising, then, that nobody has tried
+to make one until now.</p>
+<p><a href="http://files.mlindgren.ca/images/gits1.jpg"><img alt="Ghost in the Shell: Stand Alone Whatever
+Online" src="http://files.mlindgren.ca/images/gits1_thumb.jpg" /></a></p>
+<p>Unfortunately, the results are mixed, at least at this early stage. I've seen
+some significant stuttering during some matches, which is a real problem in such
+a fast-paced shooter. The gunplay also is also ever-so-slightly off. It's got a
+satisfying, weighty feel to it, but I can't quite get used to the aiming and
+recoil. Adjusting your aim while looking down the sights is so incredibly slow
+compared to the pace of player movement that the best strategy seems to be to
+just never use iron sights at all except at extreme range. It feels like they're
+taking cues from <em>Counter-Strike</em>, but they haven't quite nailed the experience
+yet.</p>
+<p>I trust that some of these issues will be fixed as the game is developed
+further, but what's more worrying is the character progression mechanic.
+Although early access to the game costs money, this is pretty clearly intended
+to be a free-to-play game, and as such there are already a plethora of
+unlockable weapon and ability upgrades. There are so many different things to
+customize that it's almost overwhelming at first. That would be a good thing if
+not for the fact that the pace of unlocks seems very slow (as if to encourage
+people to spend real money—imagine that!), and the unlockables don't seem very
+balanced. A fully upgraded character has clear advantages over a new character,
+which leads to a frustrating sense of unfairness.</p>
+<p><a href="http://files.mlindgren.ca/images/gits2.jpg"><img alt="Remember when games had
+gibs?" src="http://files.mlindgren.ca/images/gits2_thumb.jpg" /></a></p>
+<p>I think this one is worth keeping an eye on, but I don't see it becoming my
+go-to shooter unless I end up being dead wrong about the free-to-play
+monetization scheme.
+</div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">More &rarr;</a>
+  </footer>
+  		</article>
+  		<article class="category-reviews">
+<header>
+    <p class="meta">
 <time datetime="2015-12-20T00:00:00-08:00" pubdate>Sun 20 December 2015</time>  &ndash; &#128339; 6 min read
     </p>
       <h1 class="entry-title">
@@ -520,46 +580,6 @@ Swift's latest album, <em><a href="http://taylorswift.com/releases#/release/1245
     <a rel="full-article" href="http://blog.mlindgren.ca/entry/2015/03/01/1989/">More &rarr;</a>
   </footer>
   		</article>
-  		<article class="category-technology">
-<header>
-    <p class="meta">
-<time datetime="2015-02-21T20:36:28-08:00" pubdate>Sat 21 February 2015</time>  &ndash; &#128339; 2 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2015/02/21/configuring-dpi-in-lubuntu-slash-lxde/">Configuring DPI in Lubuntu/LXDE</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p><strong>Updated 2015-10-10:</strong> <a href="http://lambertington.github.io/">Paul</a> suggests that this can also be accomplished by editing or creating <code>/usr/share/lightdm/lightdm.conf/50xserver-command.conf</code> and adding the command <code>xerver-command=X -core -dpi 150</code>. I haven't tried this myself. Alternatively, you can just use <a href="http://xubuntu.org/">Xubuntu</a> instead, which seems to run just as well, and has a handy UI for adjusting DPI. It also handles multi-monitor setups <em>much</em> better.</p>
-<hr />
-<p>If you've tried to use <a href="http://lubuntu.net/">Lubuntu</a> (or
-<a href="http://www.lxde.org/">LXDE</a> on another distribution) with a high-DPI display,
-you've probably noticed that fonts and other UI elements are so tiny as to be
-illegible without a magnifying glass.  You've probably also noticed that there
-is no GUI with which to adjust the UI scaling factor. Happily, it is possible to
-change the DPI settings in LXDE, but this being Linux, it requires editing
-obscure configuration files. Here's what you'll need to do:</p>
-<ol>
-<li>In your home directory, create a new text file named <code>.Xresources</code></li>
-<li>In this file, enter your desired DPI in the following format: <code>Xft.dpi: 150</code></li>
-<li>Restart the X server. You can do this by pressing <code>Ctrl + Alt + F1</code> to enter
-single-user mode, then running <code>sudo service lightdm stop</code>, and then <code>sudo
-service lightdm start</code>. (Note that it may be a different service if you are not
-running Lubuntu. Alternatively, you can just reboot your machine.)</li>
-</ol>
-<p>This will scale UI elements in <em>most</em>, but not all, applications. For instance,
-it doesn't resize the desktop panel, so you'll likely want to do that as well.
-Luckily you can do so easily by right clicking on an empty space on the panel
-and selecting Panel Settings; from there, just change the height of the panel in
-pixels to a suitable value.</p>
-<p>This is yet another tip that I'm posting mainly becuase it took me an inordinate
-amount of time to figure out how to do it. I found many suggestions on how to
-enable scaling, but none of them worked until I stumbled across the above
-instructions on the blog of <a href="http://bebabi34.altervista.org/index.php?action=viewnews&amp;news=1380636261">bebabi34</a>.
-His blog is in Italian, so naturally it's not very searchable for English
-speakers; hopefully by reproducing his instructions here, I can save others some
-time.</p></div>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index2.html">&larr; Older</a>
 
@@ -578,6 +598,9 @@ time.</p></div>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post category-reviews">
+          <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
+      </li>
+      <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/20/game-review-fallout-4/">Game Review: Fallout 4</a>
       </li>
       <li class="post category-technology">
@@ -588,9 +611,6 @@ time.</p></div>
       </li>
       <li class="post category-other">
           <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
-      </li>
-      <li class="post category-technology">
-          <a href="http://blog.mlindgren.ca/entry/2015/07/29/windows-10/">Windows 10!</a>
       </li>
     </ul>
   </section>
@@ -616,7 +636,7 @@ time.</p></div>
 
   <section>
   <h1>Tags</h1>
-    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/video-games/">Video Games</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </section>
+    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/video-games/">Video Games</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/previews/">Previews</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </section>
 
 
 
