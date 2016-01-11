@@ -10,14 +10,15 @@ I'm a Canadian expat currently residing in Redmond, Washington, where I live
 with [my wife](http://shayshortt.com) and my cat. I've lived in Redmond since
 mid-2012, when I graduated from the University of Alberta with a Bachelor's
 Degree in Computing Science and accepted a job with Microsoft. I continue to
-work for Microsoft as a software developer.
+work for Microsoft as a software developer. The opinions expressed here are my
+own and do not represent the views of my employers or colleagues, past or
+present.
 
-My hobbies include snowboarding, hiking, music, programming, writing, and
-tinkering with all manners of technology. I use this site to publish pretty much
-everything I write that's fit for public consumption, as well as to catalog my
-projects and serve as the canonical source of my online identity.  The opinions
-expressed here are my own and do not represent the views of my employers or
-colleagues, past or present.
+In my spare time, I enjoy snowboarding, swimming, hiking, and writing. I try to
+make sure I'm always learning something new. Currently I'm learning to play
+guitar, and using [Duolingo](http://duolingo.com) to teach myself Swedish and
+Russian. As I slowly improve at these languages, I'll be translating some of the
+posts on the site into them&mdash;usually badly.
 
 Want to know more? You might be interested in...
 
@@ -71,10 +72,9 @@ license.
 
 - Typeface: Open Sans (in supported browsers)
 - Powered by [Pelican](http://getpelican.com)
-- Source code (forked from Octopress)
-  [available on	Github](https://github.com/mlindgren/blog)
+- Source code [available on Github](https://github.com/mlindgren/blog)
 - Header photograph by me
-- Unless otherwise noted, all content is copyright 2010-2015 Mitch Lindgren,
+- Unless otherwise noted, all content is copyright 2010-2016 Mitch Lindgren,
   but may be used under a
   [Creative Commons](http://creativecommons.org/)
   [Attribution-Non Commercial-Share Alike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)

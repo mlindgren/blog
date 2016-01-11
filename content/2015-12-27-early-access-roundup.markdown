@@ -16,11 +16,14 @@ last part up, but somebody in Nexon America's marketing department really should
 have reigned in that title a little bit. It can't even be made into a convenient
 acronym. "Hey, want to play GITSSACFAO?" asked no one, ever.
 
-Anyhow, I was drawn to this title because I love <em><a href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex"> Ghost in the Shell: Stand Alone Complex</a></em>,
-and to a lesser extent the _Ghost in the Shell_ movies as well. If you're not
+Anyhow, I was drawn to this title because I love <em><a
+href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex">
+Ghost in the Shell: Stand Alone Complex</a></em> (as well as the <em><a
+href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell_%28film%29">
+Ghost in the Shell</a></em> films). If you're not
 familiar with the series, it follows a special forces team led by Major Motoko
 Kusanagi in a sci-fi 2030s Japan where everyone who can afford it is a cyborg.
-(The overoptistic timeline is worthy of _Back to the Future_!) The setting is
+(The overoptimistic timeline is worthy of _Back to the Future_!) The setting is
 leveraged to deliver some surprisingly sophisticated philosophical and social
 commentary&mdash;for an anime, anyway. But more to the point, there's also a lot
 of over-the-top action and a hint of gun-fetishism, which makes the series
@@ -92,7 +95,7 @@ During my 14 hours, I _once_ met some friendly players who gave me some
 items to help me out. Almost every other time I came across someone, if
 they had the means to kill me, they would, even when I was clearly not a
 threat and had nothing of value to them. If _Rust_ is any indication of what a
-real apocalypticdisaster would be like, I'm amazed that humanity made it out of
+real apocalyptic disaster would be like, I'm amazed that humanity made it out of
 the jungle in the first place.
 
 Still, I think _Rust_ is pretty awesome. The construction system is
