@@ -16,19 +16,19 @@ last part up, but somebody in Nexon America's marketing department really should
 have reigned in that title a little bit. It can't even be made into a convenient
 acronym. "Hey, want to play GITSSACFAO?" asked no one, ever.
 
-Anyhow, I was drawn to this title because I love <em><a
-href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex">
-Ghost in the Shell: Stand Alone Complex</a></em> (as well as the <em><a
-href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell_%28film%29">
-Ghost in the Shell</a></em> films). If you're not
-familiar with the series, it follows a special forces team led by Major Motoko
-Kusanagi in a sci-fi 2030s Japan where everyone who can afford it is a cyborg.
-(The overoptimistic timeline is worthy of _Back to the Future_!) The setting is
-leveraged to deliver some surprisingly sophisticated philosophical and social
-commentary&mdash;for an anime, anyway. But more to the point, there's also a lot
-of over-the-top action and a hint of gun-fetishism, which makes the series
-perfect for a first person shooter. It's surprising, then, that nobody has tried
-to make one until now.
+Anyhow, I was drawn to this title because I love
+<em><a href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex">
+Ghost in the Shell: Stand Alone Complex</a></em>
+(as well as the
+<em><a href="https://en.wikipedia.org/wiki/Ghost_in_the_Shell_%28film%29">Ghost in the Shell</a></em>
+films). If you're not familiar with the series, it follows a special forces team
+led by Major Motoko Kusanagi in a sci-fi 2030s Japan where everyone who can
+afford it is a cyborg.  (The overoptimistic timeline is worthy of _Back to the
+Future_!) The setting is leveraged to deliver some surprisingly sophisticated
+philosophical and social commentary&mdash;for an anime, anyway. But more to the
+point, there's also a lot of over-the-top action and a hint of gun-fetishism,
+which makes the series perfect for a first person shooter. It's surprising,
+then, that nobody has tried to make one until now.
 
 [![Ghost in the Shell: Stand Alone Whatever
 Online](http://files.mlindgren.ca/images/gits1_thumb.jpg)](http://files.mlindgren.ca/images/gits1.jpg)
