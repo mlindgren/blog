@@ -17,8 +17,8 @@ present.
 In my spare time, I enjoy snowboarding, swimming, hiking, and writing. I try to
 make sure I'm always learning something new. Currently I'm learning to play
 guitar, and using [Duolingo](http://duolingo.com) to teach myself Swedish and
-Russian. As I slowly improve at these languages, I'll be translating some of the
-posts on the site into them&mdash;usually badly.
+Russian. As I slowly improve at these languages, I'll be (badly) translating
+some of the posts on the site into them.
 
 Want to know more? You might be interested in...
 
