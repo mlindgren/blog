@@ -104,7 +104,6 @@ jQuery(document).ready(function() {
 
 
 <ul class="main-navigation">
-      <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
       <li >
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
@@ -121,6 +120,63 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-other">
+<header>
+    <p class="meta">
+<time datetime="2013-12-24T22:07:00-08:00" pubdate>Tue 24 December 2013</time>  &ndash; &#128339; 11 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2013/12/24/road-trip-part-ii/">Road Trip! Part II</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>Five months ago, I <a href="/entry/2013/07/30/road-trip/">left off my last post</a> having
+just left Canyonlands National Park, heading further south to visit Bryce Canyon
+and Zion National Parks. I had booked a motel for the evening in Panguitch,
+Utah, which is a three or four hour drive from Moab. The drive there was
+uneventful, with relatively little in the way of scenery. I mostly followed the
+interstate, until about an hour outside of Panguitch, where I exited onto state
+route 89.</p>
+<p>Route 89 winds through scrub desert, farmland, and several very small towns
+nestled between modest mountains. I arrived in Panguitch and discovered that it,
+too, is very small. In contrast to Moab, though, it didn't seem to have much of
+a tourist draw despite its proximity to Bryce Canyon. As a foreigner, I have to
+admit that I felt some apprehension at this. Although everyone I'd met in Utah
+so far had been very friendly and welcoming, a small, isolated town like
+Panguitch is the kind of place where I imagined that I could encounter a
+<a href="http://www.youtube.com/watch?v=pKcJ-0bAHB4">Top Gear-esque redneck mob</a>.
+Granted, I wasn't driving around with a purposefully offensive slogan on my car,
+nor do I really have a discernible accent, but I still felt like a pretty
+obvious outsider with my Washington plates and conspicuous blue car with absurd
+spoiler.  I was relieved, then, when I checked in at the New Western Motel and
+was greeted at the front desk by an older Indian man (who I presume is also the
+owner); it was good to see that the population of Panguitch isn't completely
+homogeneous.</p>
+<p>If you read the previous post you might recall that I had only slept for a few
+hours the previous night, as I was up around 3:30am to get pictures of Delicate
+Arch at night. That being the case, I was exhausted by the time I checked into
+my room, so I decided to nap for a few hours before heading to Bryce Canyon. It
+might have just been because I was so tired, but I distinctly recall thinking
+that the bed in my motel room was among the most comfortable I had ever slept
+in.</p>
+<p>I woke up around five or six in the evening and went to grab dinner from "The
+Pizza Place" in the nearby town of Tropic. Yes, it's literally just called "The
+Pizza Place." It's a nice little family-run business, and the pizza was pretty
+good. I couldn't help but notice that they had several copies of the Book of
+Mormon available for guests to peruse. That didn't surprise me, given that I was
+in Utah, but I did find it strange that most if not all of the books seemed to
+be written in Danish.</p>
+<p>I made it to the Bryce Amphitheater in Bryce Canyon National Park just in time
+for sunset, and took the opportunity to walk the Rim Trail and take some
+pictures. Unfortunately, as it was quickly becoming dark, I didn't have time to
+go on any of the hiking trails or explore the rest of the park. I contemplated
+spending another day in Panguitch and going on a horseback tour of Bryce Canyon,
+but ultimately opted to leave for Zion National Park the next morning so that
+I'd have more time there.</div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2013/12/24/road-trip-part-ii/">More &rarr;</a>
+  </footer>
+  		</article>
   		<article class="category-other">
 <header>
     <p class="meta">
@@ -362,12 +418,12 @@ longer the right choice for my specific needs. These are my problems with it:</p
 
   <div class="entry-content"><p>(<a title="The state of Python imaging - Eevee's Livejournal" href="http://eevee.livejournal.com/307299.html" target="_blank">With apologies to Eevee</a>, of whom I am a great fan.)</p>
 <p>So, I'm <a title="Social networks and content ownership - mlindgren.ca" href="http://mlindgren.ca/blog/archives/597" target="_blank">working on a photo album app written in Python.</a>  I'm using Python because, well, I love it.  I think it's the perfect language for web development; it's simple and very readable, and ample syntactic sugar and just the right mix of procedural and functional features almost completely eliminate tedious boilerplate.  As a trivial example for those who have never used Python, consider:</p>
-<div class="highlight"><pre><span class="n">db_tags</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span>
-                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">MetadataTag</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="s">&#39;exif&#39;</span><span class="p">)])</span>
-</pre></div>
+
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">MetadataTag</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;exif&#39;</span><span class="p">)])</span>
+</pre>
 
 
-<p>What I'm doing here is grabbing all of the EXIF tags I know about out of my database with <a title="SQLAlchemy" href="http://www.sqlalchemy.org/" target="_blank">SQLAlchemy</a> (also awesome, by the way), and creating a dictionary which maps each tag's name to the corresponding <acronym title="Object-Relational Mapper">ORM</acronym> object; I can find the ORM object simply with <code>db_tags[tag_name]</code>, which lets me easily and efficiently insert new tag values as I read <acronym title="Exchangeable Image File Format">EXIF</acronym> data from a photo.  This isn't particularly <em>difficult</em> to do in any other language; as I said, it's a trivial example.  But consider how much more verbose the code would be: PHP, which is still the most popular language for web applications despite being an <a title="PHP: A Fractal of Bad Design - Fuzzy Notepad" href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/" target="_blank">incorrigible pile of garbage</a>, doesn't have list comprehensions.  I don't even want to think about how many lines of code this would take in Java; additionally, while I'm unfamiliar with them in general, I suspect Java ORMs require the use of generics to a painful extent (i.e. more than not at all).  In Python it only takes one <acronym title="Source Line Of Code">SLOC</acronym>, without sacrificing any readability.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup><sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup></p>
+<p>What I'm doing here is grabbing all of the EXIF tags I know about out of my database with <a title="SQLAlchemy" href="http://www.sqlalchemy.org/" target="_blank">SQLAlchemy</a> (also awesome, by the way), and creating a dictionary which maps each tag's name to the corresponding <acronym title="Object-Relational Mapper">ORM</acronym> object; I can find the ORM object simply with <code>db_tags[tag_name]</code>, which lets me easily and efficiently insert new tag values as I read <acronym title="Exchangeable Image File Format">EXIF</acronym> data from a photo.  This isn't particularly <em>difficult</em> to do in any other language; as I said, it's a trivial example.  But consider how much more verbose the code would be: PHP, which is still the most popular language for web applications despite being an <a title="PHP: A Fractal of Bad Design - Fuzzy Notepad" href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/" target="_blank">incorrigible pile of garbage</a>, doesn't have list comprehensions.  I don't even want to think about how many lines of code this would take in Java; additionally, while I'm unfamiliar with them in general, I suspect Java ORMs require the use of generics to a painful extent (i.e. more than not at all).  In Python it only takes one <acronym title="Source Line Of Code">SLOC</acronym>, without sacrificing any readability.<sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup><sup id="fnref-2"><a class="footnote-ref" href="#fn-2">2</a></sup></p>
 <p>So, Python's pretty great. But like all languages, it does have a few problems. The one I have had the most difficulty with in my current project is that third party library support is somewhat lacking in some important areas; specifically, there aren't many good options for reading and manipulating images. The most popular library seems to be the <a href="http://www.pythonware.com/products/pil/">Python Imaging Library</a>, PIL. It's easy enough to install and provides a <em>passable</em> set of core features, but doesn't go much beyond that.  For instance, none of the various camera raw formats seem to be supported, which I consider a fairly important feature for my photo album; I'd very much like be able to upload original raws and have the application automatically convert them to JPEGs for me.  Additionally, it doesn't provide much in the way of convenience methods for cropping and resizing images.  <a title="ImageMagick" href="http://www.imagemagick.org/" target="_blank">ImageMagick</a> has <a title="ImageMagick geometry" href="http://www.imagemagick.org/script/command-line-processing.php#geometry" target="_blank">a very nice means of specifying cropping and resizing geometry</a> with various aspect ratio-preserving (or not) behaviour, and I wanted to be able to leverage something similar for my app so that I could quickly prototype with various size options.
 </div>
   <footer>
@@ -421,19 +477,6 @@ longer the right choice for my specific needs. These are my problems with it:</p
     <a rel="full-article" href="http://blog.mlindgren.ca/entry/2011/12/31/2010-and-2011-in-review/">More &rarr;</a>
   </footer>
   		</article>
-  		<article class="category-technology">
-<header>
-    <p class="meta">
-<time datetime="2011-12-30T16:28:00-08:00" pubdate>Fri 30 December 2011</time>  &ndash; &#128339; 2 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2011/12/30/ethical-game-design-from-gamasutra/">Ethical Game Design from Gamasutra</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>I came across a couple excellent articles on Gamasutra which I want to share here. The first, "<a title="Contrivance and Extortion: In-App Purchases &amp; Microtransactions" href="http://www.gamasutra.com/blogs/AdamSaltsman/20111018/8685/Contrivance_and_Extortion_InApp_Purchases__Microtransactions.php">Contrivance and Extortion: In-App Purchases &amp; Microtransactions</a>" is by <a href="http://adamatomic.com/" target="_blank">Adam Saltsman</a>, creator of Canabalt, among other games. He argues that in-app purchases and so-called microtransactions are being abused by some game developers, "deliberately contriving their designs in the worst way in order to extort money from players, which is unethical and unacceptable design practice." I'll lay my cards on the table and say that I am in complete agreement with Adam.  As he does in his <a title="Contrivance and Extortion II: Clarifications, Feedback &amp; Suggestions" href="http://www.gamasutra.com/blogs/AdamSaltsman/20111020/8703/Contrivance_and_Extortion_II_Clarifications_Feedback__Suggestions.php">explanatory follow-up</a>, I acknowledge that there are benefits to the "freemium" model, but the techniques commonly associated with that model are often used in a cynical, manipulative and profit-driven manner which I feel is harmful to consumers and the industry. Whether or not you agree, Adam's thoughts on the subject are certainly worth reading.</p>
-<p>"<a title="Radical Plagiarism: The Ethical Lessons of the Gamenauts Controversy" href="http://www.gamasutra.com/blogs/EvanJones/20110815/8195/Radical_Plagiarism_The_Ethical_Lessons_of_the_Gamenauts_Controversy.php" target="_blank">Radical Plagiarism: The Ethical Lessons of the Gamenauts Controversy</a>," by <a href="http://www.gamasutra.com/blogs/author/EvanJones/4235/">Evan Jones</a>, is equally thought-provoking. Evan recounts the cloning of the indie game <a href="http://www.bored.com/game/play/150995/Radical_Fishing.html"><em>Radical Fishing</em></a> by the more established indie studio <a href="http://gamenauts.com/">Gamenauts</a>, and adds his perspective on the cultural impact of the rampant cloning that takes place on mobile app stores. Returning readers may recall that I've previously <a title="In Defense of Clones" href="http://www.mlindgren.ca/archives/318">defended the practice of cloning games</a>. My defense excluded the cloning of smaller titles by established studios, which I've always viewed as morally questionable at best, but Evan's article nevertheless gave me pause. He provides a strong counterpoint to my own thinking on the matter, and while I'm not yet ready to reverse my position, his argument has undeniable weight. If you're at all interested in game development, both articles are well worth your time.</p></div>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index4.html">&larr; Older</a>
 
@@ -446,12 +489,14 @@ longer the right choice for my specific needs. These are my problems with it:</p
     <ul id="sidebar_pages">
       <li><a href="http://blog.mlindgren.ca">Home</a></li>
       <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
-          <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
       </li>
@@ -463,9 +508,6 @@ longer the right choice for my specific needs. These are my problems with it:</p
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -528,7 +570,6 @@ longer the right choice for my specific needs. These are my problems with it:</p
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
             <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
@@ -537,7 +578,7 @@ longer the right choice for my specific needs. These are my problems with it:</p
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>

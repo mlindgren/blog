@@ -104,7 +104,6 @@ jQuery(document).ready(function() {
 
 
 <ul class="main-navigation">
-      <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
       <li >
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
@@ -121,6 +120,60 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-coding">
+<header>
+    <p class="meta">
+<time datetime="2017-10-05T00:00:00-07:00" pubdate>Thu 05 October 2017</time>  &ndash; &#128339; 13 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>A few months ago, a family member of a friend of mine sent me an email asking for advice on pursuing
+a career in computer science. I enjoyed answering his questions, and I thought other aspiring
+computer scientists might have similar questions, so with his permission, I decided to reproduce my
+answers here. I've made a few edits here and there, mostly to remove personal information.</p>
+<p>I want to be clear up front that I've only been doing this professional for about six years now, and
+I don't consider myself any sort of expert on how to have a successful career. The path I've chosen
+has worked out pretty well for me so far, but it's not the right path for everyone, and in an
+industry that changes as quickly as this one does, it's always hard to know what students should
+focus on when they're still several years from graduation.</p>
+<h3>What position do you hold at Microsoft and what is the scope of your work?</h3>
+<p>I'm a Software Development Engineer working in Windows OS security. Specifically, my team and I have
+spent the last several years working on <a href="http://www.microsoft.com/en-us/windows/windows-hello">Windows Hello</a>.
+We don't do the actual template generation or matching for biometrics (face/fingerprint
+authentication), but we own pretty much the whole stack below that, including basically all of the
+crypto and some parts of the UI and UX. The marketing for Windows Hello mostly focuses on the
+biometric aspect, but the feature is actually a lot more than that.</p>
+<p>Under the covers, Windows Hello provides key and/or X509 certificate-based login to domains and
+certain web services such as Microsoft accounts. In short, Windows Hello is more secure than using
+passwords, and you can get that benefit even if you don't have the hardware to do biometrics or
+don't want to use biometrics. We're working with industry standards bodies to specify and implement
+a set of <a href="https://w3c.github.io/webauthn/">web authentication APIs</a> which will
+<a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/web-authentication">allow the use of key-based authentication technologies like Windows Hello with regular websites</a>,
+which will hopefully eventually mean you won't have to have dozens of different passwords for each
+website you visit, or reuse the same password everywhere and risk having all your accounts get
+compromised.</p>
+<p>My day-to-day work involves designing and implementing features and improvements to make Windows
+Hello more secure and easier to use, and of course fixing bugs as they're found. Developers are also
+responsible for writing and maintaining automated tests related to their features. Personally my
+favorite part of the job is writing code, so I try to spend as much time as possible doing that.
+Product managers (PMs) are responsible for mapping out the requirements, but in practice it's a very
+collaborative process between PMs and developers, so there are often a lot of meetings to hash
+things out.  Meetings aren't my favorite way to spend my time, but I am glad that developers get to
+have input on the way features should work. The balance between design and coding varies a lot
+depending on where we are in the release cycle; Microsoft still basically uses waterfall-style
+development.</p>
+<p>All of the code I write is in C++. On my team we make fairly heavy use of C++11 and C++14 (and soon
+C++17) features, which have really modernized the language and made it much nicer to deal with.
+Plus, trying to keep up with the latest additions to the C++ standard means I'm always learning new
+techniques and tricks, which is fun.
+</div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">More &rarr;</a>
+  </footer>
+  		</article>
   		<article class="category-reviews">
 <header>
     <p class="meta">
@@ -153,7 +206,7 @@ point, there's also a lot of over-the-top action and a hint of gun-fetishism,
 which makes the series perfect for a first person shooter. It's surprising,
 then, that nobody has tried to make one until now.</p>
 <p><a href="http://files.mlindgren.ca/images/gits1.jpg"><img alt="Ghost in the Shell: Stand Alone Whatever
-Online" src="http://files.mlindgren.ca/images/gits1_thumb.jpg" /></a></p>
+Online" src="http://files.mlindgren.ca/images/gits1_thumb.jpg"></a></p>
 <p>Unfortunately, the results are mixed, at least at this early stage. I've seen
 some significant stuttering during some matches, which is a real problem in such
 a fast-paced shooter. The gunplay also is also ever-so-slightly off. It's got a
@@ -174,7 +227,7 @@ people to spend real money—imagine that!), and the unlockables don't seem very
 balanced. A fully upgraded character has clear advantages over a new character,
 which leads to a frustrating sense of unfairness.</p>
 <p><a href="http://files.mlindgren.ca/images/gits2.jpg"><img alt="Remember when games had
-gibs?" src="http://files.mlindgren.ca/images/gits2_thumb.jpg" /></a></p>
+gibs?" src="http://files.mlindgren.ca/images/gits2_thumb.jpg"></a></p>
 <p>I think this one is worth keeping an eye on, but I don't see it becoming my
 go-to shooter unless I end up being dead wrong about the free-to-play
 monetization scheme.
@@ -529,59 +582,6 @@ battery.</div>
     <a rel="full-article" href="http://blog.mlindgren.ca/entry/2015/03/14/fun-with-the-microsoft-band-sdk-preview/">More &rarr;</a>
   </footer>
   		</article>
-  		<article class="category-other">
-<header>
-    <p class="meta">
-<time datetime="2015-03-01T23:57:06-08:00" pubdate>Sun 01 March 2015</time>  &ndash; &#128339; 5 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2015/03/01/1989/">1989</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>I've been working on my next book review for a few days now, but I'm finding
-that when I try to work on it, words don't come quickly or easily to me. So,
-what the hell&mdash;might as well try something different. Music is immensely
-important to me. I've got a fairly large collection spanning over a thousand
-artists in dozens of different genres; I spent two years working in a record
-store (back when those still existed) and I consider music crucial to my ability
-to handle difficult emotions, be productive, and maintain sanity.</p>
-<p>However, I've always been reluctant to write about it, because I'm basically
-musically illiterate. I don't play any instruments; I can't tell a C from an F;
-I can barely pick out the individual instruments in a song; I don't even know
-the right terminology to use when discussing what makes music good or not. I
-hope that eventually I'll be able to take some music lessons and correct this to
-some extent, because I also believe that you can't fully appreciate something
-you don't understand. But for now, I remain ignorant of the intricacies of
-musical composition. Thus, I'm not going to be so presumptuous as to call this a
-review, but... well, keep reading and you'll see what I'm on about.</p>
-<p>I go through periods of obsession with musical artists where I'll discover
-someone new and become absolutely, completely captivated by them, usually buying
-several if not all of their records and listening to them over and over again
-until I've thoroughly "worn out" every single song. Then, if I'm lucky, I find
-someone new to become obsessed with, and the cycle begins anew.</p>
-<p>Last month it was <a href="http://en.wikipedia.org/wiki/Lana_Del_Rey">Lana Del Rey</a>:
-her albums <em>Born to Die</em> and <em>Paradise</em> are absolutely phenomenal, and she
-herself is just an incredibly talented artist.  One thing I find particularly
-interesting about Lana is how her sound&mdash;her voice, in
-particular&mdash;seems to evoke the 1950s; according to
-<a href="http://en.wikipedia.org/wiki/Lana_Del_Rey">Wikipedia</a>, "her music has
-been noted for its cinematic sound and its references to various aspects of pop
-culture, particularly that of 1950s and '60s Americana." But Del Rey's music
-doesn't sound dated&mdash;lyrically, she manages to capture a timeless quality
-while also epitomizing modernity and the hollowness of American decadence. It's
-a combination unlike anything else I have ever heard, and I still find it
-almost intoxicating.</p>
-<p>Del Rey has announced a fourth album, <em>Honeymoon</em>, which is billed as being more
-like <em>Born to Die</em> and <em>Paradise</em> than her third album, <em>Ultraviolence</em>, which I
-have to admit that I didn't care for as much. Naturally, I'm really looking
-forward to that. Enough about Lana, though. This month, I'm hooked on Taylor
-Swift's latest album, <em><a href="http://taylorswift.com/releases#/release/12453">1989</a></em>.
-</div>
-  <footer>
-    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2015/03/01/1989/">More &rarr;</a>
-  </footer>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index2.html">&larr; Older</a>
 
@@ -593,12 +593,14 @@ Swift's latest album, <em><a href="http://taylorswift.com/releases#/release/1245
     <ul id="sidebar_pages">
       <li><a href="http://blog.mlindgren.ca">Home</a></li>
       <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
-          <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
       </li>
@@ -610,9 +612,6 @@ Swift's latest album, <em><a href="http://taylorswift.com/releases#/release/1245
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -675,7 +674,6 @@ Swift's latest album, <em><a href="http://taylorswift.com/releases#/release/1245
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
             <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
@@ -684,7 +682,7 @@ Swift's latest album, <em><a href="http://taylorswift.com/releases#/release/1245
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>

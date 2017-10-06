@@ -104,7 +104,6 @@ jQuery(document).ready(function() {
 
 
 <ul class="main-navigation">
-      <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
       <li >
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
@@ -121,6 +120,59 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-other">
+<header>
+    <p class="meta">
+<time datetime="2015-03-01T23:57:06-08:00" pubdate>Sun 01 March 2015</time>  &ndash; &#128339; 5 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2015/03/01/1989/">1989</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>I've been working on my next book review for a few days now, but I'm finding
+that when I try to work on it, words don't come quickly or easily to me. So,
+what the hell&mdash;might as well try something different. Music is immensely
+important to me. I've got a fairly large collection spanning over a thousand
+artists in dozens of different genres; I spent two years working in a record
+store (back when those still existed) and I consider music crucial to my ability
+to handle difficult emotions, be productive, and maintain sanity.</p>
+<p>However, I've always been reluctant to write about it, because I'm basically
+musically illiterate. I don't play any instruments; I can't tell a C from an F;
+I can barely pick out the individual instruments in a song; I don't even know
+the right terminology to use when discussing what makes music good or not. I
+hope that eventually I'll be able to take some music lessons and correct this to
+some extent, because I also believe that you can't fully appreciate something
+you don't understand. But for now, I remain ignorant of the intricacies of
+musical composition. Thus, I'm not going to be so presumptuous as to call this a
+review, but... well, keep reading and you'll see what I'm on about.</p>
+<p>I go through periods of obsession with musical artists where I'll discover
+someone new and become absolutely, completely captivated by them, usually buying
+several if not all of their records and listening to them over and over again
+until I've thoroughly "worn out" every single song. Then, if I'm lucky, I find
+someone new to become obsessed with, and the cycle begins anew.</p>
+<p>Last month it was <a href="http://en.wikipedia.org/wiki/Lana_Del_Rey">Lana Del Rey</a>:
+her albums <em>Born to Die</em> and <em>Paradise</em> are absolutely phenomenal, and she
+herself is just an incredibly talented artist.  One thing I find particularly
+interesting about Lana is how her sound&mdash;her voice, in
+particular&mdash;seems to evoke the 1950s; according to
+<a href="http://en.wikipedia.org/wiki/Lana_Del_Rey">Wikipedia</a>, "her music has
+been noted for its cinematic sound and its references to various aspects of pop
+culture, particularly that of 1950s and '60s Americana." But Del Rey's music
+doesn't sound dated&mdash;lyrically, she manages to capture a timeless quality
+while also epitomizing modernity and the hollowness of American decadence. It's
+a combination unlike anything else I have ever heard, and I still find it
+almost intoxicating.</p>
+<p>Del Rey has announced a fourth album, <em>Honeymoon</em>, which is billed as being more
+like <em>Born to Die</em> and <em>Paradise</em> than her third album, <em>Ultraviolence</em>, which I
+have to admit that I didn't care for as much. Naturally, I'm really looking
+forward to that. Enough about Lana, though. This month, I'm hooked on Taylor
+Swift's latest album, <em><a href="http://taylorswift.com/releases#/release/12453">1989</a></em>.
+</div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2015/03/01/1989/">More &rarr;</a>
+  </footer>
+  		</article>
   		<article class="category-technology">
 <header>
     <p class="meta">
@@ -132,7 +184,7 @@ jQuery(document).ready(function() {
 </header>
 
   <div class="entry-content"><p><strong>Updated 2015-10-10:</strong> <a href="http://lambertington.github.io/">Paul</a> suggests that this can also be accomplished by editing or creating <code>/usr/share/lightdm/lightdm.conf/50xserver-command.conf</code> and adding the command <code>xerver-command=X -core -dpi 150</code>. I haven't tried this myself. Alternatively, you can just use <a href="http://xubuntu.org/">Xubuntu</a> instead, which seems to run just as well, and has a handy UI for adjusting DPI. It also handles multi-monitor setups <em>much</em> better.</p>
-<hr />
+<hr>
 <p>If you've tried to use <a href="http://lubuntu.net/">Lubuntu</a> (or
 <a href="http://www.lxde.org/">LXDE</a> on another distribution) with a high-DPI display,
 you've probably noticed that fonts and other UI elements are so tiny as to be
@@ -254,7 +306,7 @@ or anything else of relevance, when I was searching for information on how to
 send a Pingback. Hopefully, by posting about it and adding some extra context, I
 can make the information more searchable.</p>
 <p>First, you'll need to create a copy of this XML file on your local machine:</p>
-<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
 <span class="nt">&lt;methodCall&gt;</span>
 <span class="nt">&lt;methodName&gt;</span>pingback.ping<span class="nt">&lt;/methodName&gt;</span>
 <span class="nt">&lt;params&gt;</span>
@@ -284,7 +336,7 @@ systems, but Windows users will have to
 <a href="http://curl.haxx.se/dlwiz/?type=bin&amp;os=Win32&amp;flav=-&amp;ver=2000%2FXP">download it</a>,
 and if you're on Mac OS X you probably need to have Apple's developer tools
 installed.  Just run:</p>
-<div class="highlight"><pre>curl -X POST -d @pingback.xml http://example.com/xmlrpc.php
+<div class="highlight"><pre><span></span>curl -X POST -d @pingback.xml http://example.com/xmlrpc.php
 </pre></div>
 
 
@@ -502,63 +554,6 @@ the obligations of the real world.
     <a rel="full-article" href="http://blog.mlindgren.ca/entry/2014/05/18/the-elder-scrolls-online/">More &rarr;</a>
   </footer>
   		</article>
-  		<article class="category-other">
-<header>
-    <p class="meta">
-<time datetime="2013-12-24T22:07:00-08:00" pubdate>Tue 24 December 2013</time>  &ndash; &#128339; 11 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2013/12/24/road-trip-part-ii/">Road Trip! Part II</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>Five months ago, I <a href="/entry/2013/07/30/road-trip/">left off my last post</a> having
-just left Canyonlands National Park, heading further south to visit Bryce Canyon
-and Zion National Parks. I had booked a motel for the evening in Panguitch,
-Utah, which is a three or four hour drive from Moab. The drive there was
-uneventful, with relatively little in the way of scenery. I mostly followed the
-interstate, until about an hour outside of Panguitch, where I exited onto state
-route 89.</p>
-<p>Route 89 winds through scrub desert, farmland, and several very small towns
-nestled between modest mountains. I arrived in Panguitch and discovered that it,
-too, is very small. In contrast to Moab, though, it didn't seem to have much of
-a tourist draw despite its proximity to Bryce Canyon. As a foreigner, I have to
-admit that I felt some apprehension at this. Although everyone I'd met in Utah
-so far had been very friendly and welcoming, a small, isolated town like
-Panguitch is the kind of place where I imagined that I could encounter a
-<a href="http://www.youtube.com/watch?v=pKcJ-0bAHB4">Top Gear-esque redneck mob</a>.
-Granted, I wasn't driving around with a purposefully offensive slogan on my car,
-nor do I really have a discernible accent, but I still felt like a pretty
-obvious outsider with my Washington plates and conspicuous blue car with absurd
-spoiler.  I was relieved, then, when I checked in at the New Western Motel and
-was greeted at the front desk by an older Indian man (who I presume is also the
-owner); it was good to see that the population of Panguitch isn't completely
-homogeneous.</p>
-<p>If you read the previous post you might recall that I had only slept for a few
-hours the previous night, as I was up around 3:30am to get pictures of Delicate
-Arch at night. That being the case, I was exhausted by the time I checked into
-my room, so I decided to nap for a few hours before heading to Bryce Canyon. It
-might have just been because I was so tired, but I distinctly recall thinking
-that the bed in my motel room was among the most comfortable I had ever slept
-in.</p>
-<p>I woke up around five or six in the evening and went to grab dinner from "The
-Pizza Place" in the nearby town of Tropic. Yes, it's literally just called "The
-Pizza Place." It's a nice little family-run business, and the pizza was pretty
-good. I couldn't help but notice that they had several copies of the Book of
-Mormon available for guests to peruse. That didn't surprise me, given that I was
-in Utah, but I did find it strange that most if not all of the books seemed to
-be written in Danish.</p>
-<p>I made it to the Bryce Amphitheater in Bryce Canyon National Park just in time
-for sunset, and took the opportunity to walk the Rim Trail and take some
-pictures. Unfortunately, as it was quickly becoming dark, I didn't have time to
-go on any of the hiking trails or explore the rest of the park. I contemplated
-spending another day in Panguitch and going on a horseback tour of Bryce Canyon,
-but ultimately opted to leave for Zion National Park the next morning so that
-I'd have more time there.</div>
-  <footer>
-    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2013/12/24/road-trip-part-ii/">More &rarr;</a>
-  </footer>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index3.html">&larr; Older</a>
 
@@ -571,12 +566,14 @@ I'd have more time there.</div>
     <ul id="sidebar_pages">
       <li><a href="http://blog.mlindgren.ca">Home</a></li>
       <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
-          <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
       </li>
@@ -588,9 +585,6 @@ I'd have more time there.</div>
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -653,7 +647,6 @@ I'd have more time there.</div>
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
             <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
@@ -662,7 +655,7 @@ I'd have more time there.</div>
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>

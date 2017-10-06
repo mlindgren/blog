@@ -104,7 +104,6 @@ jQuery(document).ready(function() {
 
 
 <ul class="main-navigation">
-      <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
       <li >
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
@@ -121,6 +120,19 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-technology">
+<header>
+    <p class="meta">
+<time datetime="2011-12-30T16:28:00-08:00" pubdate>Fri 30 December 2011</time>  &ndash; &#128339; 2 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2011/12/30/ethical-game-design-from-gamasutra/">Ethical Game Design from Gamasutra</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>I came across a couple excellent articles on Gamasutra which I want to share here. The first, "<a title="Contrivance and Extortion: In-App Purchases &amp; Microtransactions" href="http://www.gamasutra.com/blogs/AdamSaltsman/20111018/8685/Contrivance_and_Extortion_InApp_Purchases__Microtransactions.php">Contrivance and Extortion: In-App Purchases &amp; Microtransactions</a>" is by <a href="http://adamatomic.com/" target="_blank">Adam Saltsman</a>, creator of Canabalt, among other games. He argues that in-app purchases and so-called microtransactions are being abused by some game developers, "deliberately contriving their designs in the worst way in order to extort money from players, which is unethical and unacceptable design practice." I'll lay my cards on the table and say that I am in complete agreement with Adam.  As he does in his <a title="Contrivance and Extortion II: Clarifications, Feedback &amp; Suggestions" href="http://www.gamasutra.com/blogs/AdamSaltsman/20111020/8703/Contrivance_and_Extortion_II_Clarifications_Feedback__Suggestions.php">explanatory follow-up</a>, I acknowledge that there are benefits to the "freemium" model, but the techniques commonly associated with that model are often used in a cynical, manipulative and profit-driven manner which I feel is harmful to consumers and the industry. Whether or not you agree, Adam's thoughts on the subject are certainly worth reading.</p>
+<p>"<a title="Radical Plagiarism: The Ethical Lessons of the Gamenauts Controversy" href="http://www.gamasutra.com/blogs/EvanJones/20110815/8195/Radical_Plagiarism_The_Ethical_Lessons_of_the_Gamenauts_Controversy.php" target="_blank">Radical Plagiarism: The Ethical Lessons of the Gamenauts Controversy</a>," by <a href="http://www.gamasutra.com/blogs/author/EvanJones/4235/">Evan Jones</a>, is equally thought-provoking. Evan recounts the cloning of the indie game <a href="http://www.bored.com/game/play/150995/Radical_Fishing.html"><em>Radical Fishing</em></a> by the more established indie studio <a href="http://gamenauts.com/">Gamenauts</a>, and adds his perspective on the cultural impact of the rampant cloning that takes place on mobile app stores. Returning readers may recall that I've previously <a title="In Defense of Clones" href="http://www.mlindgren.ca/archives/318">defended the practice of cloning games</a>. My defense excluded the cloning of smaller titles by established studios, which I've always viewed as morally questionable at best, but Evan's article nevertheless gave me pause. He provides a strong counterpoint to my own thinking on the matter, and while I'm not yet ready to reverse my position, his argument has undeniable weight. If you're at all interested in game development, both articles are well worth your time.</p></div>
+  		</article>
   		<article class="category-coding">
 <header>
     <p class="meta">
@@ -138,10 +150,10 @@ jQuery(document).ready(function() {
 <li>Chose "System Library."</li>
 <li>Locate the GLUT framework.  On my Mac, running Lion, I used <code>/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework</code>. However, it seems there are multiple different copies on the disk that you could use.  If that path doesn't work for you, just search for <code>glut.h</code> in Finder and you'll find a copy of the framework.  The path you enter into Qt Creator should point to a <code>.framework</code> directory.</li>
 <li>Qt Creator will generate code in your project file which will link to the correct framework or library depending on which platform the code is being compiled on.</li>
-<li>Finally, because Apple loves to be different, the glut.h header path is different on OS X.  <strong>You'll need to <code>#include &lt;GLUT/glut.h&gt;</code></strong>, instead of <code>&lt;gl/glut.h&gt;</code> is usually the case.  You can use preprocessor conditional statements to make this inclusion cross-platform:<div class="highlight"><pre><span class="cp">#if defined(__APPLE__) || defined(MACOSX)</span>
-  <span class="cp">#include &lt;GLUT/glut.h&gt;</span>
+<li>Finally, because Apple loves to be different, the glut.h header path is different on OS X.  <strong>You'll need to <code>#include &lt;GLUT/glut.h&gt;</code></strong>, instead of <code>&lt;gl/glut.h&gt;</code> is usually the case.  You can use preprocessor conditional statements to make this inclusion cross-platform:<div class="highlight"><pre><span></span><span class="cp">#if defined(__APPLE__) || defined(MACOSX)</span>
+  <span class="cp">#include</span> <span class="cpf">&lt;GLUT/glut.h&gt;</span><span class="cp"></span>
 <span class="cp">#else</span>
-    <span class="cp">#include &lt;gl/glut.h&gt;</span>
+    <span class="cp">#include</span> <span class="cpf">&lt;gl/glut.h&gt;</span><span class="cp"></span>
 <span class="cp">#endif</span>
 </pre></div>
 
@@ -182,7 +194,7 @@ jQuery(document).ready(function() {
 </header>
 
   <div class="entry-content"><p><em>[2015-10-10]: I made some minor edits to this post to remove some content that I now feel is superfluous. These edits did not change the substance of the post.</em></p>
-<p>With the phenomenal and growing successes of the iPhone App Store, the Android Market, and the Xbox Live Indie Games marketplace, gamers have seen an unprecedented number of titles which could be described as "clones" of more successful games&mdash;or rip-offs, if you're feeling less kind.  Along with these titles has come a veritable tsunami of hatred for their developers, from game critics and anonymous Internet commenters alike.  The commercial success of some of these titles, such as <em>Angry Birds</em>,<sup id="fnref:birds"><a class="footnote-ref" href="#fn:birds" rel="footnote">1</a></sup> has shown that average gamers are happy to patronize any developer who can provide a fun experience, regardless of originality.  However, any mention of a new clone on a gaming blog or podcast inevitably brings about a stunning amount of vitriol from gamers who, presumably, are upset that their favorite megacorporations aren't getting their due.</div>
+<p>With the phenomenal and growing successes of the iPhone App Store, the Android Market, and the Xbox Live Indie Games marketplace, gamers have seen an unprecedented number of titles which could be described as "clones" of more successful games&mdash;or rip-offs, if you're feeling less kind.  Along with these titles has come a veritable tsunami of hatred for their developers, from game critics and anonymous Internet commenters alike.  The commercial success of some of these titles, such as <em>Angry Birds</em>,<sup id="fnref-birds"><a class="footnote-ref" href="#fn-birds">1</a></sup> has shown that average gamers are happy to patronize any developer who can provide a fun experience, regardless of originality.  However, any mention of a new clone on a gaming blog or podcast inevitably brings about a stunning amount of vitriol from gamers who, presumably, are upset that their favorite megacorporations aren't getting their due.</div>
   <footer>
     <a rel="full-article" href="http://blog.mlindgren.ca/entry/2011/07/14/in-defense-of-clones/">More &rarr;</a>
   </footer>
@@ -296,21 +308,6 @@ sudo chmod 755 /Volumes/Mount_Name
 </ol></p>
 <p>I doubt a great number of people will need this information as it's a strange sort of setup, but it's my hope that these instructions will save someone some time.</p></div>
   		</article>
-  		<article class="category-coding">
-<header>
-    <p class="meta">
-<time datetime="2010-09-12T17:02:00-07:00" pubdate>Sun 12 September 2010</time>  &ndash; &#128339; 3 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/">Android Development Device Setup in Ubuntu 10.04</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>I spent part of last night setting up my HTC Desire as a development device on my Ubuntu laptop.  This was a somewhat frustrating process, because a lot of the information I came across seem to be outdated and didn't work for me.  Even the <a title="Android documentation for developing on a device" href="http://developer.android.com/guide/developing/device.html">official documentation</a> refers to a version of Ubuntu which is more than two years old.  I did eventually piece together the correct process for Ubuntu 10.04, so I'm documenting that process here in the hope that it will help out other developers in the future.  This guide assumes that you've already installed and configured the <a href="http://developer.android.com/sdk/index.html">Android SDK.</a></div>
-  <footer>
-    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/">More &rarr;</a>
-  </footer>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index5.html">&larr; Older</a>
 
@@ -323,12 +320,14 @@ sudo chmod 755 /Volumes/Mount_Name
     <ul id="sidebar_pages">
       <li><a href="http://blog.mlindgren.ca">Home</a></li>
       <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
-          <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
       </li>
@@ -340,9 +339,6 @@ sudo chmod 755 /Volumes/Mount_Name
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -405,7 +401,6 @@ sudo chmod 755 /Volumes/Mount_Name
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
             <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
@@ -414,7 +409,7 @@ sudo chmod 755 /Volumes/Mount_Name
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>

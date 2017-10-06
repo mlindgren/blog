@@ -104,7 +104,6 @@ jQuery(document).ready(function() {
 
 
 <ul class="main-navigation">
-      <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
       <li >
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
@@ -121,6 +120,21 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-coding">
+<header>
+    <p class="meta">
+<time datetime="2010-09-12T17:02:00-07:00" pubdate>Sun 12 September 2010</time>  &ndash; &#128339; 3 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/">Android Development Device Setup in Ubuntu 10.04</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>I spent part of last night setting up my HTC Desire as a development device on my Ubuntu laptop.  This was a somewhat frustrating process, because a lot of the information I came across seem to be outdated and didn't work for me.  Even the <a title="Android documentation for developing on a device" href="http://developer.android.com/guide/developing/device.html">official documentation</a> refers to a version of Ubuntu which is more than two years old.  I did eventually piece together the correct process for Ubuntu 10.04, so I'm documenting that process here in the hope that it will help out other developers in the future.  This guide assumes that you've already installed and configured the <a href="http://developer.android.com/sdk/index.html">Android SDK.</a></div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2010/09/12/android-development-device-setup-in-ubuntu-10-04/">More &rarr;</a>
+  </footer>
+  		</article>
   		<article class="category-technology">
 <header>
     <p class="meta">
@@ -215,12 +229,14 @@ jQuery(document).ready(function() {
     <ul id="sidebar_pages">
       <li><a href="http://blog.mlindgren.ca">Home</a></li>
       <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
-          <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
       </li>
@@ -232,9 +248,6 @@ jQuery(document).ready(function() {
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -297,7 +310,6 @@ jQuery(document).ready(function() {
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
             <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
@@ -306,7 +318,7 @@ jQuery(document).ready(function() {
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>

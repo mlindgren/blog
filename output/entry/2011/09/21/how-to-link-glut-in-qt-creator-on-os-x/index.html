@@ -106,7 +106,6 @@ jQuery(document).ready(function() {
 
 
 <ul class="main-navigation">
-      <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
       <li class="active">
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
@@ -140,10 +139,10 @@ jQuery(document).ready(function() {
 <li>Chose "System Library."</li>
 <li>Locate the GLUT framework.  On my Mac, running Lion, I used <code>/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework</code>. However, it seems there are multiple different copies on the disk that you could use.  If that path doesn't work for you, just search for <code>glut.h</code> in Finder and you'll find a copy of the framework.  The path you enter into Qt Creator should point to a <code>.framework</code> directory.</li>
 <li>Qt Creator will generate code in your project file which will link to the correct framework or library depending on which platform the code is being compiled on.</li>
-<li>Finally, because Apple loves to be different, the glut.h header path is different on OS X.  <strong>You'll need to <code>#include &lt;GLUT/glut.h&gt;</code></strong>, instead of <code>&lt;gl/glut.h&gt;</code> is usually the case.  You can use preprocessor conditional statements to make this inclusion cross-platform:<div class="highlight"><pre><span class="cp">#if defined(__APPLE__) || defined(MACOSX)</span>
-  <span class="cp">#include &lt;GLUT/glut.h&gt;</span>
+<li>Finally, because Apple loves to be different, the glut.h header path is different on OS X.  <strong>You'll need to <code>#include &lt;GLUT/glut.h&gt;</code></strong>, instead of <code>&lt;gl/glut.h&gt;</code> is usually the case.  You can use preprocessor conditional statements to make this inclusion cross-platform:<div class="highlight"><pre><span></span><span class="cp">#if defined(__APPLE__) || defined(MACOSX)</span>
+  <span class="cp">#include</span> <span class="cpf">&lt;GLUT/glut.h&gt;</span><span class="cp"></span>
 <span class="cp">#else</span>
-    <span class="cp">#include &lt;gl/glut.h&gt;</span>
+    <span class="cp">#include</span> <span class="cpf">&lt;gl/glut.h&gt;</span><span class="cp"></span>
 <span class="cp">#endif</span>
 </pre></div>
 
@@ -178,12 +177,14 @@ jQuery(document).ready(function() {
     <ul id="sidebar_pages">
       <li><a href="http://blog.mlindgren.ca">Home</a></li>
       <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
-          <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
       </li>
@@ -195,9 +196,6 @@ jQuery(document).ready(function() {
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -260,7 +258,6 @@ jQuery(document).ready(function() {
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
             <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
@@ -269,7 +266,7 @@ jQuery(document).ready(function() {
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>

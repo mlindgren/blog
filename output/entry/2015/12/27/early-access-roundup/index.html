@@ -106,7 +106,6 @@ jQuery(document).ready(function() {
 
 
 <ul class="main-navigation">
-      <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
       <li >
         <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
       </li>
@@ -155,7 +154,7 @@ point, there's also a lot of over-the-top action and a hint of gun-fetishism,
 which makes the series perfect for a first person shooter. It's surprising,
 then, that nobody has tried to make one until now.</p>
 <p><a href="http://files.mlindgren.ca/images/gits1.jpg"><img alt="Ghost in the Shell: Stand Alone Whatever
-Online" src="http://files.mlindgren.ca/images/gits1_thumb.jpg" /></a></p>
+Online" src="http://files.mlindgren.ca/images/gits1_thumb.jpg"></a></p>
 <p>Unfortunately, the results are mixed, at least at this early stage. I've seen
 some significant stuttering during some matches, which is a real problem in such
 a fast-paced shooter. The gunplay also is also ever-so-slightly off. It's got a
@@ -176,7 +175,7 @@ people to spend real money—imagine that!), and the unlockables don't seem very
 balanced. A fully upgraded character has clear advantages over a new character,
 which leads to a frustrating sense of unfairness.</p>
 <p><a href="http://files.mlindgren.ca/images/gits2.jpg"><img alt="Remember when games had
-gibs?" src="http://files.mlindgren.ca/images/gits2_thumb.jpg" /></a></p>
+gibs?" src="http://files.mlindgren.ca/images/gits2_thumb.jpg"></a></p>
 <p>I think this one is worth keeping an eye on, but I don't see it becoming my
 go-to shooter unless I end up being dead wrong about the free-to-play
 monetization scheme.
@@ -190,7 +189,7 @@ me. I suppose
 <em><a href="http://blog.mlindgren.ca/entry/2015/12/20/game-review-fallout-4/">Fallout 4</a></em>
 made me curious about what the genre had to offer. It turns out that
 the answer is pain and misery.</p>
-<p><a href="http://files.mlindgren.ca/images/rust.jpg"><img alt="Sunrise in Rust" src="http://files.mlindgren.ca/images/rust_thumb.jpg" /></a></p>
+<p><a href="http://files.mlindgren.ca/images/rust.jpg"><img alt="Sunrise in Rust" src="http://files.mlindgren.ca/images/rust_thumb.jpg"></a></p>
 <p>Don't get me wrong, though. <em>Rust</em> is actually an awesome game. Despite
 still being in early access, it's very polished, has an excellent core
 gameplay loop of gathering, building, and defending oneself, and is a lot
@@ -256,11 +255,9 @@ jobs and other boring adult responsibilites. </p>
     }
 
     var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
@@ -328,12 +325,14 @@ jobs and other boring adult responsibilites. </p>
     <ul id="sidebar_pages">
       <li><a href="http://blog.mlindgren.ca">Home</a></li>
       <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
-          <li><a href="http://blog.mlindgren.ca/blog/about/">About</a></li>
     </ul>
   </section>
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
       </li>
@@ -345,9 +344,6 @@ jobs and other boring adult responsibilites. </p>
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
-      </li>
-      <li class="post category-other">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/07/observations-from-three-years-in-america/">Observations from Three Years in America</a>
       </li>
     </ul>
   </section>
@@ -410,7 +406,6 @@ jobs and other boring adult responsibilites. </p>
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="https://twitter.com/_snowghost" target="_blank"><img src="http://files.mlindgren.ca/images/twitter.png"> Twitter</a></li>
             <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
@@ -419,7 +414,7 @@ jobs and other boring adult responsibilites. </p>
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2015  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>

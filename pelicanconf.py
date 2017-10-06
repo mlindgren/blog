@@ -32,7 +32,6 @@ SOCIAL = (
 ('<img src="http://files.mlindgren.ca/images/github.png"/> Github', 'https://github.com/mlindgren'),
 ('<img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm', 'http://last.fm/user/lindgrenM'),
 ('<img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow', 'http://stackoverflow.com/users/108340/mitch-lindgren'),
-('<img src="http://files.mlindgren.ca/images/twitter.png"> Twitter', 'https://twitter.com/_snowghost'),
 ('<img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp', 'http://mlindgren.yelp.com'),
 ('<img src="http://files.mlindgren.ca/images/yt.png"/> YouTube', 'http://www.youtube.com/user/lindgrenMitch'),
 )
