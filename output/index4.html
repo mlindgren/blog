@@ -120,6 +120,22 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-other">
+<header>
+    <p class="meta">
+<time datetime="2011-12-31T15:59:00-08:00" pubdate>Sat 31 December 2011</time>  &ndash; &#128339; 6 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2011/12/31/2010-and-2011-in-review/">2010 and 2011 in Review</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>If you'll forgive me for "metablogging," I've been ruminating lately on the purpose of this website.  Up until now, I've been trying to focus exclusively on technology, programming and game design, and to minimize the subjective aspects of my connection to those fields.  Put more simply, I've been avoiding writing about who I am and what I do in favour of producing a series of mostly impersonal tutorials and critiques of technology.  There are a number of reasons for this—the word "professionalism" comes to mind as chief among them.  I'd like this website to be my public face on the Internet, and as every saavy Internet denizen should know by now, there are certain risks associated with maintaining a public persona.  I greatly admire <a href="http://zedshaw.com/">Zed Shaw</a>, for his personality as well as his technical accomplishments, but I have no desire to make myself unemployable as he claims to have done (albeit temporarily).</p>
+<p>That said, trying to take a dry, detached and objective approach to creating a personal website presents a number of problems itself.  First and foremost, it's an inherent contradiction; if I don't write about myself in any meaningful capacity, then there is nothing aside from the superficial about this website which makes it mine.  I can't imagine it makes for a very interesting read, either.  Realistically, how many people will come here looking for <a title="How to link GLUT in Qt Creator on OS X" href="http://www.mlindgren.ca/archives/453">advice on how to link GLUT?</a>  Readership numbers are of little to no concern to me, mind you, but I can at least endeavour to give this website a purposeful existence.  To that end, I want to start writing more about personal topics, although for the sake of cohesiveness I'm going to continue to focus primarily on those aspects of my life that will be of interest to a technically-minded audience.</div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2011/12/31/2010-and-2011-in-review/">More &rarr;</a>
+  </footer>
+  		</article>
   		<article class="category-technology">
 <header>
     <p class="meta">
@@ -281,33 +297,6 @@ its brevity (and the fact the title is reasonably descriptive), I won't bother
 summarizing the article—instead, I'll merely say that you should click the link
 and check it out for yourself.</p></div>
   		</article>
-  		<article class="category-technology">
-<header>
-    <p class="meta">
-<time datetime="2010-10-03T19:29:00-07:00" pubdate>Sun 03 October 2010</time>  &ndash; &#128339; 2 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2010/10/03/194/">Making Samba shares accessible to Apache on OS X</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>As a small weekend project, I've been working on a simple Python HTTP "file server" of sorts.  The basic idea is that authorized users can log in to a web interface and browse files in specific locations on my home network.  The Python script is accessed through Apache on my Mac Mini, but some of the files I need access to are on Windows boxes.  Unfortunately this presented something of a problem, as the Apache user on OS X (<code>_www</code> as of Snow Leopard) doesn't have permission to access Windows shares mounted by users.</p>
-<p>Sounds simple enough, right?  Just <code>chmod</code> or <code>chown</code> the Windows share and go to town.  Unfortunately, this doesn't seem to work; neither <code>chown</code> or <code>chmod</code> have any effect on mounted Windows shares.  Oddly, they don't output any errors; they just don't <em>do anything.</em> The only way around this seems to be to mount the shares <em>as</em> the Apache user (or whichever user you need to have access).  Here's how to do so in Snow Leopard, with instructions modified slightly from a <a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a> <a title="Stack Overflow: mount a windows smb share on OS X as so it can be accessed by 'www' user" href="http://stackoverflow.com/questions/324171/mount-a-windows-smb-share-on-os-x-as-so-it-can-be-accessed-by-www-user" target="_blank">question on the subject</a>:
-<ol>
-    <li>Create the mountpoint<br />
-        <code>mkdir /Volumes/Mount_Name</code></li>
-    <li>Set the permissions on the mount point
-<pre><code>sudo chown _www:_www /Volumes/Mount_Name
-sudo chmod 755 /Volumes/Mount_Name
-</code></pre>
-</li>
-    <li>If necessary, make a symlink from your Apache documents folder to the mount point<br />
-         <code>ln -s /Volumes/Mount_Name /Library/WebServer/Documents/Mount_Name</code></li>
-    <li>Mount the share <strong>as the Apache user</strong><br />
-        <code>sudo -u _www mount_smbfs //DOMAIN;User:Password@Host/Share /Volumes/Mount_Name</code></li>
-</ol></p>
-<p>I doubt a great number of people will need this information as it's a strange sort of setup, but it's my hope that these instructions will save someone some time.</p></div>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index5.html">&larr; Older</a>
 
@@ -326,6 +315,9 @@ sudo chmod 755 /Volumes/Mount_Name
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/">Fitbit Ionic SDK impressions</a>
+      </li>
+      <li class="post category-coding">
           <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
       </li>
       <li class="post category-reviews">
@@ -336,9 +328,6 @@ sudo chmod 755 /Volumes/Mount_Name
       </li>
       <li class="post category-technology">
           <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
       </li>
     </ul>
   </section>

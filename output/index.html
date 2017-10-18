@@ -123,6 +123,83 @@ jQuery(document).ready(function() {
   		<article class="category-coding">
 <header>
     <p class="meta">
+<time datetime="2017-10-17T00:00:00-07:00" pubdate>Tue 17 October 2017</time>  &ndash; &#128339; 12 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/">Fitbit Ionic SDK impressions</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>I got the new <a href="https://www.fitbit.com/ionic">Fitbit Ionic</a> a few weeks ago, and I'm generally pretty
+happy with the device. I'm in the process of writing a full review of the Ionic, but I realized
+partway through that I had written quite a lot about the SDK, which many people probably won't be
+interested in. Hence, I decided to make that into its own post. In the meantime, if you're looking
+for a review, I would recommend reading <a href="https://www.dcrainmaker.com/2017/09/fitbit-ionic-smartwatch-in-depth-review.html">DC Rainmaker's</a>.
+He's a much more serious athlete than I am, and he reviews fitness gear semi-professionally, so he's
+able to put the devices through much more rigorous tests and go into detail about things like heart
+rate and GPS accuracy, which I won't be doing.</p>
+
+<a href="http://files.mlindgren.ca/images/Ionic.jpg">
+<img src="http://files.mlindgren.ca/images/IonicSmall.jpg" title="The Fitbit Ionic"/>
+</a>
+
+
+<p><br /></p>
+<p>Anyway, the Ionic being Fitbit's first real smartwatch, I was eager to check out the SDK and dive
+into app development. And, well, I've tried to do so, but so far the results haven't been great. I
+think this is partly just because the platform is very new, and partly because of some questionable
+technology decisions that Fitbit made. Although it's too early to really evaluate the success or
+failure of the Ionic, or of FitOS an app platform, I think it can still be instructive to look at
+some of the choices that Fitbit made in designing the device and the OS, what effects they're having
+on developers now, and why I think they may prove to have been suboptimal choices.</p>
+<p>Battery life was clearly the foremost concern for Fitbit when they designed the Ionic, and the
+technology decisions reflect that. Whereas the Apple Watch series 3 has a dual core CPU with a
+maximum clock speed of at least 780 Mhz, 3D graphics acceleration, and a
+<a href="https://www.gsmarena.com/apple_watch_series_3-8860.php">rumored 768MB of RAM</a>, the Ionic contains
+the humble <a href="https://toshiba.semicon-storage.com/us/product/assp/applite/tz1200.html">Toshiba TZ1201XBG</a>,
+with a meager maximum clock speed of 120Mhz<sup id="fnref-cpu"><a class="footnote-ref" href="#fn-cpu">1</a></sup>. The battery life of the two devices reflects
+these hardware differences: the Ionic lasts 4-5 days on a charge, whereas the Apple Watch lasts a
+maximum of 2 days. Personally, I think this was a great choice by Fitbit.  Although the Apple Watch
+is inarguably a more capable "smartwatch," its two-day maximum battery life is an absolute
+deal-breaker for me, which is one of the primary reasons I bought the Ionic instead.</p>
+<p>With the hardware itself being so thoughtfully designed to maximize battery life, it strikes me as a
+bit odd that Fitbit chose JavaScript as the sole language for app development on their platform.
+JavaScript is not known for being a high-performance, memory-efficient programming language;
+historically, it has been quite the opposite. Of course, it's not the language itself that matters
+so much as the interpreter, and modern JavaScript engines like V8 and Chakra have made extremely
+significant performance improvements compared to how slow JavaScript interpreters used to
+be. The Ionic, for its part, uses an engine called "<a href="http://jerryscript.net/">JerryScript</a>", which
+is designed specifically for <acronym title="Internet of Things">IoT</acronym> devices and allows
+JavaScript to be precompiled to bytecode; it boasts that it can run in environments with less than
+64KB of RAM and less than 200KB of ROM. I'm not sure where the name comes from; contrary to what you
+might expect, the project's main contributor does not appear to be named Jerry. For me, the name
+just conjures images of <a href="http://rickandmorty.wikia.com/wiki/Jerry_Smith">Jerry from Rick and Morty</a>:</p>
+<video class="video" id="video-jerry" alt="Jerry from Rick and Morty"
+height="282" width="502" autoplay="" loop="" muted="" playsinline="" preload="true">
+<source src="http://files.mlindgren.ca/images/Jerry.mp4" type="video/mp4"></video>
+
+<p>Uh, anyway, JavaScript is still orders of magnitude slower than C and C++ for most workloads, and
+when you're concerned about energy efficiency and performance on a device with a 120Mhz single-core
+CPU, that difference matters. I freely admit that I am biased in favor of languages like C and C++,
+which are as close to the metal as you can get in a high-level language. Some would consider this
+preference anachronistic, but it's undeniable that there are still many places where maximizing
+performance really does matter. Embedded applications are one of those places, and I'm fairly
+confident that on the Ionic, using native code could have offered even better battery life, or
+perhaps improved performance, which is sometimes suboptimal even in the built-in apps.</p>
+<p>Similarly, all UI on the Ionic is done using Scalable Vector Graphics (SVG). SVG
+is a lot easier to use than requiring developers to render their own UI, but it's also a lot less
+flexible than just blitting pixels to the screen. The minimum benchmark that any modern computing
+device should be able to pass is <a href="https://www.reddit.com/r/itrunsdoom/">whether or not it can run DOOM</a>,
+but between the poor performance of JavaScript and the inflexibility of SVG, I don't see that
+happening on the Ionic any time soon.</p>
+</div>
+  <footer>
+    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/">More &rarr;</a>
+  </footer>
+  		</article>
+  		<article class="category-coding">
+<header>
+    <p class="meta">
 <time datetime="2017-10-05T00:00:00-07:00" pubdate>Thu 05 October 2017</time>  &ndash; &#128339; 13 min read
     </p>
       <h1 class="entry-title">
@@ -538,50 +615,6 @@ Thus, there is no shared password stored on their servers for a hacker to potent
     <a rel="full-article" href="http://blog.mlindgren.ca/entry/2015/03/17/windows-hello/">More &rarr;</a>
   </footer>
   		</article>
-  		<article class="category-coding">
-<header>
-    <p class="meta">
-<time datetime="2015-03-14T02:07:34-07:00" pubdate>Sat 14 March 2015</time>  &ndash; &#128339; 4 min read
-    </p>
-      <h1 class="entry-title">
-        <a href="http://blog.mlindgren.ca/entry/2015/03/14/fun-with-the-microsoft-band-sdk-preview/">Fun with the Microsoft Band SDK Preview</a>
-      </h1>
-</header>
-
-  <div class="entry-content"><p>First of all, happy <a href="http://en.wikipedia.org/wiki/Pi_Day">Pi Day</a>! Using the standard United States
-date format, today is 3/14/15, which makes it the most significant Pi Day this century.</p>
-<p>Anyway, I've spent the past few hours tinkering with the
-<a href="http://developer.microsoftband.com/">Microsoft Band SDK Preview</a>, and although I think it's
-unfortunate that there's no SDK for writing apps which actually run on the Band itself, you can
-still accomplish some pretty cool things with the phone SDK. Unfortunately, this being a preview
-release, the documentation is a bit sparse, and I had some trouble figuring out how to get things
-working. Thus, I wanted to share some of what I've learned. If you prefer to dive right into the
-code, I've got a small C# sample application <a href="https://github.com/mlindgren/BandDemo">on GitHub</a>.</p>
-<p>Standard disclaimer: although I am a Microsoft employee, everything I am posting here and on GitHub
-is my own personal work done on my own time. None of it should be considered as officially
-representative of Microsoft in any respect. While I will do my best to answer any questions I can
-related to the Band SDK Preview, I cannot provide official support for this or any other Microsoft
-product.</p>
-<p>Let's get started. If you're following
-<a href="http://developer.microsoftband.com/docs/MicrosoftBandSDKPreview.pdf">the documentation</a>, the first
-few steps describe how to connect to the Band, as one would expect. The sample code provided creates
-a connection within a <code>using</code> block. This ensures that the connection is disposed of as soon as
-control leaves the block, which is sensible since maintaing a connection to the Band, especially
-when subscribed to multiple sensors, can severely impact its battery life. However, this approach
-can also be a bit misleading, because if you <em>do</em> want to collect data from the Band over some
-interval of time, you will only be able to do so during the lifetime of the <code>IBandClient</code> returned
-by <code>ConnectAsync</code>. As soon as the <code>IBandClient</code> is disposed of, your connection will be closed and
-you will no longer receive sensor data.</p>
-<p>Since you'll typically only be connected to one Band at a time, the easiest way to solve this
-problem is to store the <code>IBandClient</code> as a static member variable of your <code>Application</code> class.
-(Note: I don't guarantee that this is the <em>optimal</em> solution. I am by no means an expert here.) This
-also makes it easy to access your Band client from different pages within your application, and to
-unsubscribe from sensor data when you no longer need it so that you won't drain the Band's
-battery.</div>
-  <footer>
-    <a rel="full-article" href="http://blog.mlindgren.ca/entry/2015/03/14/fun-with-the-microsoft-band-sdk-preview/">More &rarr;</a>
-  </footer>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://blog.mlindgren.ca/index2.html">&larr; Older</a>
 
@@ -599,6 +632,9 @@ battery.</div>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/">Fitbit Ionic SDK impressions</a>
+      </li>
+      <li class="post category-coding">
           <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
       </li>
       <li class="post category-reviews">
@@ -609,9 +645,6 @@ battery.</div>
       </li>
       <li class="post category-technology">
           <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
       </li>
     </ul>
   </section>

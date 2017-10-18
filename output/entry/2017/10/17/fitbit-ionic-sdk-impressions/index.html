@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Fitbit Ionic SDK impressions &mdash; mlindgren.ca</title>
+  <meta name="author" content="Mitch Lindgren">
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="http://blog.mlindgren.ca/favicon.png" rel="icon">
+
+  <link href="http://blog.mlindgren.ca/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<!--
+/* @license
+* MyFonts Webfont Build ID 1737828, 2011-12-16T22:03:39-0500
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are 
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license at the URLs below.
+*
+* Webfont: Museo 700 by exljbris
+* URL: http://www.myfonts.com/fonts/exljbris/museo/700/
+* Copyright: Copyright (c) 2008 by Jos Buivenga/exljbris. All rights reserved.
+* Licensed pageviews: unlimited
+*
+*
+* License: http://www.myfonts.com/viewlicense?type=web&buildid=1737828
+*
+* © 2011 Bitstream Inc
+*/
+-->
+<link rel="stylesheet" type="text/css" href="/theme/css/mlindgren_ca_museo700.css">
+
+<!-- Load jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+type="text/javascript"></script>
+<!--
+<script type="text/javascript">
+    jQuery.noConflict(); // ender.js conflicts with jQuery
+</script>
+-->
+
+ <!-- Load FancyBox -->
+<!-- Fancybox bh fancyapps.com. License: http://fancyapps.com/fancybox/#license -->
+ <link rel="stylesheet" href="/theme/css/jquery.fancybox.css" />
+ <script src="/theme/js/jquery.fancybox.pack.js" type="text/javascript">
+ </script>
+
+<!-- Custom Scripts -->
+<script language="Javascript" type="text/javascript">
+// ender.js gobbles jQuery's ready event: Use ender.js $ instead
+jQuery(document).ready(function() {
+    jQuery(".fancybox").fancybox(
+    {
+      helpers:
+      {
+        overlay:
+        {
+          locked: false
+        }
+      }
+    });
+});
+</script>
+
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="http://blog.mlindgren.ca/">mlindgren.ca</a></h1>
+</hgroup>
+<div id="header-outer-wrap">
+  <div id="header-wrap">
+    <div id="header-background">
+      <img src="/theme/images/header.jpg" class="header-background-stretch">
+    </div>
+  </div>
+</div></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+
+<ul class="main-navigation">
+      <li class="active">
+        <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
+      </li>
+      <li >
+        <a href="http://blog.mlindgren.ca/category/other.html">Other</a>
+      </li>
+      <li >
+        <a href="http://blog.mlindgren.ca/category/reviews.html">Reviews</a>
+      </li>
+      <li >
+        <a href="http://blog.mlindgren.ca/category/technology.html">Technology</a>
+      </li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div class="category-coding">
+  <article class="hentry" role="article">
+<header>
+    <p class="meta">
+<time datetime="2017-10-17T00:00:00-07:00" pubdate>Tue 17 October 2017</time>  &ndash; &#128339; 12 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/">Fitbit Ionic SDK impressions</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>I got the new <a href="https://www.fitbit.com/ionic">Fitbit Ionic</a> a few weeks ago, and I'm generally pretty
+happy with the device. I'm in the process of writing a full review of the Ionic, but I realized
+partway through that I had written quite a lot about the SDK, which many people probably won't be
+interested in. Hence, I decided to make that into its own post. In the meantime, if you're looking
+for a review, I would recommend reading <a href="https://www.dcrainmaker.com/2017/09/fitbit-ionic-smartwatch-in-depth-review.html">DC Rainmaker's</a>.
+He's a much more serious athlete than I am, and he reviews fitness gear semi-professionally, so he's
+able to put the devices through much more rigorous tests and go into detail about things like heart
+rate and GPS accuracy, which I won't be doing.</p>
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<a href="http://files.mlindgren.ca/images/Ionic.jpg">
+<img src="http://files.mlindgren.ca/images/IonicSmall.jpg" title="The Fitbit Ionic"/>
+</a>
+</div>
+
+<p><br /></p>
+<p>Anyway, the Ionic being Fitbit's first real smartwatch, I was eager to check out the SDK and dive
+into app development. And, well, I've tried to do so, but so far the results haven't been great. I
+think this is partly just because the platform is very new, and partly because of some questionable
+technology decisions that Fitbit made. Although it's too early to really evaluate the success or
+failure of the Ionic, or of FitOS an app platform, I think it can still be instructive to look at
+some of the choices that Fitbit made in designing the device and the OS, what effects they're having
+on developers now, and why I think they may prove to have been suboptimal choices.</p>
+<p>Battery life was clearly the foremost concern for Fitbit when they designed the Ionic, and the
+technology decisions reflect that. Whereas the Apple Watch series 3 has a dual core CPU with a
+maximum clock speed of at least 780 Mhz, 3D graphics acceleration, and a
+<a href="https://www.gsmarena.com/apple_watch_series_3-8860.php">rumored 768MB of RAM</a>, the Ionic contains
+the humble <a href="https://toshiba.semicon-storage.com/us/product/assp/applite/tz1200.html">Toshiba TZ1201XBG</a>,
+with a meager maximum clock speed of 120Mhz<sup id="fnref-cpu"><a class="footnote-ref" href="#fn-cpu">1</a></sup>. The battery life of the two devices reflects
+these hardware differences: the Ionic lasts 4-5 days on a charge, whereas the Apple Watch lasts a
+maximum of 2 days. Personally, I think this was a great choice by Fitbit.  Although the Apple Watch
+is inarguably a more capable "smartwatch," its two-day maximum battery life is an absolute
+deal-breaker for me, which is one of the primary reasons I bought the Ionic instead.</p>
+<p>With the hardware itself being so thoughtfully designed to maximize battery life, it strikes me as a
+bit odd that Fitbit chose JavaScript as the sole language for app development on their platform.
+JavaScript is not known for being a high-performance, memory-efficient programming language;
+historically, it has been quite the opposite. Of course, it's not the language itself that matters
+so much as the interpreter, and modern JavaScript engines like V8 and Chakra have made extremely
+significant performance improvements compared to how slow JavaScript interpreters used to
+be. The Ionic, for its part, uses an engine called "<a href="http://jerryscript.net/">JerryScript</a>", which
+is designed specifically for <acronym title="Internet of Things">IoT</acronym> devices and allows
+JavaScript to be precompiled to bytecode; it boasts that it can run in environments with less than
+64KB of RAM and less than 200KB of ROM. I'm not sure where the name comes from; contrary to what you
+might expect, the project's main contributor does not appear to be named Jerry. For me, the name
+just conjures images of <a href="http://rickandmorty.wikia.com/wiki/Jerry_Smith">Jerry from Rick and Morty</a>:</p>
+<video class="video" id="video-jerry" alt="Jerry from Rick and Morty"
+height="282" width="502" autoplay="" loop="" muted="" playsinline="" preload="true">
+<source src="http://files.mlindgren.ca/images/Jerry.mp4" type="video/mp4"></video>
+
+<p>Uh, anyway, JavaScript is still orders of magnitude slower than C and C++ for most workloads, and
+when you're concerned about energy efficiency and performance on a device with a 120Mhz single-core
+CPU, that difference matters. I freely admit that I am biased in favor of languages like C and C++,
+which are as close to the metal as you can get in a high-level language. Some would consider this
+preference anachronistic, but it's undeniable that there are still many places where maximizing
+performance really does matter. Embedded applications are one of those places, and I'm fairly
+confident that on the Ionic, using native code could have offered even better battery life, or
+perhaps improved performance, which is sometimes suboptimal even in the built-in apps.</p>
+<p>Similarly, all UI on the Ionic is done using Scalable Vector Graphics (SVG). SVG
+is a lot easier to use than requiring developers to render their own UI, but it's also a lot less
+flexible than just blitting pixels to the screen. The minimum benchmark that any modern computing
+device should be able to pass is <a href="https://www.reddit.com/r/itrunsdoom/">whether or not it can run DOOM</a>,
+but between the poor performance of JavaScript and the inflexibility of SVG, I don't see that
+happening on the Ionic any time soon.</p>
+
+
+<p><hr /><br /></p>
+<p>In fairness, Fitbit had a difficult problem to solve in developing an SDK for a smartwatch which
+supports multiple "companion" devices (i.e. iOS, Android, and Windows devices which communicate with
+the watch). First, there's the technical problem to solve of enabling the device to communicate with
+those three platforms, each of which has different restrictions on what apps can do. But perhaps
+equally important is the challenge of making the SDK easy and convenient enough that people will
+actually want to develop for it. Having an app platform is meaningless if nobody actually writes
+apps for it, and as Microsoft found out with Windows Phone, it can be very hard to attract
+developers to your platform if you're not already in a dominant (or at least strong) market
+position. Fitbit has been very successful with its cheaper wearables, but this is their first real
+smartwatch, and between Apple, Garmin, Suunto, Samsung, and dozens of others, there's a lot of
+competition.</p>
+<p>With that in mind, it's tempting to think that a platform can be differentiated by making it very
+easy to develop for. I assume this was one of the primary factors that weighed into Fitbit's
+decision to use JavaScript: it's generally considered to be a pretty easy language to learn and use,
+and since it can be run within the official Fitbit app on the phone or PC, it allows developers to
+write "companion" modules for their watch apps in the same language that the watch app itself is
+written in.  (This is often cited as an advantage of node.js&mdash;you can write your code in the
+same language on the server and the client. Personally, I've never understood why one would <em>want</em>
+to write JavaScript on the server, but that's just me.) The ability to easily create companion
+modules is important, since the watch can't directly communicate with the Internet; all Internet
+access must use the companion app as a proxy. (The Ionic does have WiFi, but it seems to only be
+used for syncing must and downloading firmware updates. As I understand it, this is because WiFi
+consumes too much battery.)</p>
+<p>The problem is that I don't think it's actually true that you can attract developers to your
+platform on the basis of it being easy to develop for&mdash;at least, not solely or primarily on
+that basis, and not the kind of developers you actually want to attract (that is, skilled developers
+who know what they're doing). The whole open source community is a testament to the insane amount of
+work that some software developers are willing to do for free, but everyone needs to eat. Developers
+will come to a platform if it provides a money-making opportunity, even if it's difficult to develop
+for; conversely, the easiest development platform in the world won't help if it has no users. With
+that in mind, it's also concerning that the FitOS platform has <em>no built in way for app developers
+to charge for their applications</em>.</p>
+<p>And in any case, the biggest problem is that currently, the Ionic <em>isn't</em> actually easy to develop
+for, because the SDK is seriously short on features and extremely buggy. The web-based toolchain can
+also be pretty painful to use. In no particular order, here are some of the issues I've run into in
+the process of trying to develop a simple app, along with a few other problems that other developers
+have mentioned in the forums or in Discord:</p>
+<ul>
+<li>The <acronym title="Document Object Model">DOM</acronym> for an app's interface <strong>cannot be
+  modified at runtime</strong>, so the only way to change your UI dynamically is to hide and show
+  pre-existing elements. (Limited support for being able to spawn copies of existing elements is
+  coming.)</li>
+<li>There is currently no built-in support for multi-page applications. Again, you just have to show
+  and hide different elements to achieve the effect of multiple pages.</li>
+<li>Although the watch CPU appears to support hardware accelerated AES and SHA256, this isn't exposed
+  through any API, so cryptographic operations require the use of third-party JavaScript libraries
+  and end up being unusably slow.</li>
+<li><a href="https://community.fitbit.com/t5/SDK-Development/PKCE-not-working-for-OAuthButton/m-p/2226906">I cannot get the OAuthButton component to work</a>
+  in my application settings, which means I can't authenticate to basically any web service.  This
+  might be iOS-specific; one of the Fitbit developers mentioned that their QA had reported something
+  similar, so hopefully they're looking into it. Another developer mentioned
+  <a href="https://community.fitbit.com/t5/SDK-Development/Looking-for-help-with-OAuth/m-p/2231303">having trouble getting OAuthButton to work</a>
+  with <strong>Fitbit's own REST APIs!</strong> Unfortunately, there are currently no examples of how this
+  component is supposed to work.</li>
+<li>There is no emulator available, and no way to test the companion app or Settings page in the
+  browser. This is an annoyance in general, and it seriously exacerbates the OAuthButton issue,
+  because it <a href="https://stackoverflow.com/questions/12561758/fiddler-capture-and-decrypt-https-traffic-from-ipad-app">also seems to be nigh-impossible</a>
+  to capture decrypted HTTPS traffic from an iOS device. (Granted, that last bit isn't Fitbit's
+  fault at all, but it also wouldn't be an issue if the OAuthButton just worked.)</li>
+<li>PNGs are automatically converted to a proprietary hardware-accelerated format, but JPGs are not
+  hardware accelerated so they take forever to load and can actually cause crashes or hangs if
+  they're too big. This isn't a big deal for static images within the app, but what if you want to
+  show content from the Internet?</li>
+<li>Communication between the watch and the "companion" app running on the phone seems to have some
+  reliability issues. Sometimes the companion seems to just not launch at all.</li>
+<li>There is no way to "push" data from the companion to the watch. The watch app has to request the
+  data, which means you need to poll for it if you don't know when the data will be available. (In
+  fairness, this might be an iOS limitation.)</li>
+<li>Some APIs having confusing asymmetries. For instance, apparently in order to send a file from the
+  companion app to the device, you need to manually CBOR-encode the contents before sending it. But
+  when reading the file on the other side, it is decoded for you automatically.</li>
+<li>Documentation is fairly limited; for example, a lot of APIs have parameters that aren't
+  well-explained, so you kind of have to guess what they do and then figure it out by trial and
+  error.</li>
+<li>There is no local toolchain that you can install on your PC or Mac; there is only a web-based IDE
+  which builds and deploys your app for you. This means no Git (unless you download copies of your
+  code every time you make changes), no inline diffs, no using your own text editor with your own
+  keyboard shortcuts, and no working on your app if you're offline. Some people have also reported
+  connectivity issues when trying to get the watch to talk to the IDE.</li>
+<li>The IDE does not support breakpoints, performance profiling, or other such tools that you'd expect
+  from a modern development environment. I hope you enjoy debugging using
+  <code>console.log(...)</code>! By the way, there's a (relatively small) limit to length of string
+  you can log.</li>
+</ul>
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<a href="http://files.mlindgren.ca/images/FitbitStudio.jpg">
+<img src="http://files.mlindgren.ca/images/FitbitStudioSmall.jpg" title="Fitbit Studio"/>
+</a>
+</div>
+
+<p><br /></p>
+<p>I could go on, but I'm sure you get the point. Fitbit is aware of many (hopefully most) of these
+issues and is already working on many of them, and I have to commend their developers for being very
+responsive and involved in the community. There's an <a href="https://discord.gg/4ujeheG">unofficial Discord channel</a>
+where a few of the developers are very active in providing advice and investigating issues raised by
+the community. It's nice to have such a direct line to the development team; when interacting with a
+bigger company, you usually have to go through six layers of customer service and escalation
+engineers before you get to talk to an actual developer. Unfortunately, the downside is that the
+handful of Fitbit developers who are going above and beyond by fielding SDK questions during and
+outside of work hours can't possibly hope to keep up with the volume of requests they're getting,
+especially given how many issues there are right now. A public bug tracker would be nice so that we
+have a definitive source for which issues are being tracked...</p>
+<p><hr /><br /></p>
+<p>It's frustrating that the SDK wasn't more complete at release. I'm sympathetic to the need to get
+the device out the door, especially given that Fitbit is facing stiff competition from bigger
+companies with vastly more resources. However, that fact only compounds my feeling that building a
+brand new JavaScript-based app platform was probably the wrong decision. In general, I'm of the
+opinion that any new app platform should start by exposing APIs that can be called from native code,
+and providing a toolchain that allows developers to compile C and/or C++ into the platform's native
+instruction set. Not only is this more performant, but it's easier to do: since you need to at least
+partly implement your APIs in native code so that they can talk to onboard devices, adding a
+scripting interface is just extra work. Once the (public!) native APIs are working, stable, and
+reasonably complete, you can build a managed code SDK on top of it… or just sit back and wait for
+someone else to do it for you.</p>
+<p>This appears to be what Pebble did, as they provided a C API to create "watchapps and watchfaces,"
+and a JavaScript API which could only be used for watchfaces. Given that Fitbit acquired Pebble last
+year, reportedly primarily for the purpose of using their code and expertise to build FitOS, I don't
+know why Fitbit didn't just literally rename all the Pebble APIs and call it a day. I haven't
+actually done any Pebble development, so maybe I'm missing some major issues, but from a quick
+perusal of their documentation, their APIs look pretty solid, and they're obviously a lot more
+mature than Fitbit's new platform is. Pebble's users certainly seemed to be happy with the platform
+(to the point that many of them were very vocally disapointed when the company was acquired by
+Fitbit). Plus, Pebble had Android and iOS SDKs to allow third party apps on those platforms to
+communicate with the watch, in addition to a JavaScript-based SDK that ran as part of Pebble's own
+Android/iOS app. This approach appears much more flexible and powerful to me. Perhaps eventually
+Fitbit will follow suit, but at this point I'm not holding my breath.</p>
+<p>So, what's the takeaway of all this? It's not that the Ionic is a bad device, or that its app
+platform is doomed to failure, or that Fitbit has bad engineers. I don't think any of those things
+are true. What I <em>would</em> like to communicate&mdash;and this will probably be a running theme in all
+of the CS-related writing I ever do&mdash;is that technology decisions really matter. Programmers
+are notorious for getting into religious wars about their favorite languages, and evangelizing your
+preferred technology too hard makes you come across as an asshole. I'm probably already guilty of
+this. But on the other hand, I feel that there's a strange sort of postmodern stream of thought in
+CS that it doesn't really matter what languages or technologies you choose to use in any given case,
+because they're all more or less equally capable, and that's… just not true.</p>
+<p>Yes, there is a sort of isomorphism between any two Turing-complete languages, but in practice you
+can't simply gloss over the performance implications of using, say, JavaScript (or even Java)
+instead of C or C++.  This might sound blindingly obvious, but remember that even huge companies are
+subject to this mentality, sometimes with disastrous results, as was the case with
+<a href="http://winsupersite.com/article/faqtip/windows-longhorn-faq">Windows Longhorn</a>. (It also runs
+rampant in college CS programs, which is why it's notoriously difficult to hire college graduates
+who are comfortable with C or C++.)</p>
+<p>Lest I come off as too much of a native code zealot, I'm not saying that native code is <em>always</em> the
+right choice. If you're writing a web application, or anything else that involves a lot of text
+manipulation, database interactions, or (de-)serialization of dynamic objects, you're probably crazy
+if your tool of choice is C++. Even just writing a <em>client</em> for REST APIs in C++ is not very fun (I
+know this from experience). But, particularly if you're building an app platform or a modding system
+or something like that, it's better to offer third-party developers as much flexibility and power as
+you can, rather than painting yourself and everyone else into a corner to start with. Remember that
+you can always just export C APIs and provide bindings to call them with your favorite scripting
+language. It's quite a bit more difficult to do the other way around.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-cpu">
+<p>The first personal computer I ever used was a Macintosh LCII, which had a clock speed of 16
+MHz. That was 20-some years ago. If it doesn't blow your mind that we can now fit a CPU an order of
+magnitude more powerful than that in a watch, and make it run for several days on a tiny battery
+<em>while</em> powering several other sensors... well, it should!&#160;<a class="footnote-backref" href="#fnref-cpu" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        Mitch Lindgren
+    </span>
+  </span>
+<time datetime="2017-10-17T00:00:00-07:00" pubdate>Tue 17 October 2017</time>  <span class="categories">
+    <a class='category' href='http://blog.mlindgren.ca/category/coding.html'>Coding</a>
+  </span>
+  <span class="categories">
+    <a class="category" href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a class="category" href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>  </span>
+</p><div class="sharing">
+</div>    </footer>
+  </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+  </section>
+</div>
+<aside class="sidebar">
+  <section>
+    <h1>Pages</h1>
+    <ul id="sidebar_pages">
+      <li><a href="http://blog.mlindgren.ca">Home</a></li>
+      <li><a href="http://blog.mlindgren.ca/blog/archives/">Archives</a></li>
+    </ul>
+  </section>
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/">Fitbit Ionic SDK impressions</a>
+      </li>
+      <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
+      </li>
+      <li class="post category-reviews">
+          <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
+      </li>
+      <li class="post category-reviews">
+          <a href="http://blog.mlindgren.ca/entry/2015/12/20/game-review-fallout-4/">Game Review: Fallout 4</a>
+      </li>
+      <li class="post category-technology">
+          <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li class="category-coding">
+          <a href="http://blog.mlindgren.ca/category/coding.html">Coding</a>
+        </li>
+        <li class="category-other">
+          <a href="http://blog.mlindgren.ca/category/other.html">Other</a>
+        </li>
+        <li class="category-reviews">
+          <a href="http://blog.mlindgren.ca/category/reviews.html">Reviews</a>
+        </li>
+        <li class="category-technology">
+          <a href="http://blog.mlindgren.ca/category/technology.html">Technology</a>
+        </li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/video-games/">Video Games</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/previews/">Previews</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </section>
+
+
+
+  <section>
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+      <li class="loading">Status updating...</li>
+    </ul>
+      <a href="https://github.com/mlindgren">@mlindgren</a> on GitHub
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+          if (!window.jXHR){
+              var jxhr = document.createElement('script');
+              jxhr.type = 'text/javascript';
+              jxhr.src = 'http://blog.mlindgren.ca/theme/js/jXHR.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(jxhr, s);
+          }
+
+          github.showRepos({
+              user: 'mlindgren',
+              count: 5,
+              skip_forks: false,
+              target: '#gh_repos'
+          });
+      });
+    </script>
+    <script src="http://blog.mlindgren.ca/theme/js/github.js" type="text/javascript"> </script>
+  </section>
+
+    <section class="social">
+        <h1>Social</h1>
+        <ul>
+            <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
+            <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
+            <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
+            <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
+            <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
+        </ul>
+    </section>
+
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>
+  <script src="http://blog.mlindgren.ca/theme/js/ender.js"></script>
+  <script src="http://blog.mlindgren.ca/theme/js/octopress.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-56108181-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-56108181-1');
+    ga('send', 'pageview');
+</script>
+  <script type="text/javascript">
+    var disqus_shortname = 'mlindgrenca';
+    var disqus_identifier = '/entry/2017/10/17/fitbit-ionic-sdk-impressions/';
+    var disqus_url = 'http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/';
+    var disqus_title = 'Fitbit Ionic SDK impressions';
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+</body>
+</html>

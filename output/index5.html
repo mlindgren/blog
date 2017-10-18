@@ -120,6 +120,33 @@ jQuery(document).ready(function() {
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article class="category-technology">
+<header>
+    <p class="meta">
+<time datetime="2010-10-03T19:29:00-07:00" pubdate>Sun 03 October 2010</time>  &ndash; &#128339; 2 min read
+    </p>
+      <h1 class="entry-title">
+        <a href="http://blog.mlindgren.ca/entry/2010/10/03/194/">Making Samba shares accessible to Apache on OS X</a>
+      </h1>
+</header>
+
+  <div class="entry-content"><p>As a small weekend project, I've been working on a simple Python HTTP "file server" of sorts.  The basic idea is that authorized users can log in to a web interface and browse files in specific locations on my home network.  The Python script is accessed through Apache on my Mac Mini, but some of the files I need access to are on Windows boxes.  Unfortunately this presented something of a problem, as the Apache user on OS X (<code>_www</code> as of Snow Leopard) doesn't have permission to access Windows shares mounted by users.</p>
+<p>Sounds simple enough, right?  Just <code>chmod</code> or <code>chown</code> the Windows share and go to town.  Unfortunately, this doesn't seem to work; neither <code>chown</code> or <code>chmod</code> have any effect on mounted Windows shares.  Oddly, they don't output any errors; they just don't <em>do anything.</em> The only way around this seems to be to mount the shares <em>as</em> the Apache user (or whichever user you need to have access).  Here's how to do so in Snow Leopard, with instructions modified slightly from a <a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a> <a title="Stack Overflow: mount a windows smb share on OS X as so it can be accessed by 'www' user" href="http://stackoverflow.com/questions/324171/mount-a-windows-smb-share-on-os-x-as-so-it-can-be-accessed-by-www-user" target="_blank">question on the subject</a>:
+<ol>
+    <li>Create the mountpoint<br />
+        <code>mkdir /Volumes/Mount_Name</code></li>
+    <li>Set the permissions on the mount point
+<pre><code>sudo chown _www:_www /Volumes/Mount_Name
+sudo chmod 755 /Volumes/Mount_Name
+</code></pre>
+</li>
+    <li>If necessary, make a symlink from your Apache documents folder to the mount point<br />
+         <code>ln -s /Volumes/Mount_Name /Library/WebServer/Documents/Mount_Name</code></li>
+    <li>Mount the share <strong>as the Apache user</strong><br />
+        <code>sudo -u _www mount_smbfs //DOMAIN;User:Password@Host/Share /Volumes/Mount_Name</code></li>
+</ol></p>
+<p>I doubt a great number of people will need this information as it's a strange sort of setup, but it's my hope that these instructions will save someone some time.</p></div>
+  		</article>
   		<article class="category-coding">
 <header>
     <p class="meta">
@@ -235,6 +262,9 @@ jQuery(document).ready(function() {
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post category-coding">
+          <a href="http://blog.mlindgren.ca/entry/2017/10/17/fitbit-ionic-sdk-impressions/">Fitbit Ionic SDK impressions</a>
+      </li>
+      <li class="post category-coding">
           <a href="http://blog.mlindgren.ca/entry/2017/10/05/software-development-career-advice/">Computer Science Career Advice</a>
       </li>
       <li class="post category-reviews">
@@ -245,9 +275,6 @@ jQuery(document).ready(function() {
       </li>
       <li class="post category-technology">
           <a href="http://blog.mlindgren.ca/entry/2015/10/12/switching-to-pelican/">Switching to Pelican</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/09/25/tv-series-review-mr-robot/">TV Series Review: Mr. Robot, Season One</a>
       </li>
     </ul>
   </section>
