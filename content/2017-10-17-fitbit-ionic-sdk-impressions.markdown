@@ -125,16 +125,17 @@ have mentioned in the forums or in Discord:
 - Although the watch CPU appears to support hardware accelerated AES and SHA256, this isn't exposed
   through any API, so cryptographic operations require the use of third-party JavaScript libraries
   and end up being unusably slow.
-- [I cannot get the OAuthButton component to work](https://community.fitbit.com/t5/SDK-Development/PKCE-not-working-for-OAuthButton/m-p/2226906)
+- <span style="text-decoration: line-through;">[I cannot get the OAuthButton component to work](https://community.fitbit.com/t5/SDK-Development/PKCE-not-working-for-OAuthButton/m-p/2226906)
   in my application settings, which means I can't authenticate to basically any web service.  This
   might be iOS-specific; one of the Fitbit developers mentioned that their QA had reported something
   similar, so hopefully they're looking into it. Another developer mentioned
   [having trouble getting OAuthButton to work](https://community.fitbit.com/t5/SDK-Development/Looking-for-help-with-OAuth/m-p/2231303)
   with **Fitbit's own REST APIs!** Unfortunately, there are currently no examples of how this
-  component is supposed to work.
+  component is supposed to work.</span> [Edited 2017-10-22] This appears to be fixed now.
 - There is no emulator available, and no way to test the companion app or Settings page in the
-  browser. This is an annoyance in general, and it seriously exacerbates the OAuthButton issue,
-  because it [also seems to be nigh-impossible](https://stackoverflow.com/questions/12561758/fiddler-capture-and-decrypt-https-traffic-from-ipad-app)
+  browser. This is an annoyance in general, and it <span style="text-decoration: line-through;">
+  seriously exacerbates the OAuthButton issue</span> makes it really hard to debug any issue with
+  REST APIs, because it [also seems to be nigh-impossible](https://stackoverflow.com/questions/12561758/fiddler-capture-and-decrypt-https-traffic-from-ipad-app)
   to capture decrypted HTTPS traffic from an iOS device. (Granted, that last bit isn't Fitbit's
   fault at all, but it also wouldn't be an issue if the OAuthButton just worked.)
 - PNGs are automatically converted to a proprietary hardware-accelerated format, but JPGs are not
