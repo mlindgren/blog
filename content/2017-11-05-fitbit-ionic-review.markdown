@@ -1,21 +1,21 @@
 layout: post
 Title: Review: Fitbit Ionic
 date: 2017-11-05
-Category: Coding
+Category: Reviews
 Slug: fitbit-ionic-review
-Tags: Fitness
+Tags: Fitness, Wearables
+
+<small>Conflict of interest disclosure: I own 20 shares of Fitbit stock, which I purchased
+halfway through writing this review, on the hope that apparently strong Ionic sales would give the
+stock a boost. So far, that hasn't been the case. At any rate, the value of the stock is less than
+the cost of the device itself, so I don't think it compromises my objectivity, but you have been
+warned.</small>
 
 <div style="margin-left: auto; margin-right: auto; text-align: center;">
 <a href="http://files.mlindgren.ca/images/IonicFamily.jpg">
 <img src="http://files.mlindgren.ca/images/IonicFamilySmall.jpg" title="Fitbit Ionic"/>
 </a>
 </div><br />
-
-<small>Conflict of interest disclosure: I own about 30 shares of Fitbit stock, which I purchased
-halfway through writing this review, on the hope that apparently strong Ionic sales would give the
-stock a boost. So far, that hasn't been the case. At any rate, the value of the stock is less than
-the cost of the device itself, so I don't think it compromises my objectivity, but you have been
-warned.</small>
 
 Fitbit recently released their first true smartwatch, the Ionic. After going through a phase of
 slight obsession in the lead-up to its release, during which I spent many hours watching preview
@@ -36,45 +36,46 @@ watch is for various types of users.
 Even though I don't consider myself a serious athlete, I did buy the Fitbit Ionic primarily as a
 fitness tracker, so I'd be remiss to not mention how the device fares in that respect. Indeed, I
 think it's fair to say that the Ionic was _designed_ primarily as a fitness tracker, with the
-smartwatch functionality being somewhat secondary. In fact, I think some of the comparisons that
-other reviewers have made between the Ionic and the Apple Watch are somewhat off base, because they
-don't take into account the fact that the devices are designed with different audiences in mind.
-Moreover, the Apple Watch is only compatible with iOS devices, so if you don't use iOS, the Apple
-Watch is simply not an option. That means that although the Apple Watch is (according to Apple) now
-the most popular watch globally, its addressable market is actually only a tiny fraction of the
-Ionic's (and other watch manufacturers). Unfortunately for Fitbit, competition in this market is
-extremely fierce, even if you only consider all the Android and Windows users that the Apple Watch
-can't reach.
+smartwatch functionality being somewhat secondary. In my mind, this puts the Ionic in a slightly
+different category than the Apple Watch&mdash;plus, the Ionic supports Android and Windows devices,
+whereas the Apple Watch does not. Unfortunately for Fitbit, competition in this market is extremely
+fierce, even if you only consider all the Android and Windows users that the Apple Watch can't
+reach.
 
-So, how does the Ionic perform as a fitness tracker? I think it's pretty good for the most part, but
-there are some noteworthy shortcomings that Fitbit absolutely needs to address in future software
-updates if they want to stay competitive. But let's start with the good parts. First of all, I've
-been impressed with the GPS. It connects quickly and consistently, and in my experience, the
-accuracy is pretty good for a wrist-mounted device. I have found that it tends to cut corners if you
-make sharp turns, which can result in runs appearing slightly shorter than they actually are, but
-the deviation is only about 50-100 meters over a 5km run. This is on par with the accuracy of other
-devices, and it won't be cause for concern for most people. Besides, in some cases that error will
-be averaged out by other noise.
+So, how _does_ the Ionic perform as a fitness tracker? I think it's pretty good for the most part,
+but there are some noteworthy shortcomings that Fitbit absolutely needs to address in future
+software updates if they want to stay competitive. But let's start with the good parts. First of
+all, I've been impressed with the GPS. It connects quickly and consistently, and in my experience,
+the accuracy is pretty good for a wrist-mounted device. I have found that it tends to cut corners if
+you make sharp turns, which can result in runs appearing slightly shorter than they actually are,
+but the deviation is only about 50-100 meters over a 5km run. This is on par with the accuracy of
+other devices, and it won't be cause for concern for most people. Besides, in some cases that error
+will be averaged out by other noise.
 
 <!-- PELICAN_END_SUMMARY -->
 
 Likewise, the heart rate monitor is quite reliable. Like most wearable devices, it records
-continuously throughout the day at a lower frequency, and then runs at a higher frequency during
-activities. I have found it to be fairly accurate, only occasionally getting confused during
-strenuous exercise, and pretty much always working at rest&mdash;even if I wear it on my tattooed
-arm. Optical heart rate sensors are never as accurate as chest straps, but they're much more
-convenient; although I've owned a chest strap for years now, I can never be bothered to actually use
-it.
+continuously throughout the day at a lower frequency, and at a higher frequency during activities. I
+have found it to be fairly accurate, only occasionally getting confused during strenuous exercise,
+and pretty much always appearing correct at rest&mdash;even if I wear it on my tattooed arm. I say
+"appearing" because my testing of the heart rate sensor's accuracy has been thoroughly unscientific;
+I've just counted beats manually and compared it to the reading on the Fitbit. Optical heart rate
+sensors are never as accurate as chest straps, but they're much more convenient. I've owned
+a chest strap for years now, but I can never be bothered to actually use it.
 
 Arguably the most important aspect of a wearable device is its battery life, and happily Fitbit did
 not disappoint with the Ionic. They advertise 4+ days for most users, and in my experience that is
 accurate. If you don't use the GPS much, I think you could easily get 5 days on a single charge, but
 even with fairly frequent GPS use, you should have no problem lasting at least 3.5-4 days between
-charges. With GPS on constantly, you should get 10 hours of battery life, which is great as it would
+charges. With GPS on constantly, you should get 10 hours of battery life, which is nice as it would
 allow you to track a longish hike without having to bring a battery pack to recharge at the top of
-the mountain. I did have one day where the battery rapidly dropped from 40% to zero over the course
-of only a few hours, but that appears to have been a one-time anomaly, and I'm also running
-developer firmware so it may be a bug specific to that firmware.
+the mountain. Ultramarathon runners or multi-day backpackers might find 10 hours of GPS time
+insufficient, though.
+
+I have had a couple days where the battery rapidly dropped from 40% to zero over the
+course of only a few hours, part way through the fourth day of use. I assume this is an issue with
+the calibration of the battery guage which can be corrected by a software update; at any rate, it
+has only happened to me a couple times.
 
 Garmin, Suunto, and some lesser-known brands do have Fitbit beat in terms of battery life, but the
 important thing for me is that I can use the Ionic all day for several days without having to think
@@ -82,8 +83,8 @@ about when I last charged it, or when I'll next have to charge it. That was not 
 Microsoft Band 2[^microsoft], which I previously owned. At only two days to a charge, I had to be
 mindful of when to put the Band on the charger if I wanted to be able to consistently track my
 sleep, and if I happened to forget, I'd just have to forego sleep tracking that night.
-Incidentally, this is the main reason I didn't get an Apple Watch; the short battery life was
-basically a deal breaker for me.
+Incidentally, this is the main reason I didn't get an Apple Watch; the short life is a deal breaker
+for me.
 
 (Apparently the Apple Watch doesn't natively do sleep tracking, anyway. One could argue that sleep
 tracking isn't actually very useful, but personally I enjoy having the data and being able to
@@ -103,6 +104,7 @@ issue, because swiping through activities on the device might be cumbersome if t
 activities available. Whatever the reason, I really hope this is fixed in a future software update.
 
 Second, the list of available activities has some notable omissions. The available options are:
+
 - Run
 - Walk
 - Swim (pool swimming)
@@ -134,17 +136,17 @@ Frankly, looking through Fitbit's [feature suggestion forum](https://community.f
 doesn't make me extremely optimistic about the level of post-launch support we're likely to see on
 the Ionic. There are over 9,000 suggestions on that forum, across all Fitbit products, but only a
 handful of them have been implemented so far. And I can't help but wonder why more exercise options
-weren't available at launch, given Fitbit's emphasis on, well, fitness, especially given that the
-Apple Watch _does_ support a lot of these activities.
+weren't available at launch, given Fitbit's emphasis on, you know, fitness. It's especially
+irritating when you consider that the Apple Watch _does_ support a lot of these activities.
 
 Third, the Ionic cannot be connected to external sensors like chest strap heart rate monitors or
 power meters for bicycles. This is not a huge issue for me personally, because I don't use any of
 those devices. As mentioned previously, I do actually own a chest strap heart rate monitor, but I
 find it too much of a nuisance to wear it when I run or work out, which is part of the reason I like
-having a fitness tracking watch in the first place. But other devices do support external sensors -
-including the Garmin Vivoactive 3 and the Apple Watch. So again, for serious fitness enthusiasts,
-this seems like a big shortcoming on a device that really should be capitalizing on its fitness
-features to make up for its shortcomings as a smartwatch. (More on that later.)
+having a fitness watch in the first place. But other devices do support external
+sensors&mdash;including the Garmin Vivoactive 3 and, again, the Apple Watch. So this too is a big
+shortcoming for serious fitness enthusiasts, on a device that really should be capitalizing on its
+fitness features to make up for its shortcomings as a smartwatch.  (More on that later.)
 
 ### Aesthetics and comfort
 Aesthetics are obviously inherently subjective, but personally I think the Ionic looks great. I've
@@ -164,8 +166,14 @@ nice to just have more screen. I will say, though, that the close up marketing i
 exaggerate the bezel's prominence. It's really not that noticeable on the watch itself when it's on
 your wrist, at least to my eye.
 
+<div style="margin-left: auto; margin-right: auto; text-align: center;">
+<a href="http://files.mlindgren.ca/images/IonicFront.jpg">
+<img src="http://files.mlindgren.ca/images/IonicFrontSmall.jpg" title="Fitbit Ionic"/>
+</a>
+</div><br />
+
 Actually, although to some it may look dated, overall I really like the subtle curve of the Ionic.
-It's hardly noticeable from some angles, but it still manages to make the watch feel like it's
+It's hardly noticeable from most angles, but it still manages to make the watch feel like it's
 hugging my wrist all the way around, rather than just sitting flat against it. As someone with small
 wrists, this is really nice. In contrast to a lot of other watches I've worn, including mechanical
 watches, the Ionic doesn't look absurdly bulky on my wrist. And more importantly, it's light and
@@ -203,16 +211,16 @@ The Ionic has the following built-in apps:
   Seattle area is notoriously fickle, so 30 minutes can be the difference between sunny skies and
   torrential downpour.
 - **Pandora**: allows Pandora Plus subscribers to sync a few of their Pandora stations to the Ionic.
-  The Ionic can't stream music, so a selection of songs are synced over WiFi while the device is
-  charging.  Unfortunately, this is only available to US customers.  Personally, I use Spotify
-  rather than Pandora, so I haven't used this. Fitbit is reportedly trying to get Spotify to support
-  the Ionic as well, but that is easier said than done.
+  The Ionic can't stream music from the Internet, so a selection of songs are synced over WiFi while
+  the device is charging.  Unfortunately, this is only available to US customers.  Personally, I use
+  Spotify rather than Pandora, so I haven't used this. Fitbit is reportedly trying to get Spotify to
+  support the Ionic as well, but that is easier said than done.
 - **Music**: allows you to sync playlists from your PC or Mac to the Ionic. You cannot use your
   phone to sync music (which is probably an iOS limitation, but Fitbit doesn't support it on Android
-  or Windows either, probably just to keep the apps consistent). I haven't actually used this either
-  since I basically always have my phone with me. From what I've read elsewhere, music playback on
-  the device works pretty well, but syncing songs is very slow and you must create playlists for the
-  songs you want to sync (i.e.  you can't just sync a folder of music).
+  or Windows Phone either, probably just to keep the apps consistent). I haven't actually used this
+  either since I basically always have my phone with me. From what I've read elsewhere, music
+  playback on the device works pretty well, but syncing songs is very slow and you must create
+  playlists for the songs you want to sync (i.e.  you can't just sync a folder of music).
 - **Coach**: offers guided bodyweight workouts with short animations that show you how to perform
   each move. The workouts are pretty fast-paced, and the goal is to do as many reps as you can
   during the time frame you're given for each exercise, so it should be an effective workout
@@ -237,7 +245,10 @@ The Ionic has the following built-in apps:
   time. I did have one or two times where the terminal didn't seem to detect the Ionic, but that may
   have been an issue with the terminal.
 - **Settings**: lets you change brightness, vibration, all-day heart rate, and notification
-  settings.  There is no option to keep the screen always on, which a lot of people seem to want.
+  settings. On the subject of notifications, the Ionic can display any notification shown on the
+  smartphone, but there's no way to interact with the notifications (i.e. you can't reply to a text
+  message from the watch), and currently notifications on the watch are not perfectly reliable.
+  Also, there is no option to keep the screen always on, which a lot of people seem to want.
   Personally I find the rotate-wrist-to-wake functionality sufficient.
 
 Of course, built-in apps will only get you so far.  Whether or not the Ionic proves to be a capable
