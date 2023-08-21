@@ -1,16 +1,12 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
-
-AUTHOR = u'Mitch Lindgren'
-SITENAME = u'mlindgren.ca'
+AUTHOR = 'Mitch Lindgren'
+SITENAME = 'mlindgren.ca'
 SITEURL = 'http://blog.mlindgren.ca'
 
 PATH = 'content'
 
 TIMEZONE = 'America/Los_Angeles'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -22,7 +18,6 @@ AUTHOR_FEED_RSS = None
 DISPLAY_PAGES_ON_MENU = True
 
 DISQUS_SITENAME = 'mlindgrenca'
-GOOGLE_ANALYTICS = 'UA-56108181-1'
 
 # Blogroll
 LINKS = ()
@@ -32,7 +27,6 @@ SOCIAL = (
 ('<img src="http://files.mlindgren.ca/images/github.png"/> Github', 'https://github.com/mlindgren'),
 ('<img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm', 'http://last.fm/user/lindgrenM'),
 ('<img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow', 'http://stackoverflow.com/users/108340/mitch-lindgren'),
-('<img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp', 'http://mlindgren.yelp.com'),
 ('<img src="http://files.mlindgren.ca/images/yt.png"/> YouTube', 'http://www.youtube.com/user/lindgrenMitch'),
 )
 
