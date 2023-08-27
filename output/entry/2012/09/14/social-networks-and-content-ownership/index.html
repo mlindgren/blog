@@ -136,13 +136,13 @@ jQuery(document).ready(function() {
 <p>When Google+ debuted, my enthusiasm for the service followed a sort of bell curve.  I was already using Twitter and Facebook, and I didn't want to have to post everything to yet another service.  At the urging of friends, I joined anyway, and warmed to it considerably.  It was simply better software than Facebook; the interface was cleaner, the privacy controls more usable, the communication options more diverse, the means of sharing and interacting with media more engaging and deeply integrated.  Best of all, there wasn't nearly as much app spam.  Much of this is probably still true, although the impression I get from Google+ pages I've stumbled across recently is that they've been trying to make it look more like Facebook, to its detriment.</p>
 <p>Realizing that it was a better product in almost every regard, I started using Google+ almost exclusively and tried to recruit additional friends away from Facebook.  I stopped uploading new photos to Facebook and even purchased additional storage capacity on Google+ so I could upload all of my photos there at the original quality.  Problems quickly became apparent, though.  Despite my best efforts, nobody was using the service; even among those of my friends who were enthusiastic early adopters, actual <em>social</em> activity among my circles dropped off quickly, and I soon found myself wondering why I even bothered to check for updates.  I finally deleted my account when I logged in one day and realized that the newest post in my news feed was from several months prior.</p>
 <p>And with my Google+ account, there went all of the photos and other content I had uploaded.  I still have the files, of course, but the effort I expended in selecting a handful of good photos to upload to each gallery from the hundreds of shots I take on most outings, not to mention the comments, captions, and other metadata I had curated, vanished into the ether with not a trace left behind.  The moral of the story is that private social networks are impermanent, and thus anything uploaded to them necessarily has an unknown but very much finite period of accessibility and relevance.  Whether or not Google ever admits it, Google+ never quite took off, but it could have supplanted Facebook just as Facebook did MySpace.  If and when some other service comes along and succeeds where Google+ failed, every user on Facebook will be forced to start over from scratch on whatever's in vogue next.</p>
-<p>I'm tired of playing that game. I want to keep control over the content I create so that I can truly decide how it's shared and with whom, and so that if I need to migrate my data to a new system, I have the means to do so.<sup id="fnref-export"><a class="footnote-ref" href="#fn-export">1</a></sup> The ultimate realization of this ideal is in decentralized services based on open protocols, such as <a title="Tent" href="http://tent.io/">Tent</a>. I'm very enthusiastic about such attempts, but realistically, I'm skeptical that any of them will ever gain the necessary traction to make a real difference. Even if Tent or some analogue gains millions of users, it will be a drop in the bucket compared to Facebook, and entrenched players such as Facebook will have no incentive to interoperate because decentralized services do nothing but threaten their business model.</p>
+<p>I'm tired of playing that game. I want to keep control over the content I create so that I can truly decide how it's shared and with whom, and so that if I need to migrate my data to a new system, I have the means to do so.<sup id="fnref:export"><a class="footnote-ref" href="#fn:export">1</a></sup> The ultimate realization of this ideal is in decentralized services based on open protocols, such as <a title="Tent" href="http://tent.io/">Tent</a>. I'm very enthusiastic about such attempts, but realistically, I'm skeptical that any of them will ever gain the necessary traction to make a real difference. Even if Tent or some analogue gains millions of users, it will be a drop in the bucket compared to Facebook, and entrenched players such as Facebook will have no incentive to interoperate because decentralized services do nothing but threaten their business model.</p>
 <p>I will do as much as is in my power to help services like Tent succeed, but for the time being, that is not much.  That kind of leaves me without a good means of pushing my content to the people who care about it.  Nevertheless, I can still take ownership of it by hosting it on my own server using my own tools.  That is the purpose of developing my own photo album software.  I'm making good progress so far, and hopefully soon I'll have more to share; once the code is in a reasonably complete state with most of the major features I want for my own purposes, I intend to make the app open source and share the code on my <a title="mlindgren on Github" href="https://github.com/mlindgren" target="_blank">Github account.</a>  And now that I've announced my intent publicly, I expect anyone who reads this to hold me to my plan to ensure that I get it finished!</p>
 <div class="footnote">
 <hr>
 <ol>
-<li id="fn-export">
-<p>Both Facebook and Google+ provide a means of exporting the data you've shared. I believe both will export everything belonging to you personally, but I don't think you necessarily get to keep all of the social data associated with your content, e.g. comments, nor the relationships between different pieces of content. Last I checked, the data was merely dumped into a bunch of flat files; nothing is kept in a structured format that makes it easy to work with, and even if it were, other privates services don't usually offer the option to import your data. While it may still not be easy, if you own your own data and manage it using open source tools, it's at least <em>possible</em> to migrate everything to another system with the greatest fidelity supported by that system.&#160;<a class="footnote-backref" href="#fnref-export" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn:export">
+<p>Both Facebook and Google+ provide a means of exporting the data you've shared. I believe both will export everything belonging to you personally, but I don't think you necessarily get to keep all of the social data associated with your content, e.g. comments, nor the relationships between different pieces of content. Last I checked, the data was merely dumped into a bunch of flat files; nothing is kept in a structured format that makes it easy to work with, and even if it were, other privates services don't usually offer the option to import your data. While it may still not be easy, if you own your own data and manage it using open source tools, it's at least <em>possible</em> to migrate everything to another system with the greatest fidelity supported by that system.&#160;<a class="footnote-backref" href="#fnref:export" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div></div>
@@ -179,6 +179,9 @@ jQuery(document).ready(function() {
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post category-reviews">
+          <a href="http://blog.mlindgren.ca/entry/2023/08/20/review-made-in-abyss/">Review: Made in Abyss: Binary Star Falling into Darkness</a>
+      </li>
+      <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2017/11/05/fitbit-ionic-review/">Review: Fitbit Ionic</a>
       </li>
       <li class="post category-coding">
@@ -189,9 +192,6 @@ jQuery(document).ready(function() {
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/12/20/game-review-fallout-4/">Game Review: Fallout 4</a>
       </li>
     </ul>
   </section>
@@ -217,7 +217,7 @@ jQuery(document).ready(function() {
 
   <section>
   <h1>Tags</h1>
-    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/wearables/">Wearables</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/video-games/">Video Games</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/previews/">Previews</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/fitness/">Fitness</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </section>
+    <a href="http://blog.mlindgren.ca/tag/video-games/">Video games</a>,    <a href="http://blog.mlindgren.ca/tag/fitness/">Fitness</a>,    <a href="http://blog.mlindgren.ca/tag/wearables/">Wearables</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/previews/">Previews</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>  </section>
 
 
 
@@ -254,7 +254,6 @@ jQuery(document).ready(function() {
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
     </section>
@@ -262,30 +261,12 @@ jQuery(document).ready(function() {
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2023  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>
   <script src="http://blog.mlindgren.ca/theme/js/ender.js"></script>
   <script src="http://blog.mlindgren.ca/theme/js/octopress.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-56108181-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-56108181-1');
-    ga('send', 'pageview');
-</script>
   <script type="text/javascript">
     var disqus_shortname = 'mlindgrenca';
     var disqus_identifier = '/entry/2012/09/14/social-networks-and-content-ownership/';

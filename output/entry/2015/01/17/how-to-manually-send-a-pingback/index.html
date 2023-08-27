@@ -156,24 +156,23 @@ or anything else of relevance, when I was searching for information on how to
 send a Pingback. Hopefully, by posting about it and adding some extra context, I
 can make the information more searchable.</p>
 <p>First, you'll need to create a copy of this XML file on your local machine:</p>
-<div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
 <span class="nt">&lt;methodCall&gt;</span>
 <span class="nt">&lt;methodName&gt;</span>pingback.ping<span class="nt">&lt;/methodName&gt;</span>
 <span class="nt">&lt;params&gt;</span>
- <span class="nt">&lt;param&gt;</span>
-  <span class="nt">&lt;value&gt;</span>
-   <span class="nt">&lt;string&gt;</span>http://source/url/here<span class="nt">&lt;/string&gt;</span>
-  <span class="nt">&lt;/value&gt;</span>
- <span class="nt">&lt;/param&gt;</span>
- <span class="nt">&lt;param&gt;</span>
-  <span class="nt">&lt;value&gt;</span>
-   <span class="nt">&lt;string&gt;</span>http://target/url/here<span class="nt">&lt;/string&gt;</span>
-  <span class="nt">&lt;/value&gt;</span>
- <span class="nt">&lt;/param&gt;</span>
+<span class="w"> </span><span class="nt">&lt;param&gt;</span>
+<span class="w">  </span><span class="nt">&lt;value&gt;</span>
+<span class="w">   </span><span class="nt">&lt;string&gt;</span>http://source/url/here<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/value&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/param&gt;</span>
+<span class="w"> </span><span class="nt">&lt;param&gt;</span>
+<span class="w">  </span><span class="nt">&lt;value&gt;</span>
+<span class="w">   </span><span class="nt">&lt;string&gt;</span>http://target/url/here<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/value&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/param&gt;</span>
 <span class="nt">&lt;/params&gt;</span>
 <span class="nt">&lt;/methodCall&gt;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Replace the two URLs as appropriate - the first one is the source (i.e. your
 blog post), and the second is the target (the post you are linking to).</p>
@@ -186,9 +185,8 @@ systems, but Windows users will have to
 <a href="http://curl.haxx.se/dlwiz/?type=bin&amp;os=Win32&amp;flav=-&amp;ver=2000%2FXP">download it</a>,
 and if you're on Mac OS X you probably need to have Apple's developer tools
 installed.  Just run:</p>
-<div class="highlight"><pre><span></span>curl -X POST -d @pingback.xml http://example.com/xmlrpc.php
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="n">curl</span><span class="w"> </span><span class="o">-</span><span class="n">X</span><span class="w"> </span><span class="n">POST</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="nv">@pingback</span><span class="p">.</span><span class="nc">xml</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">xmlrpc</span><span class="p">.</span><span class="n">php</span>
+</code></pre></div>
 
 <p>...and that's it! cURL should print out an XML response from this server with a
 message indicating that your Pingback was registered. Of course, to be truly
@@ -227,6 +225,9 @@ added to the page. (Note that some sites disable Pingbacks.)</p></div>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post category-reviews">
+          <a href="http://blog.mlindgren.ca/entry/2023/08/20/review-made-in-abyss/">Review: Made in Abyss: Binary Star Falling into Darkness</a>
+      </li>
+      <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2017/11/05/fitbit-ionic-review/">Review: Fitbit Ionic</a>
       </li>
       <li class="post category-coding">
@@ -237,9 +238,6 @@ added to the page. (Note that some sites disable Pingbacks.)</p></div>
       </li>
       <li class="post category-reviews">
           <a href="http://blog.mlindgren.ca/entry/2015/12/27/early-access-roundup/">Steam Early Access Roundup</a>
-      </li>
-      <li class="post category-reviews">
-          <a href="http://blog.mlindgren.ca/entry/2015/12/20/game-review-fallout-4/">Game Review: Fallout 4</a>
       </li>
     </ul>
   </section>
@@ -265,7 +263,7 @@ added to the page. (Note that some sites disable Pingbacks.)</p></div>
 
   <section>
   <h1>Tags</h1>
-    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/wearables/">Wearables</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/video-games/">Video Games</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/previews/">Previews</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/fitness/">Fitness</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>  </section>
+    <a href="http://blog.mlindgren.ca/tag/video-games/">Video games</a>,    <a href="http://blog.mlindgren.ca/tag/fitness/">Fitness</a>,    <a href="http://blog.mlindgren.ca/tag/wearables/">Wearables</a>,    <a href="http://blog.mlindgren.ca/tag/computer-science/">Computer Science</a>,    <a href="http://blog.mlindgren.ca/tag/shouting-into-the-void/">Shouting into the void</a>,    <a href="http://blog.mlindgren.ca/tag/personal/">Personal</a>,    <a href="http://blog.mlindgren.ca/tag/previews/">Previews</a>,    <a href="http://blog.mlindgren.ca/tag/meta/">Meta</a>,    <a href="http://blog.mlindgren.ca/tag/python/">Python</a>,    <a href="http://blog.mlindgren.ca/tag/projects/">Projects</a>,    <a href="http://blog.mlindgren.ca/tag/tv/">TV</a>,    <a href="http://blog.mlindgren.ca/tag/politics/">Politics</a>,    <a href="http://blog.mlindgren.ca/tag/windows/">Windows</a>,    <a href="http://blog.mlindgren.ca/tag/breaking-the-cardinal-rule/">Breaking the cardinal rule</a>,    <a href="http://blog.mlindgren.ca/tag/link/">Link</a>,    <a href="http://blog.mlindgren.ca/tag/guide/">Guide</a>,    <a href="http://blog.mlindgren.ca/tag/c/">C#</a>,    <a href="http://blog.mlindgren.ca/tag/music/">Music</a>,    <a href="http://blog.mlindgren.ca/tag/linux/">Linux</a>,    <a href="http://blog.mlindgren.ca/tag/books/">Books</a>,    <a href="http://blog.mlindgren.ca/tag/religion/">Religion</a>,    <a href="http://blog.mlindgren.ca/tag/philosophy/">Philosophy</a>,    <a href="http://blog.mlindgren.ca/tag/sam-harris/">Sam Harris</a>,    <a href="http://blog.mlindgren.ca/tag/science/">Science</a>,    <a href="http://blog.mlindgren.ca/tag/travel/">Travel</a>,    <a href="http://blog.mlindgren.ca/tag/social-networking/">Social networking</a>,    <a href="http://blog.mlindgren.ca/tag/links/">Links</a>,    <a href="http://blog.mlindgren.ca/tag/ethics/">Ethics</a>,    <a href="http://blog.mlindgren.ca/tag/os-x/">OS X</a>,    <a href="http://blog.mlindgren.ca/tag/puzzle-panel/">Puzzle Panel</a>,    <a href="http://blog.mlindgren.ca/tag/android/">Android</a>,    <a href="http://blog.mlindgren.ca/tag/ios/">iOS</a>,    <a href="http://blog.mlindgren.ca/tag/ux/">UX</a>,    <a href="http://blog.mlindgren.ca/tag/education/">Education</a>,    <a href="http://blog.mlindgren.ca/tag/iphone/">iPhone</a>,    <a href="http://blog.mlindgren.ca/tag/opengl/">OpenGL</a>,    <a href="http://blog.mlindgren.ca/tag/university-of-alberta/">University of Alberta</a>  </section>
 
 
 
@@ -302,7 +300,6 @@ added to the page. (Note that some sites disable Pingbacks.)</p></div>
             <li><a href="https://github.com/mlindgren" target="_blank"><img src="http://files.mlindgren.ca/images/github.png"/> Github</a></li>
             <li><a href="http://last.fm/user/lindgrenM" target="_blank"><img src="http://files.mlindgren.ca/images/last.fm.png"/> last.fm</a></li>
             <li><a href="http://stackoverflow.com/users/108340/mitch-lindgren" target="_blank"><img src="http://files.mlindgren.ca/images/stackoverflow.png"> Stack Overflow</a></li>
-            <li><a href="http://mlindgren.yelp.com" target="_blank"><img src="http://files.mlindgren.ca/images/yelp.png"/> Yelp</a></li>
             <li><a href="http://www.youtube.com/user/lindgrenMitch" target="_blank"><img src="http://files.mlindgren.ca/images/yt.png"/> YouTube</a></li>
         </ul>
     </section>
@@ -310,30 +307,12 @@ added to the page. (Note that some sites disable Pingbacks.)</p></div>
 </aside>    </div>
   </div>
   <footer role="contentinfo"><p>
-    Copyright &copy;  2010&ndash;2017  Mitch Lindgren &mdash;
+    Copyright &copy;  2010&ndash;2023  Mitch Lindgren &mdash;
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
   <script src="http://blog.mlindgren.ca/theme/js/modernizr-2.0.js"></script>
   <script src="http://blog.mlindgren.ca/theme/js/ender.js"></script>
   <script src="http://blog.mlindgren.ca/theme/js/octopress.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-56108181-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-56108181-1');
-    ga('send', 'pageview');
-</script>
   <script type="text/javascript">
     var disqus_shortname = 'mlindgrenca';
     var disqus_identifier = '/entry/2015/01/17/how-to-manually-send-a-pingback/';
